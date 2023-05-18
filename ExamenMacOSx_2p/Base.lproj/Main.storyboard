@@ -2154,6 +2154,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="altaCompra:" target="Hva-vE-CiJ" id="mgm-V6-ZEB"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYm-IQ-w1L">
                                 <rect key="frame" x="297" y="173" width="60" height="32"/>
@@ -2162,6 +2165,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="funcBaja:" target="Hva-vE-CiJ" id="dmq-EO-zZz"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oX5-2e-kQW">
                                 <rect key="frame" x="281" y="131" width="91" height="32"/>
@@ -2170,6 +2176,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Consulta:" target="Hva-vE-CiJ" id="57n-tr-CQi"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4B-od-Bae">
                                 <rect key="frame" x="283" y="93" width="88" height="32"/>
@@ -2187,6 +2196,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="volver:" target="Hva-vE-CiJ" id="Dpv-48-8wN"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqV-Wa-m0Y">
                                 <rect key="frame" x="484" y="250" width="17" height="16"/>
@@ -2223,6 +2235,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="eliminar:" target="Hva-vE-CiJ" id="Yfi-6Z-yfs"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C3S-TW-paS">
                                 <rect key="frame" x="114" y="259" width="414" height="41"/>
@@ -2235,6 +2250,17 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnAlta" destination="Lsr-7m-rqw" id="fZs-Fx-Nlu"/>
+                        <outlet property="btnBaja" destination="gYm-IQ-w1L" id="dPf-Km-dAD"/>
+                        <outlet property="btnConsulta" destination="K4B-od-Bae" id="jaV-RI-qVn"/>
+                        <outlet property="btnEliminar" destination="9GB-lq-cVl" id="Mga-py-MRV"/>
+                        <outlet property="btnModificar" destination="oX5-2e-kQW" id="3mV-u1-vdc"/>
+                        <outlet property="btnOK" destination="t6z-3G-gBI" id="xxq-zV-JiS"/>
+                        <outlet property="btnVolver" destination="xq7-7w-eJZ" id="Ob3-gR-e0x"/>
+                        <outlet property="lblID" destination="AqV-Wa-m0Y" id="OyK-9y-eZQ"/>
+                        <outlet property="txtID" destination="T8i-1J-Wik" id="Lc4-Z1-RI5"/>
+                    </connections>
                 </viewController>
                 <customObject id="FP0-k8-OMI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2424,8 +2450,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="dyg-mZ-ldl">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706144415.27019501">
-                                        <!--2023-05-18 23:13:35 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="706145354.64525998">
+                                        <!--2023-05-18 23:29:14 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -2724,8 +2750,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="p3a-Ph-w7e">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706144415.27902102">
-                                        <!--2023-05-18 23:13:35 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="706145354.65403295">
+                                        <!--2023-05-18 23:29:14 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
