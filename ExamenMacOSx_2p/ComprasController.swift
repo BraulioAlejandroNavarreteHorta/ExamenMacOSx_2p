@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class ComprasController{
+    @objc dynamic var compras:[Compra]=[]
+    static var compartir: ComprasController = {
+        let instance = ComprasController()
+        return instance
+    }()
+    
+    func addCompra(_ compra:Compra){
+        compras.append(compra)
+    }
+}
