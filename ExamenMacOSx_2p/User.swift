@@ -21,6 +21,8 @@ class User: NSObject{
     @objc dynamic var edad:Int
     @objc dynamic var fechaNacimiento:Date
     
+    var PRUEBA = "ASDASDASDASDASD" 
+    
     init(_ username: String,_ password: String,_ nombre: String,_ apellidoP: String,_ apellidoM: String,_ email: String,_ telefono: String,_ genero: String,_ role: Int,_ edad: Int,_ fechaNacimiento: Date) {
         self.username = username
         self.password = password
