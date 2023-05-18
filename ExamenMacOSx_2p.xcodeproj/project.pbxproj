@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA676DAE2A16E69500709273 /* ComprasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA676DAC2A16E69500709273 /* ComprasView.swift */; };
 		AA676DAF2A16E69500709273 /* ComprasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA676DAD2A16E69500709273 /* ComprasView.xib */; };
-		AA676DB12A16E6B200709273 /* ComprasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA676DB02A16E6B200709273 /* ComprasController.swift */; };
-		AA676DB32A16E6CC00709273 /* ComprasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA676DB22A16E6CC00709273 /* ComprasVC.swift */; };
 		AA678FFF2A0D848B001D9BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA678FFE2A0D848B001D9BFF /* AppDelegate.swift */; };
 		AA6790012A0D848B001D9BFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6790002A0D848B001D9BFF /* ViewController.swift */; };
 		AA6790042A0D848B001D9BFF /* ExamenMacOSx_2p.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA6790022A0D848B001D9BFF /* ExamenMacOSx_2p.xcdatamodeld */; };
@@ -22,6 +19,11 @@
 		D131E6B92A149387006D76DB /* CRUDProductosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131E6B82A149387006D76DB /* CRUDProductosVC.swift */; };
 		D131E6BB2A149454006D76DB /* ProductosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131E6BA2A149454006D76DB /* ProductosController.swift */; };
 		D131E6BF2A14C258006D76DB /* Tablap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131E6BE2A14C258006D76DB /* Tablap.swift */; };
+		D185EF772A16E7960025FB19 /* CRUDComprasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF762A16E7960025FB19 /* CRUDComprasVC.swift */; };
+		D185EF792A16E7BF0025FB19 /* ComprasProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF782A16E7BF0025FB19 /* ComprasProfileVC.swift */; };
+		D185EF7B2A16E7DE0025FB19 /* Compras.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF7A2A16E7DE0025FB19 /* Compras.swift */; };
+		D185EF7D2A16E7EB0025FB19 /* ComprasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF7C2A16E7EB0025FB19 /* ComprasController.swift */; };
+		D185EF7F2A16E8160025FB19 /* TablaCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF7E2A16E8160025FB19 /* TablaCompra.swift */; };
 		D1FA75D72A10777800055B72 /* RegistroUsuarioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75D62A10777800055B72 /* RegistroUsuarioVC.swift */; };
 		D1FA75D92A10779C00055B72 /* AdminProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75D82A10779C00055B72 /* AdminProfileVC.swift */; };
 		D1FA75DB2A1077D400055B72 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75DA2A1077D400055B72 /* LoginVC.swift */; };
@@ -31,10 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA676DAC2A16E69500709273 /* ComprasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasView.swift; sourceTree = "<group>"; };
 		AA676DAD2A16E69500709273 /* ComprasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComprasView.xib; sourceTree = "<group>"; };
-		AA676DB02A16E6B200709273 /* ComprasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasController.swift; sourceTree = "<group>"; };
-		AA676DB22A16E6CC00709273 /* ComprasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasVC.swift; sourceTree = "<group>"; };
 		AA678FFB2A0D848B001D9BFF /* ExamenMacOSx_2p.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenMacOSx_2p.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA678FFE2A0D848B001D9BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6790002A0D848B001D9BFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +47,11 @@
 		D131E6B82A149387006D76DB /* CRUDProductosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDProductosVC.swift; sourceTree = "<group>"; };
 		D131E6BA2A149454006D76DB /* ProductosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosController.swift; sourceTree = "<group>"; };
 		D131E6BE2A14C258006D76DB /* Tablap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tablap.swift; sourceTree = "<group>"; };
+		D185EF762A16E7960025FB19 /* CRUDComprasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDComprasVC.swift; sourceTree = "<group>"; };
+		D185EF782A16E7BF0025FB19 /* ComprasProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasProfileVC.swift; sourceTree = "<group>"; };
+		D185EF7A2A16E7DE0025FB19 /* Compras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compras.swift; sourceTree = "<group>"; };
+		D185EF7C2A16E7EB0025FB19 /* ComprasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasController.swift; sourceTree = "<group>"; };
+		D185EF7E2A16E8160025FB19 /* TablaCompra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaCompra.swift; sourceTree = "<group>"; };
 		D1FA75D62A10777800055B72 /* RegistroUsuarioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroUsuarioVC.swift; sourceTree = "<group>"; };
 		D1FA75D82A10779C00055B72 /* AdminProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileVC.swift; sourceTree = "<group>"; };
 		D1FA75DA2A1077D400055B72 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -104,10 +108,12 @@
 				D131E6B62A14921D006D76DB /* ProductosProfileVC.swift */,
 				D131E6B82A149387006D76DB /* CRUDProductosVC.swift */,
 				D131E6BA2A149454006D76DB /* ProductosController.swift */,
-				AA676DAC2A16E69500709273 /* ComprasView.swift */,
-				AA676DB02A16E6B200709273 /* ComprasController.swift */,
-				AA676DB22A16E6CC00709273 /* ComprasVC.swift */,
 				D131E6BE2A14C258006D76DB /* Tablap.swift */,
+				D185EF762A16E7960025FB19 /* CRUDComprasVC.swift */,
+				D185EF782A16E7BF0025FB19 /* ComprasProfileVC.swift */,
+				D185EF7A2A16E7DE0025FB19 /* Compras.swift */,
+				D185EF7E2A16E8160025FB19 /* TablaCompra.swift */,
+				D185EF7C2A16E7EB0025FB19 /* ComprasController.swift */,
 			);
 			path = ExamenMacOSx_2p;
 			sourceTree = "<group>";
@@ -185,22 +191,24 @@
 			files = (
 				AA6790042A0D848B001D9BFF /* ExamenMacOSx_2p.xcdatamodeld in Sources */,
 				AA6790012A0D848B001D9BFF /* ViewController.swift in Sources */,
+				D185EF7D2A16E7EB0025FB19 /* ComprasController.swift in Sources */,
 				D1FA75DB2A1077D400055B72 /* LoginVC.swift in Sources */,
 				D1FA75D92A10779C00055B72 /* AdminProfileVC.swift in Sources */,
 				D131E6B72A14921D006D76DB /* ProductosProfileVC.swift in Sources */,
 				D1FA75D72A10777800055B72 /* RegistroUsuarioVC.swift in Sources */,
 				D131E6B32A144D8B006D76DB /* Productos.swift in Sources */,
 				D131E6BB2A149454006D76DB /* ProductosController.swift in Sources */,
-				AA676DB32A16E6CC00709273 /* ComprasVC.swift in Sources */,
 				D131E6B52A1482AD006D76DB /* MenuVC.swift in Sources */,
-				AA676DB12A16E6B200709273 /* ComprasController.swift in Sources */,
 				D1FA75DF2A10793500055B72 /* LoginController.swift in Sources */,
+				D185EF772A16E7960025FB19 /* CRUDComprasVC.swift in Sources */,
 				D1FA75E32A13B7ED00055B72 /* Tabla.swift in Sources */,
 				D131E6BF2A14C258006D76DB /* Tablap.swift in Sources */,
-				AA676DAE2A16E69500709273 /* ComprasView.swift in Sources */,
+				D185EF792A16E7BF0025FB19 /* ComprasProfileVC.swift in Sources */,
 				D131E6B92A149387006D76DB /* CRUDProductosVC.swift in Sources */,
 				AA678FFF2A0D848B001D9BFF /* AppDelegate.swift in Sources */,
 				D1FA75DD2A1078FC00055B72 /* User.swift in Sources */,
+				D185EF7F2A16E8160025FB19 /* TablaCompra.swift in Sources */,
+				D185EF7B2A16E7DE0025FB19 /* Compras.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

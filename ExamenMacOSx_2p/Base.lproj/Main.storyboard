@@ -2139,10 +2139,10 @@
             </objects>
             <point key="canvasLocation" x="1123" y="256"/>
         </scene>
-        <!--View Controller-->
+        <!--ComprasVC-->
         <scene sceneID="pV7-rh-d7o">
             <objects>
-                <viewController id="Hva-vE-CiJ" sceneMemberID="viewController">
+                <viewController id="Hva-vE-CiJ" customClass="CRUDComprasVC" customModule="ExamenMacOSx_2p" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="sO3-X2-Kqf">
                         <rect key="frame" x="0.0" y="0.0" width="657" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2238,7 +2238,7 @@
                 </viewController>
                 <customObject id="FP0-k8-OMI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2595" y="-627"/>
+            <point key="canvasLocation" x="2594.5" y="-627"/>
         </scene>
         <!--Registro UsuarioVC-->
         <scene sceneID="hIz-AP-VOD">
@@ -2424,8 +2424,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="dyg-mZ-ldl">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706143656.29789698">
-                                        <!--2023-05-18 23:00:56 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="706143997.99028301">
+                                        <!--2023-05-18 23:06:37 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -2724,8 +2724,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="p3a-Ph-w7e">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706143656.307549">
-                                        <!--2023-05-18 23:00:56 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="706143997.99858201">
+                                        <!--2023-05-18 23:06:37 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -2766,10 +2766,10 @@
             </objects>
             <point key="canvasLocation" x="579" y="943.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Compras ProfileVC-->
         <scene sceneID="HtE-pr-gyX">
             <objects>
-                <viewController id="1d2-VS-RRD" sceneMemberID="viewController">
+                <viewController id="1d2-VS-RRD" customClass="ComprasProfileVC" customModule="ExamenMacOSx_2p" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Ggg-MZ-McX">
                         <rect key="frame" x="0.0" y="0.0" width="794" height="542"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -3069,22 +3069,22 @@
             </objects>
             <point key="canvasLocation" x="1849" y="-506"/>
         </scene>
-        <!--View Controller-->
+        <!--Tabla Compra-->
         <scene sceneID="efz-v3-XgN">
             <objects>
-                <viewController id="ftQ-bi-e26" sceneMemberID="viewController">
+                <viewController id="ftQ-bi-e26" customClass="TablaCompra" customModule="ExamenMacOSx_2p" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="XOa-AR-R5c">
                         <rect key="frame" x="0.0" y="0.0" width="683" height="314"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-ed-Bw9">
+                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="52" horizontalPageScroll="10" verticalLineScroll="52" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-ed-Bw9">
                                 <rect key="frame" x="0.0" y="170" width="240" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" id="xi2-yn-9jF">
                                     <rect key="frame" x="1" y="1" width="238" height="133"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" headerView="2xE-KT-jSe" viewBased="YES" id="Uzs-9v-gHs">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="52" rowSizeStyle="automatic" headerView="2xE-KT-jSe" viewBased="YES" id="Uzs-9v-gHs">
                                             <rect key="frame" x="0.0" y="0.0" width="238" height="105"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
@@ -3104,11 +3104,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="jkk-29-trM">
-                                                            <rect key="frame" x="8" y="0.0" width="134" height="52"/>
+                                                            <rect key="frame" x="8" y="0.0" width="114" height="52"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4b-gZ-Dgw">
-                                                                    <rect key="frame" x="0.0" y="18" width="134" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="18" width="114" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="huF-0e-uXa">
                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -3136,11 +3136,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="RSy-w4-3C6">
-                                                            <rect key="frame" x="139" y="0.0" width="110" height="52"/>
+                                                            <rect key="frame" x="139" y="0.0" width="90" height="52"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0G-LU-uLJ">
-                                                                    <rect key="frame" x="0.0" y="18" width="110" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="18" width="90" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="96Z-aU-6pK">
                                                                         <font key="font" usesAppearanceFont="YES"/>

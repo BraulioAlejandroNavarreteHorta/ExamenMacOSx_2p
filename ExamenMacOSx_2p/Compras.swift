@@ -1,5 +1,5 @@
 //
-//  ComprasController.swift
+//  Compras.swift
 //  ExamenMacOSx_2p
 //
 //  Created by Braulio Alejandro Navarrete Horta on 18/05/23.
