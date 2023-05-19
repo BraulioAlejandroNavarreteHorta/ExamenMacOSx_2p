@@ -56,19 +56,24 @@ class CRUDProductosVC: NSViewController {
     }
     
     @IBAction func eliminar(_ sender: Any) {
-        if(Int(txtID.intValue) < 1){
-            alertaNoEliminar()
-        }else{
+        if(!productoController.productos.isEmpty){
             productoController.productos.remove(at: Int(txtID.intValue))
             alerta()
             txtID.stringValue = ""
             agregarID()
+            
+        }else{
+            alertaNoEliminar()
         }
     }
     
     func agregarID(){
-        for x in 0...productoController.productos.count-1{
-            productoController.productos[x].id = x
+        if(!productoController.productos.isEmpty){
+            for x in 0...productoController.productos.count-1{
+                productoController.productos[x].id = x
+            }
+        }else{
+            alertaNoEliminar()
         }
     }
     
@@ -82,7 +87,7 @@ class CRUDProductosVC: NSViewController {
     
     func alertaNoEliminar() -> Bool{
         let alert: NSAlert = NSAlert()
-        alert.messageText = "No existen ID menores a 1"
+        alert.messageText = "El arreglo esta vacío, ingresa otro producto"
         alert.alertStyle = .warning
         alert.addButton(withTitle: "Ok")
         return alert.runModal() == .alertFirstButtonReturn

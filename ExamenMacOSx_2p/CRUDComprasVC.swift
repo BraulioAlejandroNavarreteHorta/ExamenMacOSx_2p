@@ -51,13 +51,14 @@ class CRUDComprasVC: NSViewController {
     }
     
     @IBAction func eliminar(_ sender: Any) {
-        if(Int(txtID.intValue) < 0){
-            alertaNoEliminar()
-        }else{
+        if(!compraController.compras.isEmpty){
             compraController.compras.remove(at: Int(txtID.intValue))
             alerta()
             txtID.stringValue = ""
             agregarID()
+            
+        }else{
+            alertaNoEliminar()
         }
     }
     
@@ -95,21 +96,25 @@ class CRUDComprasVC: NSViewController {
     
     func alertaNoEliminar() -> Bool{
         let alert: NSAlert = NSAlert()
-        alert.messageText = "No existen ID menores a 1"
+        alert.messageText = "El arreglo esta vacío, ingresa otra compra"
         alert.alertStyle = .warning
         alert.addButton(withTitle: "Ok")
         return alert.runModal() == .alertFirstButtonReturn
     }
     func alerta() -> Bool {
         let alert: NSAlert = NSAlert()
-        alert.messageText = "Producto eliminado"
+        alert.messageText = "Compra eliminada"
         alert.alertStyle = .informational
         alert.addButton(withTitle: "Ok")
         return alert.runModal() == .alertFirstButtonReturn
     }
     func agregarID(){
-        for x in 0...compraController.compras.count-1{
-            compraController.compras[x].id = x
+        if(!compraController.compras.isEmpty){
+            for x in 0...compraController.compras.count-1{
+                compraController.compras[x].id = x
+            }
+        }else{
+            alertaNoEliminar()
         }
     }
     
