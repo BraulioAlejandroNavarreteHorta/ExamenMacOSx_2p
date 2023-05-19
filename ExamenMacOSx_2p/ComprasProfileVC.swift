@@ -46,6 +46,9 @@ class ComprasProfileVC: NSViewController {
     
     @IBAction func alta(_ sender: Any) {
         comprasController.compras.append(Compra(Int(txtIdProducto.integerValue),txtCantidadCompra.integerValue,txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue))
+        agregarID()
+        print("se hizo la alta")
+        self.view.window?.windowController?.close()
     }
     
     
