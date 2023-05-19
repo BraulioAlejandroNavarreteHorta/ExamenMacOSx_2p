@@ -47,7 +47,7 @@ class CRUDComprasVC: NSViewController {
         lblID.isHidden=false
         txtID.isHidden=false
         btnOK.isHidden=false
-        btnEliminar.isHidden=false
+        btnEliminar.isHidden=true
     }
     
     @IBAction func eliminar(_ sender: Any) {
@@ -75,18 +75,20 @@ class CRUDComprasVC: NSViewController {
     }
     /*
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "actualizarProducto"){
+        if(segue.identifier == "actualizarCompra"){
             let destinationVC = segue.destinationController as! ComprasProfileVC
             destinationVC.flag = enviarAFlag
             destinationVC.posicion = id
         }
+        
      if(segue.identifier == "mostrar"){
          let destinationViewCont = segue.destinationController as! Tablap
          destinationViewCont.products = productoController.productos
          destinationViewCont.prueba = "mensaje"
      }
+         
     }
-    */
+     */
     
     
     
