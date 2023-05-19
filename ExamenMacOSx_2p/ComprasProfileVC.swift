@@ -11,19 +11,12 @@ class ComprasProfileVC: NSViewController {
     var flag: Bool = false
     var posicion: Int?
     var comprasController = ComprasController.compartir
-
+    var loginController = LoginController.compartir
+    var productosController = ProductosController.compartir
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
         if flag {
             //informacion del comprador
             lblNombreComprador.stringValue = comprasController.compras[posicion!].nombreUser
@@ -47,6 +40,44 @@ class ComprasProfileVC: NSViewController {
         }
         
         
+    }
+    
+    
+    
+    @IBAction func btnAplicarCambios(_ sender: Any) {
+        //Informacion del producto
+        setProducto()
+        setInfoComprador()
+     
+    }
+    
+    func setProducto(){
+        for x in 0 ... productosController.productos.count-1{
+            if(txtIdProducto.integerValue==x){
+                lblIDproducto.stringValue = " \(productosController.productos[x].id)"
+                lblNombreProducto.stringValue = productosController.productos[x].nombre
+                lblDescripcionProducto.stringValue = productosController.productos[x].descripcion
+                lblUnidadProducto.stringValue = productosController.productos[x].unidad
+                lblPrecioProducto.stringValue = "\(productosController.productos[x].precio)"
+                lblCostoProducto.stringValue = "\(productosController.productos[x].costo)"
+                lblCategoria.stringValue = productosController.productos[x].categoría
+                lblExitenciaProducto.stringValue = "\(productosController.productos[x].cantidad)"
+
+            }
+        }
+    }
+    
+    func setInfoComprador(){
+        for x in 0 ...
+        loginController.users.count-1{
+            if(txtIdComprador.integerValue==x){
+                lblNombreComprador.stringValue = loginController.users[x].nombre
+                lblApellidoPaternoComprador.stringValue = loginController.users[x].apellidoP
+                lblApellidoMaternoComprador.stringValue = loginController.users[x].apellidoM
+                lblCorreo.stringValue = loginController.users[x].email
+                lblTelefono.stringValue = "\(loginController.users[x].telefono)"
+            }
+        }
     }
    
     

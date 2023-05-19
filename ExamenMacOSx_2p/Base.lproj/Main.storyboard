@@ -3144,6 +3144,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="btnAplicarCambios:" target="1d2-VS-RRD" id="urt-c9-mBZ"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-DH-nnt">
                                 <rect key="frame" x="590" y="45" width="68" height="32"/>
