@@ -15,9 +15,11 @@ class ComprasProfileVC: NSViewController {
     var productosController = ProductosController.compartir
     var sumaCantidades:Int = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        btnModificar.isHidden = !flag
+        btnCrear.isHidden = flag
         if flag {
             //informacion del comprador
             lblNombreComprador.stringValue = comprasController.compras[posicion!].username
@@ -45,7 +47,7 @@ class ComprasProfileVC: NSViewController {
     
     
     @IBAction func alta(_ sender: Any) {
-        comprasController.compras.append(Compra(Int(txtIdProducto.integerValue),txtCantidadCompra.integerValue,txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue))
+        comprasController.compras.append(Compra(Int(txtIdProducto.integerValue),Int(txtCantidadCompra.integerValue),txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue))
         agregarID()
         print("se hizo la alta")
         self.view.window?.windowController?.close()
@@ -58,6 +60,27 @@ class ComprasProfileVC: NSViewController {
         setInfoComprador()
      
     }
+    
+    
+    @IBAction func Actualizar(_ sender: Any) {
+        //sale paro en debug checar mañana
+        comprasController.compras[posicion!] = Compra(Int(txtIdProducto.integerValue),Int(txtCantidadCompra.integerValue),txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue)
+        print("actualizacion de compra")
+        self.view.window?.windowController?.close()
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func setProducto(){
         for x in 0 ... productosController.productos.count-1{

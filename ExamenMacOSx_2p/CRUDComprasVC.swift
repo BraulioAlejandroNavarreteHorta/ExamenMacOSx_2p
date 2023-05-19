@@ -73,17 +73,18 @@ class CRUDComprasVC: NSViewController {
     
     @IBAction func Consulta(_ sender: Any) {
     }
-    /*
+   
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if(segue.identifier == "actualizarCompra"){
             let destinationVC = segue.destinationController as! ComprasProfileVC
             destinationVC.flag = enviarAFlag
             destinationVC.posicion = id
         }
-        
+    }
+        /*
      if(segue.identifier == "mostrar"){
          let destinationViewCont = segue.destinationController as! Tablap
-         destinationViewCont.products = productoController.productos
+         destinationViewCont.products = compraController.compras
          destinationViewCont.prueba = "mensaje"
      }
          
