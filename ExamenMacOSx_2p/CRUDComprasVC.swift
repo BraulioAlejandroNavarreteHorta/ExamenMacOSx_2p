@@ -42,6 +42,13 @@ class CRUDComprasVC: NSViewController {
         self.view.window?.windowController?.close()
     }
     
+    @IBAction func actualizarCompra(_ sender: Any) {
+        id = Int(txtID.intValue)
+        enviarAFlag = true
+        performSegue(withIdentifier: "actualizarCompra", sender: self)
+        dismiss(self)
+    }
+    
     
     @IBAction func modificar(_ sender: Any) {
         lblID.isHidden=false

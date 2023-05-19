@@ -2264,6 +2264,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="actualizarCompra:" target="Hva-vE-CiJ" id="CHO-dq-4cg"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9GB-lq-cVl">
                                 <rect key="frame" x="451" y="140" width="82" height="32"/>
