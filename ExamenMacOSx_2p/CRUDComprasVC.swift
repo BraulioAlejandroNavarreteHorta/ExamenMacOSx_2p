@@ -51,7 +51,7 @@ class CRUDComprasVC: NSViewController {
     }
     
     @IBAction func eliminar(_ sender: Any) {
-        if(Int(txtID.intValue) < 1){
+        if(Int(txtID.intValue) < 0){
             alertaNoEliminar()
         }else{
             compraController.compras.remove(at: Int(txtID.intValue))

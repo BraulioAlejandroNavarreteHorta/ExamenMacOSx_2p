@@ -93,6 +93,7 @@ class ComprasProfileVC: NSViewController {
                 lblCostoProducto.stringValue = "\(productosController.productos[x].costo)"
                 lblCategoria.stringValue = productosController.productos[x].categoría
                 sumaCantidades=txtCantidadCompra.integerValue + productosController.productos[x].cantidad
+                productosController.productos[x].cantidad = sumaCantidades
                 lblExitenciaProducto.stringValue = "\(sumaCantidades)"
                 
             }
