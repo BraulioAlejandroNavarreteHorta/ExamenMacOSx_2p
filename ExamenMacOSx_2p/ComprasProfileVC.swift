@@ -43,6 +43,10 @@ class ComprasProfileVC: NSViewController {
     }
     
     
+    @IBAction func alta(_ sender: Any) {
+        
+    }
+    
     
     @IBAction func btnAplicarCambios(_ sender: Any) {
         //Informacion del producto
@@ -61,8 +65,8 @@ class ComprasProfileVC: NSViewController {
                 lblPrecioProducto.stringValue = "\(productosController.productos[x].precio)"
                 lblCostoProducto.stringValue = "\(productosController.productos[x].costo)"
                 lblCategoria.stringValue = productosController.productos[x].categoría
-                lblExitenciaProducto.stringValue = "\(productosController.productos[x].cantidad)"
-
+                lblExitenciaProducto.stringValue = "\(txtCantidadCompra.integerValue + productosController.productos[x].cantidad)"
+                
             }
         }
     }

@@ -3156,6 +3156,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="alta:" target="1d2-VS-RRD" id="cU7-cL-gvo"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ze-3P-okG">
                                 <rect key="frame" x="656" y="45" width="91" height="32"/>
