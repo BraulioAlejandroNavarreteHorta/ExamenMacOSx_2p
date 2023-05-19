@@ -13,7 +13,7 @@ class Compra: NSObject{
     @objc dynamic var idProducto:Int
     @objc dynamic var cantidad:Int
     @objc dynamic var idComprador:Int
-    @objc dynamic var nombre:String //
+    @objc dynamic var nombre:String // nombreProducto
     @objc dynamic var descripcion:String //
     @objc dynamic var unidad:String //
     @objc dynamic var precio:Double //

@@ -14,8 +14,42 @@ class ComprasProfileVC: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        if flag {
+            //informacion del comprador
+            lblNombreComprador.stringValue = comprasController.compras[posicion!].nombreUser
+            lblApellidoPaternoComprador.stringValue = comprasController.compras[posicion!].apellidoP
+            lblApellidoMaternoComprador.stringValue = comprasController.compras[posicion!].apellidoM
+            lblCorreo.stringValue = comprasController.compras[posicion!].email
+            lblTelefono.stringValue = comprasController.compras[posicion!].telefono
+            //informacion del producto
+            lblIDproducto.integerValue = comprasController.compras[posicion!].idProducto
+            lblNombreProducto.stringValue = comprasController.compras[posicion!].nombre
+            lblDescripcionProducto.stringValue = comprasController.compras[posicion!].descripcion
+            lblUnidadProducto.stringValue = comprasController.compras[posicion!].unidad
+            lblPrecioProducto.doubleValue = comprasController.compras[posicion!].precio
+            lblCostoProducto.doubleValue = comprasController.compras[posicion!].costo
+            lblCategoria.stringValue = comprasController.compras[posicion!].categoría
+            lblExitenciaProducto.integerValue = comprasController.compras[posicion!].cantidadProducto
+            //formulario
+            txtIdProducto.integerValue = comprasController.compras[posicion!].idProducto
+            txtCantidadCompra.integerValue = comprasController.compras[posicion!].cantidad
+            txtIdComprador.integerValue = comprasController.compras[posicion!].idComprador
+        }
+        
+        
     }
+   
+    
 
     //Información del comprador
     @IBOutlet weak var lblNombreComprador: NSTextField!
