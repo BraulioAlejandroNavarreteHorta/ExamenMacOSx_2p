@@ -13,12 +13,40 @@ class Compra: NSObject{
     @objc dynamic var idProducto:Int
     @objc dynamic var cantidad:Int
     @objc dynamic var idComprador:Int
+    @objc dynamic var nombre:String //
+    @objc dynamic var descripcion:String //
+    @objc dynamic var unidad:String //
+    @objc dynamic var precio:Double //
+    @objc dynamic var costo:Double //
+    @objc dynamic var categoría:String //
+    @objc dynamic var cantidadProducto:Int //
+    @objc dynamic var username:String //
+    @objc dynamic var nombreUser:String //
+    @objc dynamic var apellidoP:String //
+    @objc dynamic var apellidoM:String//
+    @objc dynamic var email:String //
+    @objc dynamic var telefono:String //
+
     
-    init(_ id: Int, _ idProducto: Int, _ cantidad: Int, _ idComprador: Int) {
+    init(_ id: Int, _ idProducto: Int, _ cantidad: Int, _ idComprador: Int, _ nombre: String, _ descripcion: String, _ unidad: String, _ precio: Double, _ costo: Double, _ categoría: String, _ cantidadProducto: Int, _ username: String, _ nombreUser: String, _ apellidoP: String, _ apellidoM: String, _ email: String, _ telefono: String) {
         self.id = id
         self.idProducto = idProducto
         self.cantidad = cantidad
         self.idComprador = idComprador
+        self.nombre = nombre
+        self.descripcion = descripcion
+        self.unidad = unidad
+        self.precio = precio
+        self.costo = costo
+        self.categoría = categoría
+        self.cantidadProducto = cantidadProducto
+        self.username = username
+        self.nombreUser = nombreUser
+        self.apellidoP = apellidoP
+        self.apellidoM = apellidoM
+        self.email = email
+        self.telefono = telefono
     }
+  
     
 }

@@ -8,14 +8,14 @@
 import Foundation
 
 class User: NSObject{
-    @objc dynamic var username:String
+    @objc dynamic var username:String //
     @objc dynamic var password:String
     @objc dynamic var id:Int
-    @objc dynamic var nombre:String
-    @objc dynamic var apellidoP:String
-    @objc dynamic var apellidoM:String
-    @objc dynamic var email:String
-    @objc dynamic var telefono:String
+    @objc dynamic var nombre:String //
+    @objc dynamic var apellidoP:String //
+    @objc dynamic var apellidoM:String//
+    @objc dynamic var email:String //
+    @objc dynamic var telefono:String //
     @objc dynamic var genero:String
     @objc dynamic var role:Int
     @objc dynamic var edad:Int

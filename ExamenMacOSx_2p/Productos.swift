@@ -10,13 +10,13 @@ import Foundation
 class Product: NSObject{
     
     @objc dynamic var id:Int
-    @objc dynamic var nombre:String
-    @objc dynamic var descripcion:String
-    @objc dynamic var unidad:String
-    @objc dynamic var precio:Double
-    @objc dynamic var costo:Double
-    @objc dynamic var categoría:String
-    @objc dynamic var cantidad:Int
+    @objc dynamic var nombre:String //
+    @objc dynamic var descripcion:String //
+    @objc dynamic var unidad:String //
+    @objc dynamic var precio:Double //
+    @objc dynamic var costo:Double //
+    @objc dynamic var categoría:String //
+    @objc dynamic var cantidad:Int //
     
     init(_ nombre: String,_ descripcion: String,_ unidad: String,_ precio: Double,_ costo: Double,_ categoría: String,_ cantidad: Int) {
         self.id = 0
