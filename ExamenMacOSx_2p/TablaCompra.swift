@@ -8,7 +8,8 @@
 import Cocoa
 
 class TablaCompra: NSViewController {
-
+    @objc dynamic var compras:[Compra] = []
+    var prueba:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

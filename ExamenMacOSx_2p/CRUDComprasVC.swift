@@ -80,6 +80,7 @@ class CRUDComprasVC: NSViewController {
     
     
     @IBAction func Consulta(_ sender: Any) {
+        performSegue(withIdentifier: "mostrar", sender: self)
     }
    
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
@@ -88,16 +89,13 @@ class CRUDComprasVC: NSViewController {
             destinationVC.flag = enviarAFlag
             destinationVC.posicion = id
         }
+        if(segue.identifier == "mostrar"){
+            let destinationViewCont = segue.destinationController as! TablaCompra
+            destinationViewCont.compras = compraController.compras
+            destinationViewCont.prueba = "mensaje"
+        }
     }
-        /*
-     if(segue.identifier == "mostrar"){
-         let destinationViewCont = segue.destinationController as! Tablap
-         destinationViewCont.products = compraController.compras
-         destinationViewCont.prueba = "mensaje"
-     }
-         
-    }
-     */
+
     
     
     
