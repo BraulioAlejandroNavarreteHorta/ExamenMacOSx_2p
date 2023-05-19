@@ -28,8 +28,8 @@ class Compra: NSObject{
     @objc dynamic var telefono:String //
 
     
-    init(_ id: Int, _ idProducto: Int, _ cantidad: Int, _ idComprador: Int, _ nombre: String, _ descripcion: String, _ unidad: String, _ precio: Double, _ costo: Double, _ categoría: String, _ cantidadProducto: Int, _ username: String, _ nombreUser: String, _ apellidoP: String, _ apellidoM: String, _ email: String, _ telefono: String) {
-        self.id = id
+    init( _ idProducto: Int, _ cantidad: Int, _ idComprador: Int, _ nombre: String, _ descripcion: String, _ unidad: String, _ precio: Double, _ costo: Double, _ categoría: String, _ cantidadProducto: Int, _ username: String, _ nombreUser: String, _ apellidoP: String, _ apellidoM: String, _ email: String, _ telefono: String) {
+        self.id = 0
         self.idProducto = idProducto
         self.cantidad = cantidad
         self.idComprador = idComprador

@@ -13,6 +13,7 @@ class ComprasProfileVC: NSViewController {
     var comprasController = ComprasController.compartir
     var loginController = LoginController.compartir
     var productosController = ProductosController.compartir
+    var sumaCantidades:Int
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,7 @@ class ComprasProfileVC: NSViewController {
     
     
     @IBAction func alta(_ sender: Any) {
+        comprasController.compras.append(Compra(txtIdProducto.integerValue,txtCantidadCompra.integerValue,txtIdComprador.integerValue,lblNombreProducto.stringValue))
         
     }
     
@@ -65,7 +67,8 @@ class ComprasProfileVC: NSViewController {
                 lblPrecioProducto.stringValue = "\(productosController.productos[x].precio)"
                 lblCostoProducto.stringValue = "\(productosController.productos[x].costo)"
                 lblCategoria.stringValue = productosController.productos[x].categoría
-                lblExitenciaProducto.stringValue = "\(txtCantidadCompra.integerValue + productosController.productos[x].cantidad)"
+                sumaCantidades=txtCantidadCompra.integerValue + productosController.productos[x].cantidad
+                lblExitenciaProducto.stringValue = "\(sumaCantidades)"
                 
             }
         }
@@ -85,6 +88,11 @@ class ComprasProfileVC: NSViewController {
     }
    
     
+    func agregarID(){
+        for x in 0...comprasController.compras.count-1{
+            comprasController.compras[x].id = x
+        }
+    }
 
     //Información del comprador
     @IBOutlet weak var lblNombreComprador: NSTextField!
