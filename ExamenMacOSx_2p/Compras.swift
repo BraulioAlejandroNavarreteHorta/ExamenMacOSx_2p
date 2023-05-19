@@ -21,14 +21,14 @@ class Compra: NSObject{
     @objc dynamic var categoría:String //
     @objc dynamic var cantidadProducto:Int //
     @objc dynamic var username:String //
-    @objc dynamic var nombreUser:String //
+    //@objc dynamic var nombreUser:String //
     @objc dynamic var apellidoP:String //
     @objc dynamic var apellidoM:String//
     @objc dynamic var email:String //
     @objc dynamic var telefono:String //
 
     
-    init( _ idProducto: Int, _ cantidad: Int, _ idComprador: Int, _ nombre: String, _ descripcion: String, _ unidad: String, _ precio: Double, _ costo: Double, _ categoría: String, _ cantidadProducto: Int, _ username: String, _ nombreUser: String, _ apellidoP: String, _ apellidoM: String, _ email: String, _ telefono: String) {
+    init( _ idProducto: Int, _ cantidad: Int, _ idComprador: Int, _ nombre: String, _ descripcion: String, _ unidad: String, _ precio: Double, _ costo: Double, _ categoría: String, _ cantidadProducto: Int, _ username: String,  _ apellidoP: String, _ apellidoM: String, _ email: String, _ telefono: String) {
         self.id = 0
         self.idProducto = idProducto
         self.cantidad = cantidad
@@ -41,7 +41,7 @@ class Compra: NSObject{
         self.categoría = categoría
         self.cantidadProducto = cantidadProducto
         self.username = username
-        self.nombreUser = nombreUser
+        //self.nombreUser = nombreUser
         self.apellidoP = apellidoP
         self.apellidoM = apellidoM
         self.email = email

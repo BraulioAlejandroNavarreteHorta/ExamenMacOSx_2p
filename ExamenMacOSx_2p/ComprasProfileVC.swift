@@ -13,14 +13,14 @@ class ComprasProfileVC: NSViewController {
     var comprasController = ComprasController.compartir
     var loginController = LoginController.compartir
     var productosController = ProductosController.compartir
-    var sumaCantidades:Int
+    var sumaCantidades:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         if flag {
             //informacion del comprador
-            lblNombreComprador.stringValue = comprasController.compras[posicion!].nombreUser
+            lblNombreComprador.stringValue = comprasController.compras[posicion!].username
             lblApellidoPaternoComprador.stringValue = comprasController.compras[posicion!].apellidoP
             lblApellidoMaternoComprador.stringValue = comprasController.compras[posicion!].apellidoM
             lblCorreo.stringValue = comprasController.compras[posicion!].email
@@ -45,8 +45,7 @@ class ComprasProfileVC: NSViewController {
     
     
     @IBAction func alta(_ sender: Any) {
-        comprasController.compras.append(Compra(txtIdProducto.integerValue,txtCantidadCompra.integerValue,txtIdComprador.integerValue,lblNombreProducto.stringValue))
-        
+        comprasController.compras.append(Compra(Int(txtIdProducto.integerValue),txtCantidadCompra.integerValue,txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue))
     }
     
     
