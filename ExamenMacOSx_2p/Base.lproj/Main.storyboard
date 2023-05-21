@@ -1517,7 +1517,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="Jdp-0e-uiM" kind="popover" popoverAnchorView="Kh1-q3-rXf" popoverBehavior="t" preferredEdge="maxY" id="IlC-R5-H1v"/>
+                                    <segue destination="Jdp-0e-uiM" kind="popover" identifier="compras" popoverAnchorView="Kh1-q3-rXf" popoverBehavior="t" preferredEdge="maxY" id="IlC-R5-H1v"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPt-sW-Oq4">
@@ -1582,7 +1582,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="Hva-vE-CiJ" kind="show" id="Hrb-dT-MG8"/>
+                                    <segue destination="Hva-vE-CiJ" kind="show" identifier="compras" id="Hrb-dT-MG8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1590,7 +1590,7 @@
                 </viewController>
                 <customObject id="DDH-E7-3jx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="-671"/>
+            <point key="canvasLocation" x="513.5" y="-671.5"/>
         </scene>
         <!--ProductosVC-->
         <scene sceneID="b1S-d0-Ohm">
@@ -2193,7 +2193,7 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="altaCompra:" target="Hva-vE-CiJ" id="mgm-V6-ZEB"/>
-                                    <segue destination="1d2-VS-RRD" kind="show" id="dwl-Eq-MMu"/>
+                                    <segue destination="1d2-VS-RRD" kind="show" identifier="altaCompra" id="dwl-Eq-MMu"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYm-IQ-w1L">
@@ -2310,7 +2310,7 @@
                 </viewController>
                 <customObject id="FP0-k8-OMI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="-671"/>
+            <point key="canvasLocation" x="41.5" y="-671"/>
         </scene>
         <!--Registro UsuarioVC-->
         <scene sceneID="hIz-AP-VOD">
@@ -2496,8 +2496,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="dyg-mZ-ldl">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706230854.06115997">
-                                        <!--2023-05-19 23:14:14 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="706233250.73032999">
+                                        <!--2023-05-19 23:54:10 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -2796,8 +2796,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="p3a-Ph-w7e">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706230854.07035005">
-                                        <!--2023-05-19 23:14:14 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="706233250.73927605">
+                                        <!--2023-05-19 23:54:10 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -2856,7 +2856,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rpa-ET-c6y">
-                                <rect key="frame" x="40" y="469" width="98" height="16"/>
+                                <rect key="frame" x="40" y="432" width="98" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="ID del Producto" id="w3J-4x-LhB">
                                     <font key="font" metaFont="system"/>
@@ -2865,7 +2865,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64n-n9-uas">
-                                <rect key="frame" x="182" y="468" width="106" height="21"/>
+                                <rect key="frame" x="182" y="431" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Wdh-sD-WfC">
                                     <font key="font" metaFont="system"/>
@@ -2874,7 +2874,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cNU-wM-BCE">
-                                <rect key="frame" x="353" y="469" width="111" height="16"/>
+                                <rect key="frame" x="326" y="469" width="111" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="ID del Comprador" id="z3H-fD-Hyh">
                                     <font key="font" metaFont="system"/>
@@ -2883,7 +2883,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jR-VQ-ndG">
-                                <rect key="frame" x="468" y="469" width="133" height="21"/>
+                                <rect key="frame" x="467" y="469" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="B4B-GN-azn">
                                     <font key="font" metaFont="system"/>
@@ -3054,7 +3054,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qw9-Yi-8p0">
-                                <rect key="frame" x="39" y="431" width="127" height="16"/>
+                                <rect key="frame" x="324" y="434" width="127" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Cantidad de compra" id="RcW-T0-CzL">
                                     <font key="font" metaFont="system"/>
@@ -3063,7 +3063,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-HD-U2F">
-                                <rect key="frame" x="182" y="426" width="106" height="21"/>
+                                <rect key="frame" x="467" y="429" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="VXs-D7-Lnq">
                                     <font key="font" metaFont="system"/>
@@ -3143,18 +3143,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-M1-fe8">
-                                <rect key="frame" x="388" y="419" width="173" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Aplicar cambios" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ehf-Of-yzC">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                                <connections>
-                                    <action selector="btnAplicarCambios:" target="1d2-VS-RRD" id="urt-c9-mBZ"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-DH-nnt">
                                 <rect key="frame" x="590" y="45" width="68" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -3197,6 +3185,45 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bdz-Hp-YV8">
+                                <rect key="frame" x="40" y="469" width="99" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="ID de la compra" id="Nu3-Ua-fQj">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-20-ebb">
+                                <rect key="frame" x="182" y="466" width="106" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="ZEh-3B-AEs">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3f-3F-RPM">
+                                <rect key="frame" x="42" y="519" width="228" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Usuario" id="AtA-4k-qyc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-M1-fe8">
+                                <rect key="frame" x="579" y="424" width="173" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Aplicar cambios" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ehf-Of-yzC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="btnAplicarCambios:" target="1d2-VS-RRD" id="urt-c9-mBZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -3216,7 +3243,9 @@
                         <outlet property="lblPrecioProducto" destination="Lj7-I8-DHf" id="Yqi-oy-isW"/>
                         <outlet property="lblTelefono" destination="YXa-zp-nGL" id="SMS-eN-48g"/>
                         <outlet property="lblUnidadProducto" destination="NsQ-WY-4K2" id="a8E-OI-IHk"/>
+                        <outlet property="lblUsuario" destination="x3f-3F-RPM" id="fMF-xD-xKZ"/>
                         <outlet property="txtCantidadCompra" destination="aCa-HD-U2F" id="gsB-0P-KWt"/>
+                        <outlet property="txtIDCompra" destination="ab5-20-ebb" id="g3U-bk-eCo"/>
                         <outlet property="txtIdComprador" destination="9jR-VQ-ndG" id="qmW-j3-8v6"/>
                         <outlet property="txtIdProducto" destination="64n-n9-uas" id="GSj-cQ-8KM"/>
                     </connections>
@@ -3230,7 +3259,7 @@
             <objects>
                 <viewController id="ftQ-bi-e26" customClass="TablaCompra" customModule="ExamenMacOSx_2p" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="XOa-AR-R5c">
-                        <rect key="frame" x="0.0" y="0.0" width="1689" height="334"/>
+                        <rect key="frame" x="0.0" y="0.0" width="2388" height="334"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-ed-Bw9">
@@ -3740,11 +3769,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="P0A-4V-IWR">
-                                                            <rect key="frame" x="2209" y="0.0" width="168" height="17"/>
+                                                            <rect key="frame" x="2209" y="0.0" width="7" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nG0-SF-t3P">
-                                                                    <rect key="frame" x="0.0" y="1" width="168" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="1" width="7" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="6zw-Ae-4yt">
                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -3762,13 +3791,14 @@
                                             </tableColumns>
                                         </tableView>
                                     </subviews>
+                                    <nil key="backgroundColor"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="sXr-U7-7pF">
-                                    <rect key="frame" x="1" y="272" width="2375" height="15"/>
+                                    <rect key="frame" x="1" y="284" width="2386" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="JH9-Ma-9Cu">
-                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <rect key="frame" x="2371" y="29" width="16" height="271"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" wantsLayer="YES" id="2xE-KT-jSe">
@@ -3782,15 +3812,15 @@
                 <customObject id="FvV-Jq-i4S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController id="o76-b2-7yp"/>
             </objects>
-            <point key="canvasLocation" x="1710.5" y="-1045"/>
+            <point key="canvasLocation" x="2060" y="-1045"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LWM-Hr-kTY"/>
+        <segue reference="dwl-Eq-MMu"/>
         <segue reference="DF1-Q0-v9I"/>
         <segue reference="c9t-qj-ehu"/>
         <segue reference="bzv-3C-hfJ"/>
-        <segue reference="L3e-Cz-ACk"/>
+        <segue reference="Vop-Ri-nOJ"/>
         <segue reference="yHR-WD-ta3"/>
     </inferredMetricsTieBreakers>
 </document>

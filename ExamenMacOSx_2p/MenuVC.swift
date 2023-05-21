@@ -9,9 +9,12 @@ import Cocoa
 
 class MenuVC: NSViewController {
     var destinoMensage:String?
+    var usuarioRecibido:String?
+    var usuario: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usuario = usuarioRecibido!
         lblMensaje.stringValue = destinoMensage!
         validarMenu()
         
@@ -60,6 +63,13 @@ class MenuVC: NSViewController {
         self.view.window?.windowController?.close()
     }
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "compras" {
+            let destination = segue.destinationController as! OpcionesCompradorVC
+            destination.usuarioRecibido = usuario
+        }
+    }
     
     @IBOutlet weak var lblMensaje: NSTextField!
     @IBOutlet weak var btnUsuarios: NSButton!

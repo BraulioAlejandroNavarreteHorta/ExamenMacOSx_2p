@@ -11,6 +11,7 @@ class ViewController: NSViewController {
     var username: String = ""
     var password: String = ""
     var mensaje: String = ""
+    var usuario: String = ""
     var loginController = LoginController.compartir
     var posicion:Int?
     var productosController = ProductosController.compartir
@@ -37,6 +38,7 @@ class ViewController: NSViewController {
         
         for x in 0...loginController.users.count-1{
             if(loginController.users[x].username == username){
+                usuario = username
                 posicion = x
             }
         }
@@ -71,7 +73,7 @@ class ViewController: NSViewController {
         if segue.identifier == "irAMenu" {
             let destination = segue.destinationController as! MenuVC
             destination.destinoMensage = mensaje
-            
+            destination.usuarioRecibido = usuario
         }
     }
 

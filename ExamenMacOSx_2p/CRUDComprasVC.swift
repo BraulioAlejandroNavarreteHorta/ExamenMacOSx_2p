@@ -8,12 +8,15 @@
 import Cocoa
 
 class CRUDComprasVC: NSViewController {
+    var usuarioRecibido:String?
+    var usuario: String = ""
     var id :Int = 0
     var enviarAFlag: Bool = false
     var compraController = ComprasController.compartir
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usuario = usuarioRecibido!
         lblID.isHidden=true
         txtID.isHidden=true
         btnOK.isHidden=true
@@ -88,12 +91,20 @@ class CRUDComprasVC: NSViewController {
             let destinationVC = segue.destinationController as! ComprasProfileVC
             destinationVC.flag = enviarAFlag
             destinationVC.posicion = id
+            destinationVC.usuarioRecibido = usuario
         }
         if(segue.identifier == "mostrar"){
             let destinationViewCont = segue.destinationController as! TablaCompra
             destinationViewCont.compras = compraController.compras
             destinationViewCont.prueba = "mensaje"
         }
+        if(segue.identifier == "altaCompra"){
+            let destinationVC = segue.destinationController as! ComprasProfileVC
+            destinationVC.flag = enviarAFlag
+            destinationVC.posicion = id
+            destinationVC.usuarioRecibido = usuario
+        }
+        
     }
 
     

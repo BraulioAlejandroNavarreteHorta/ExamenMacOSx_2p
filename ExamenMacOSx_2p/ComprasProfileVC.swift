@@ -8,6 +8,8 @@
 import Cocoa
 
 class ComprasProfileVC: NSViewController {
+    var usuarioRecibido:String?
+    var usuario: String = ""
     var flag: Bool = false
     var posicion: Int?
     var comprasController = ComprasController.compartir
@@ -18,8 +20,14 @@ class ComprasProfileVC: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usuario = usuarioRecibido!
+        lblUsuario.stringValue = usuario
+        txtIDCompra.isEnabled = false
+        txtIdComprador.isEnabled = false
+        txtIDCompra.stringValue = String(comprasController.compras.count)
         btnModificar.isHidden = !flag
         btnCrear.isHidden = flag
+        txtIdComprador.integerValue = identificarIdComprador(lblUsuario)
         if flag {
             //informacion del comprador
             lblNombreComprador.stringValue = comprasController.compras[posicion!].username
@@ -37,6 +45,7 @@ class ComprasProfileVC: NSViewController {
             lblCategoria.stringValue = comprasController.compras[posicion!].categoría
             lblExitenciaProducto.integerValue = comprasController.compras[posicion!].cantidadProducto
             //formulario
+            txtIDCompra.integerValue = comprasController.compras[posicion!].id
             txtIdProducto.integerValue = comprasController.compras[posicion!].idProducto
             txtCantidadCompra.integerValue = comprasController.compras[posicion!].cantidad
             txtIdComprador.integerValue = comprasController.compras[posicion!].idComprador
@@ -119,6 +128,16 @@ class ComprasProfileVC: NSViewController {
             comprasController.compras[x].id = x
         }
     }
+    
+    func identificarIdComprador(_ usuario: NSTextField) -> Int {
+        var idComprador = 0
+        for x in 0...loginController.users.count-1{
+            if usuario.stringValue == loginController.users[x].username {
+                idComprador = x
+            }
+        }
+        return idComprador
+    }
 
     //Información del comprador
     @IBOutlet weak var lblNombreComprador: NSTextField!
@@ -127,6 +146,7 @@ class ComprasProfileVC: NSViewController {
     @IBOutlet weak var lblCorreo: NSTextField!
     
     @IBOutlet weak var lblTelefono: NSTextField!
+    @IBOutlet weak var lblUsuario: NSTextField!
     
     //Información del producto
     @IBOutlet weak var lblIDproducto: NSTextField!
@@ -140,7 +160,7 @@ class ComprasProfileVC: NSViewController {
     
     
     //formulario
-    
+    @IBOutlet weak var txtIDCompra: NSTextField!
     @IBOutlet weak var txtIdProducto: NSTextField!
     @IBOutlet weak var txtCantidadCompra: NSTextField!
     @IBOutlet weak var txtIdComprador: NSTextField!
