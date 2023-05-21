@@ -31,6 +31,8 @@
 		D185EF7F2A16E8160025FB19 /* TablaCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF7E2A16E8160025FB19 /* TablaCompra.swift */; };
 		D185EF812A19A30A0025FB19 /* Ventas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF802A19A30A0025FB19 /* Ventas.swift */; };
 		D185EF832A19A8490025FB19 /* VentasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF822A19A8490025FB19 /* VentasController.swift */; };
+		D185EF852A1AA31A0025FB19 /* CRUDVentasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF842A1AA31A0025FB19 /* CRUDVentasVC.swift */; };
+		D185EF872A1AB2C00025FB19 /* VentasProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF862A1AB2C00025FB19 /* VentasProfileVC.swift */; };
 		D1FA75D72A10777800055B72 /* RegistroUsuarioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75D62A10777800055B72 /* RegistroUsuarioVC.swift */; };
 		D1FA75D92A10779C00055B72 /* AdminProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75D82A10779C00055B72 /* AdminProfileVC.swift */; };
 		D1FA75DB2A1077D400055B72 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75DA2A1077D400055B72 /* LoginVC.swift */; };
@@ -66,6 +68,8 @@
 		D185EF7E2A16E8160025FB19 /* TablaCompra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaCompra.swift; sourceTree = "<group>"; };
 		D185EF802A19A30A0025FB19 /* Ventas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventas.swift; sourceTree = "<group>"; };
 		D185EF822A19A8490025FB19 /* VentasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasController.swift; sourceTree = "<group>"; };
+		D185EF842A1AA31A0025FB19 /* CRUDVentasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDVentasVC.swift; sourceTree = "<group>"; };
+		D185EF862A1AB2C00025FB19 /* VentasProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasProfileVC.swift; sourceTree = "<group>"; };
 		D1FA75D62A10777800055B72 /* RegistroUsuarioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroUsuarioVC.swift; sourceTree = "<group>"; };
 		D1FA75D82A10779C00055B72 /* AdminProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileVC.swift; sourceTree = "<group>"; };
 		D1FA75DA2A1077D400055B72 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				AA676DB42A16F59500709273 /* OpcionesCompradorVC.swift */,
 				D185EF802A19A30A0025FB19 /* Ventas.swift */,
 				D185EF822A19A8490025FB19 /* VentasController.swift */,
+				D185EF842A1AA31A0025FB19 /* CRUDVentasVC.swift */,
+				D185EF862A1AB2C00025FB19 /* VentasProfileVC.swift */,
 			);
 			path = ExamenMacOSx_2p;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 				AA6790012A0D848B001D9BFF /* ViewController.swift in Sources */,
 				AA676DB52A16F59500709273 /* OpcionesCompradorVC.swift in Sources */,
 				D185EF7D2A16E7EB0025FB19 /* ComprasController.swift in Sources */,
+				D185EF872A1AB2C00025FB19 /* VentasProfileVC.swift in Sources */,
 				D1FA75DB2A1077D400055B72 /* LoginVC.swift in Sources */,
 				D1FA75D92A10779C00055B72 /* AdminProfileVC.swift in Sources */,
 				D131E6B72A14921D006D76DB /* ProductosProfileVC.swift in Sources */,
@@ -231,6 +238,7 @@
 				D1FA75E32A13B7ED00055B72 /* Tabla.swift in Sources */,
 				D131E6BF2A14C258006D76DB /* Tablap.swift in Sources */,
 				D185EF792A16E7BF0025FB19 /* ComprasProfileVC.swift in Sources */,
+				D185EF852A1AA31A0025FB19 /* CRUDVentasVC.swift in Sources */,
 				D185EF812A19A30A0025FB19 /* Ventas.swift in Sources */,
 				D131E6B92A149387006D76DB /* CRUDProductosVC.swift in Sources */,
 				AA678FFF2A0D848B001D9BFF /* AppDelegate.swift in Sources */,

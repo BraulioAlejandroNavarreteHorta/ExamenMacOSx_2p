@@ -13,6 +13,8 @@ class CRUDComprasVC: NSViewController {
     var id :Int = 0
     var enviarAFlag: Bool = false
     var compraController = ComprasController.compartir
+    var productosController = ProductosController.compartir
+    var restaCantidad: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +64,8 @@ class CRUDComprasVC: NSViewController {
     
     @IBAction func eliminar(_ sender: Any) {
         if(!compraController.compras.isEmpty){
+            restaCantidad = productosController.productos[compraController.compras[Int(txtID.intValue)].idProducto].cantidad - compraController.compras[Int(txtID.intValue)].cantidad
+            productosController.productos[compraController.compras[Int(txtID.intValue)].idProducto].cantidad = restaCantidad
             compraController.compras.remove(at: Int(txtID.intValue))
             alerta()
             txtID.stringValue = ""

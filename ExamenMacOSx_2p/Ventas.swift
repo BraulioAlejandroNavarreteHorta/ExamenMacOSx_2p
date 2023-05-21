@@ -16,8 +16,7 @@ class Venta: NSObject{
     @objc dynamic var descripcionProducto:String //
     @objc dynamic var unidadProducto:String //
     @objc dynamic var precioProducto:Double //
-    @objc dynamic var categoríaProducto:String //
-    @objc dynamic var cantidadProducto:Int //
+    @objc dynamic var cantidadVenta:Int //
     
     @objc dynamic var nombreVendedor:String //
     @objc dynamic var apellidoPVendedor:String //
@@ -36,15 +35,14 @@ class Venta: NSObject{
     @objc dynamic var IVA:Double
     @objc dynamic var total:Double
     
-    init(_ idVenta: Int,_ idProducto: Int,_ nombreProducto: String,_ descripcionProducto: String,_ unidadProducto: String,_ precioProducto: Double,_ categoríaProducto: String,_ cantidadProducto: Int,_ nombreVendedor: String,_ apellidoPVendedor: String,_ apellidoMVendedor: String,_ emailVendedor: String,_ telefonoVendedor: String,_ idCliente: Int,_ nombreCliente: String,_ apellidoPCliente: String,_ apellidoMCliente: String,_ correoCliente: String,_ telefonoCliente: String,_ subtotal: Double,_ IVA: Double,_ total: Double) {
+    init(_ idVenta: Int,_ idProducto: Int,_ nombreProducto: String,_ descripcionProducto: String,_ unidadProducto: String,_ precioProducto: Double,_ cantidadVenta: Int,_ nombreVendedor: String,_ apellidoPVendedor: String,_ apellidoMVendedor: String,_ emailVendedor: String,_ telefonoVendedor: String,_ idCliente: Int,_ nombreCliente: String,_ apellidoPCliente: String,_ apellidoMCliente: String,_ correoCliente: String,_ telefonoCliente: String,_ subtotal: Double,_ IVA: Double,_ total: Double) {
         self.idVenta = idVenta
         self.idProducto = idProducto
         self.nombreProducto = nombreProducto
         self.descripcionProducto = descripcionProducto
         self.unidadProducto = unidadProducto
         self.precioProducto = precioProducto
-        self.categoríaProducto = categoríaProducto
-        self.cantidadProducto = cantidadProducto
+        self.cantidadVenta = cantidadVenta
         self.nombreVendedor = nombreVendedor
         self.apellidoPVendedor = apellidoPVendedor
         self.apellidoMVendedor = apellidoMVendedor
