@@ -9,7 +9,7 @@ import Cocoa
 
 class TablaPedidosVC: NSViewController {
     
-    @objc dynamic var pedidosPorUsuario:[Pedidos] = []
+    @objc dynamic var pedidos:[Pedidos] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

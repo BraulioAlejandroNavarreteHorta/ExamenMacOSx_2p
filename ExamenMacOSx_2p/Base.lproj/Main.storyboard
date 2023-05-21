@@ -1801,7 +1801,7 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="ZUf-9x-lpW" name="value" keyPath="objectValue.cantidadProducto" id="Lvh-v0-zfO"/>
+                                                                        <binding destination="ZUf-9x-lpW" name="value" keyPath="objectValue.cantidadPedidaProducto" id="4qh-hq-JzY"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1837,7 +1837,7 @@
                 <customObject id="agF-w9-KF1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController id="7tc-Z1-o09">
                     <connections>
-                        <binding destination="P88-rO-c4u" name="contentArray" keyPath="values.pedidosPorUsuario" id="8af-SR-xw4"/>
+                        <binding destination="xQN-B8-6yC" name="contentArray" keyPath="pedidos" id="rm8-wv-o3R"/>
                     </connections>
                 </arrayController>
                 <userDefaultsController id="P88-rO-c4u"/>
