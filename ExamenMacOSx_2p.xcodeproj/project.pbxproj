@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5E7A11742A19D40B000921F9 /* Pedidos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A11732A19D40B000921F9 /* Pedidos.swift */; };
 		5E7A11762A19D5D0000921F9 /* pedidosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A11752A19D5D0000921F9 /* pedidosController.swift */; };
+		5E7A11782A19DB95000921F9 /* ClientesProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A11772A19DB95000921F9 /* ClientesProfileVC.swift */; };
+		5E7A117A2A19DBAD000921F9 /* TablaPedidosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A11792A19DBAD000921F9 /* TablaPedidosVC.swift */; };
 		AA676DAF2A16E69500709273 /* ComprasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA676DAD2A16E69500709273 /* ComprasView.xib */; };
 		AA676DB52A16F59500709273 /* OpcionesCompradorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA676DB42A16F59500709273 /* OpcionesCompradorVC.swift */; };
 		AA678FFF2A0D848B001D9BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA678FFE2A0D848B001D9BFF /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		5E7A11732A19D40B000921F9 /* Pedidos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedidos.swift; sourceTree = "<group>"; };
 		5E7A11752A19D5D0000921F9 /* pedidosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pedidosController.swift; sourceTree = "<group>"; };
+		5E7A11772A19DB95000921F9 /* ClientesProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientesProfileVC.swift; sourceTree = "<group>"; };
+		5E7A11792A19DBAD000921F9 /* TablaPedidosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaPedidosVC.swift; sourceTree = "<group>"; };
 		AA676DAD2A16E69500709273 /* ComprasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComprasView.xib; sourceTree = "<group>"; };
 		AA676DB42A16F59500709273 /* OpcionesCompradorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcionesCompradorVC.swift; sourceTree = "<group>"; };
 		AA678FFB2A0D848B001D9BFF /* ExamenMacOSx_2p.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenMacOSx_2p.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,8 @@
 				AA6790002A0D848B001D9BFF /* ViewController.swift */,
 				AA6790052A0D848C001D9BFF /* Assets.xcassets */,
 				AA6790072A0D848C001D9BFF /* Main.storyboard */,
+				5E7A11792A19DBAD000921F9 /* TablaPedidosVC.swift */,
+				5E7A11772A19DB95000921F9 /* ClientesProfileVC.swift */,
 				5E7A11732A19D40B000921F9 /* Pedidos.swift */,
 				5E7A11752A19D5D0000921F9 /* pedidosController.swift */,
 				AA676DAD2A16E69500709273 /* ComprasView.xib */,
@@ -211,6 +217,7 @@
 				D1FA75DB2A1077D400055B72 /* LoginVC.swift in Sources */,
 				D1FA75D92A10779C00055B72 /* AdminProfileVC.swift in Sources */,
 				D131E6B72A14921D006D76DB /* ProductosProfileVC.swift in Sources */,
+				5E7A117A2A19DBAD000921F9 /* TablaPedidosVC.swift in Sources */,
 				D1FA75D72A10777800055B72 /* RegistroUsuarioVC.swift in Sources */,
 				5E7A11742A19D40B000921F9 /* Pedidos.swift in Sources */,
 				D131E6B32A144D8B006D76DB /* Productos.swift in Sources */,
@@ -219,6 +226,7 @@
 				D131E6B52A1482AD006D76DB /* MenuVC.swift in Sources */,
 				D1FA75DF2A10793500055B72 /* LoginController.swift in Sources */,
 				D185EF772A16E7960025FB19 /* CRUDComprasVC.swift in Sources */,
+				5E7A11782A19DB95000921F9 /* ClientesProfileVC.swift in Sources */,
 				D185EF832A19A8490025FB19 /* VentasController.swift in Sources */,
 				D1FA75E32A13B7ED00055B72 /* Tabla.swift in Sources */,
 				D131E6BF2A14C258006D76DB /* Tablap.swift in Sources */,

@@ -15,7 +15,7 @@ class Pedidos: NSObject{
     @objc dynamic var unidadProducto:String //
     @objc dynamic var precioProducto:Double //
     @objc dynamic var costoProducto:Double //
-    @objc dynamic var categoríaProducto:String //
+    @objc dynamic var categoriaProducto:String //
     @objc dynamic var cantidadPedidaProducto:Int
     
     init(_ idProducto: Int,_ nombreProducto: String,_ descripcionProducto: String,_ unidadProducto: String,_ precioProducto: Double,_ costoProducto: Double,_ categoríaProducto: String,_ cantidadPedidaProducto: Int) {
@@ -26,7 +26,7 @@ class Pedidos: NSObject{
         self.unidadProducto = unidadProducto
         self.precioProducto = precioProducto
         self.costoProducto = costoProducto
-        self.categoríaProducto = categoríaProducto
+        self.categoriaProducto = categoríaProducto
         self.cantidadPedidaProducto = cantidadPedidaProducto
     }
 }
