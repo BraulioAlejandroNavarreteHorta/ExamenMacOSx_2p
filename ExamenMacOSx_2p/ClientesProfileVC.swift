@@ -10,28 +10,36 @@ import Cocoa
 class ClientesProfileVC: NSViewController {
 
     var usuarioRecibido:String?
+    var mensaje:String?
+    
     var loginController = LoginController.compartir
     var ventasController = VentasController.compartir
     var PedidosController = pedidosController.compartir
     //var idProducto:Int = 0
+    
     var idCliente:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        lblMensajeBienvenida.stringValue = mensaje!
         
         obtenerElIdClienteDelUsuarioRecibido()
         
         ventasController.addVenta(Venta(0, 0, "a", "b", "c", 120, "d", 10, "e", "f", "g", "h", "i", 0, "j", "k", "l", "m", "n", 1301, 16, 146))
-        ventasController.addVenta(Venta(0, 0, "a", "b", "c", 120, "d", 10, "e", "f", "g", "h", "i", 1, "j", "k", "l", "m", "n", 1302, 16, 146))
-        ventasController.addVenta(Venta(0, 0, "a", "b", "c", 120, "d", 10, "e", "f", "g", "h", "i", 1, "j", "k", "l", "m", "n", 1303, 16, 146))
-        ventasController.addVenta(Venta(0, 0, "a", "b", "c", 120, "d", 10, "e", "f", "g", "h", "i", 1, "j", "k", "l", "m", "n", 1304, 16, 146))
+        ventasController.addVenta(Venta(1, 0, "a", "b", "c", 120, "d", 10, "e", "f", "g", "h", "i", 1, "j", "k", "l", "m", "n", 1302, 16, 146))
+        ventasController.addVenta(Venta(2, 0, "a", "b", "c", 120, "d", 10, "e", "f", "g", "h", "i", 1, "j", "k", "l", "m", "n", 1303, 16, 146))
+        ventasController.addVenta(Venta(3, 0, "a", "b", "c", 120, "d", 10, "e", "f", "g", "h", "i", 1, "j", "k", "l", "m", "n", 1304, 16, 146))
     }
     
     @IBAction func viajarATablaProductos(_ sender: Any) {
         asignarVentasAlArregloPedidos()
         agregarIDaPedidos()
-        performSegue(withIdentifier: "actualizarUsuario", sender: self)
+        performSegue(withIdentifier: "irATablaPedidos", sender: self)
+    }
+    
+    @IBAction func salirDeLaPagina(_ sender: Any) {
+        self.view.window?.windowController?.close()
     }
     
     func agregarIDaPedidos(){
@@ -58,7 +66,8 @@ class ClientesProfileVC: NSViewController {
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if segue.identifier == "irATablaPedidos"{
-            
+            let destination = segue.destinationController as! TablaPedidosVC
+            destination.pedidosPorUsuario = PedidosController.pedidos
         }
     }
     

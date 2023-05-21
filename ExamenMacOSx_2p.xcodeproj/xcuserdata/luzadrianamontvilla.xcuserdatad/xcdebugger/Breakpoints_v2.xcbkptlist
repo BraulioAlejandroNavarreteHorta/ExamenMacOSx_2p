@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0A7B6160-1A91-4836-9A8F-787A10E13171"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8ECBA101-4E7E-4E87-97A6-39F4E8C6ED92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExamenMacOSx_2p/TablaPedidosVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "TablaPedidosVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "8ECBA101-4E7E-4E87-97A6-39F4E8C6ED92 - 1856152620005049"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExamenMacOSx_2p.TablaPedidosVC.pedidosPorUsuario.getter : Swift.Array&lt;ExamenMacOSx_2p.Pedidos&gt;"
+                  moduleName = "ExamenMacOSx_2p"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/USB%20DISK/Examen%20de%20Mac/ExamenMacOSx_2p/ExamenMacOSx_2p/TablaPedidosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "8ECBA101-4E7E-4E87-97A6-39F4E8C6ED92 - a5cfd79224aa4045"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExamenMacOSx_2p.TablaPedidosVC.pedidosPorUsuario.setter : Swift.Array&lt;ExamenMacOSx_2p.Pedidos&gt;"
+                  moduleName = "ExamenMacOSx_2p"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/USB%20DISK/Examen%20de%20Mac/ExamenMacOSx_2p/ExamenMacOSx_2p/TablaPedidosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "8ECBA101-4E7E-4E87-97A6-39F4E8C6ED92 - 1f4e7387619ee46d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExamenMacOSx_2p.TablaPedidosVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ExamenMacOSx_2p.TablaPedidosVC"
+                  moduleName = "ExamenMacOSx_2p"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/USB%20DISK/Examen%20de%20Mac/ExamenMacOSx_2p/ExamenMacOSx_2p/TablaPedidosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "8ECBA101-4E7E-4E87-97A6-39F4E8C6ED92 - b1cff06160046c62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExamenMacOSx_2p.TablaPedidosVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ExamenMacOSx_2p.TablaPedidosVC&gt;"
+                  moduleName = "ExamenMacOSx_2p"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/USB%20DISK/Examen%20de%20Mac/ExamenMacOSx_2p/ExamenMacOSx_2p/TablaPedidosVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "69">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9E3E696-1BC0-4CD5-A7FD-ABE0802C0492"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExamenMacOSx_2p/ClientesProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "885BF71D-8AA3-4E5D-8C75-803BA7F81D39"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExamenMacOSx_2p/ClientesProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "viajarATablaProductos(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
