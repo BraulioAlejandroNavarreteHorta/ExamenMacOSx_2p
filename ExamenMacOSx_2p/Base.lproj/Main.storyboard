@@ -1853,7 +1853,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-Aj-A7Q">
-                                <rect key="frame" x="18" y="251" width="132" height="29"/>
+                                <rect key="frame" x="18" y="251" width="414" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Bienvenid@" id="jsp-aM-W9g">
                                     <font key="font" metaFont="system" size="25"/>

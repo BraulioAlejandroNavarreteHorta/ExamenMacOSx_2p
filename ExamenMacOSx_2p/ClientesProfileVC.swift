@@ -58,8 +58,12 @@ class ClientesProfileVC: NSViewController {
     
     func asignarVentasAlArregloPedidos(){
         for x in 0...ventasController.ventas.count-1{
-            if idCliente == ventasController.ventas[x].idCliente{
+            if idCliente == 0{
                 PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadProducto))
+            }else{
+                if idCliente == ventasController.ventas[x].idCliente{
+                    PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadProducto))
+                }
             }
         }
     }
