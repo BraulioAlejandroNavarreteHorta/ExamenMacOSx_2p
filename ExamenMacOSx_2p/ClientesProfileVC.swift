@@ -26,10 +26,14 @@ class ClientesProfileVC: NSViewController {
         
         obtenerElIdClienteDelUsuarioRecibido()
         
+        //NOTA: Desde aqui hasta la siguinte nota se usa para hardcodear lo de pedidos
+        ventasController.ventas.removeAll()
+        
         ventasController.addVenta(Venta(0, 0, "a", "b", "c", 1201, "d", 10, "e", "f", "g", "h", "i", 1, "j", "k", "l", "m", "n", 1301, 16, 146))
         ventasController.addVenta(Venta(1, 0, "a", "b", "c", 1202, "d", 10, "e", "f", "g", "h", "i", 0, "j", "k", "l", "m", "n", 1302, 16, 146))
         ventasController.addVenta(Venta(2, 0, "a", "b", "c", 1203, "d", 10, "e", "f", "g", "h", "i", 1, "j", "k", "l", "m", "n", 1303, 16, 146))
         ventasController.addVenta(Venta(3, 0, "a", "b", "c", 1204, "d", 10, "e", "f", "g", "h", "i", 0, "j", "k", "l", "m", "n", 1304, 16, 146))
+        //NOTA
     }
     
     @IBAction func viajarATablaProductos(_ sender: Any) {
@@ -57,6 +61,7 @@ class ClientesProfileVC: NSViewController {
     }
     
     func asignarVentasAlArregloPedidos(){
+        PedidosController.pedidos.removeAll()
         for x in 0...ventasController.ventas.count-1{
             if idCliente == 0{
                 PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadProducto))
