@@ -1474,10 +1474,10 @@
             </objects>
             <point key="canvasLocation" x="187" y="-1715"/>
         </scene>
-        <!--View Controller-->
+        <!--Ventas ProfileVC-->
         <scene sceneID="q3x-zq-pnk">
             <objects>
-                <viewController id="mI9-Qr-NSd" sceneMemberID="viewController">
+                <viewController id="mI9-Qr-NSd" customClass="VentasProfileVC" customModule="ExamenMacOSx_2p" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="akz-1K-Vnl">
                         <rect key="frame" x="0.0" y="0.0" width="702" height="710"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2476,6 +2476,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <segue destination="z12-tj-HWC" kind="show" identifier="irAVentas" id="xIC-pI-jxm"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kh1-q3-rXf">
                                 <rect key="frame" x="171" y="118" width="89" height="32"/>
