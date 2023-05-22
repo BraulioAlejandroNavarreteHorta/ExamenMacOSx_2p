@@ -19,9 +19,9 @@ class AdminProfileVC: NSViewController {
     @IBOutlet weak var txtUsuer: NSTextField!
     @IBOutlet weak var txtTelefono: NSTextField!
     @IBOutlet weak var txtEmail: NSTextField!
-    @IBOutlet weak var txtGenero: NSTextField!
-    @IBOutlet weak var txtContraseña: NSTextField!
-    @IBOutlet weak var txtRol: NSTextField!
+    @IBOutlet weak var txtGenero: NSComboBox!    
+    @IBOutlet weak var txtContraseña: NSSecureTextField!
+    @IBOutlet weak var txtRol: NSComboBox!
     @IBOutlet weak var dateNacimiento: NSDatePicker!
     
     
@@ -63,15 +63,14 @@ class AdminProfileVC: NSViewController {
     }
     @IBAction func addEvent(_ sender: NSButton) {
         
-        if txtTelefono.stringValue.count != 10 {
-            txtTelefono.stringValue = ""
-            txtTelefono.placeholderString = "Ingresa un número de 10 digitos"
-        }
-        else {
+        if validacionDeCampos() {
             loginController.users.append(User(txtUsuer.stringValue, txtContraseña.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, Int(txtRol.intValue), calcularEdad(dateNacimiento),dateNacimiento.dateValue))
             agregarID()
             print("Actualizado")
             self.view.window?.windowController?.close()
+        }
+        else {
+            alerta()
         }
         
         print(dateNacimiento.dateValue)
@@ -84,14 +83,13 @@ class AdminProfileVC: NSViewController {
     }
     
     @IBAction func updateEvent(_ sender: NSButton) {
-        if txtTelefono.stringValue.count != 10 {
-            txtTelefono.stringValue = ""
-            txtTelefono.placeholderString = "Ingresa un número de 10 digitos"
-        } else {
+        if validacionDeCampos() {
             loginController.users[posicion!] = User(txtUsuer.stringValue, txtContraseña.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, Int(txtRol.intValue),calcularEdad(dateNacimiento), dateNacimiento.dateValue)
-            
+            agregarID()
             print("Actualizado")
             dismiss(self)
+        } else {
+            alerta()
         }
         
     }
@@ -104,6 +102,24 @@ class AdminProfileVC: NSViewController {
         let age = ageComponents.year!
         
         return age
+    }
+    
+    func validacionDeCampos() -> Bool{
+        var estado = false
+        if txtUsuer.stringValue == "" || txtContraseña.stringValue == "" || txtNombre.stringValue == "" || txtApellidoP.stringValue == "" || txtApellidoM.stringValue == "" || txtTelefono.stringValue == "" || txtEmail.stringValue == "" || txtGenero.stringValue == "" || txtRol.stringValue == "" || txtNombre.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoP.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoM.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || !txtEmail.stringValue.contains("@") || txtContraseña.stringValue.count < 8 || txtTelefono.stringValue.count != 10 || txtTelefono.stringValue.range(of: "[a-z]", options: .regularExpression) != nil{
+        }
+        else{
+            estado = true
+        }
+        return estado
+    }
+    
+    func alerta() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "Verifica los campos, puede que tengas errores"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
     }
     
 }

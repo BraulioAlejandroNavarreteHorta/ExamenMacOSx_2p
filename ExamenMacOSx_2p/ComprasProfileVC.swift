@@ -56,41 +56,48 @@ class ComprasProfileVC: NSViewController {
     
     
     @IBAction func alta(_ sender: Any) {
-        comprasController.compras.append(Compra(Int(txtIdProducto.integerValue),Int(txtCantidadCompra.integerValue),txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue))
-        agregarID()
-        print("se hizo la alta")
-        self.view.window?.windowController?.close()
+        if validacionID(){
+            comprasController.compras.append(Compra(Int(txtIdProducto.integerValue),Int(txtCantidadCompra.integerValue),txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue))
+            agregarID()
+            print("se hizo la alta")
+            self.view.window?.windowController?.close()
+        }else{
+            alertaValidacion()
+        }
+        
+        
+        
     }
     
     
     @IBAction func btnAplicarCambios(_ sender: Any) {
         //Informacion del producto
-        setProducto()
-        setInfoComprador()
+        if validacionID(){
+            setProducto()
+            setInfoComprador()
+        }else{
+            alertaValidacion()
+        }
+        
+        
      
     }
     
     
     @IBAction func Actualizar(_ sender: Any) {
         //sale paro en debug checar mañana
-        comprasController.compras[posicion!] = Compra(Int(txtIdProducto.integerValue),Int(txtCantidadCompra.integerValue),txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue)
-        print("actualizacion de compra")
-        self.view.window?.windowController?.close()
+        if validacionID(){
+            comprasController.compras[posicion!] = Compra(Int(txtIdProducto.integerValue),Int(txtCantidadCompra.integerValue),txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue)
+            agregarID()
+            print("actualizacion de compra")
+            self.view.window?.windowController?.close()
+        }else{
+            alertaValidacion()
+        }
+        
+        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     func setProducto(){
         for x in 0 ... productosController.productos.count-1{
             if(txtIdProducto.integerValue==x){
@@ -167,5 +174,28 @@ class ComprasProfileVC: NSViewController {
     @IBOutlet weak var btnSubmit: NSButton!
     @IBOutlet weak var btnCrear: NSButton!
     @IBOutlet weak var btnModificar: NSButton!
+    
+    
+    func validacionID() -> Bool {
+        var estado = false
+        if !productosController.productos.isEmpty{
+            for x in 0 ... productosController.productos.count-1{
+                if(txtIdProducto.integerValue==x){
+                    estado = true
+                }
+            }
+        }else{
+            estado = false
+        }
+        return estado
+    }
+    
+    func alertaValidacion() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "No existe el ID, verifica en la lista de productos los ID"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
+    }
     
 }

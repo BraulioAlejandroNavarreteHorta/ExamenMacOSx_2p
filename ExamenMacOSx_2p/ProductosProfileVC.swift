@@ -33,10 +33,14 @@ class ProductosProfileVC: NSViewController {
     
     @IBAction func addEvent(_ sender: NSButton) {
         //agregar validaciones
-        productosController.productos.append(Product(txtNombre.stringValue, txtDescripcion.stringValue, cmbUnidad.stringValue, Double(txtPrecio.doubleValue), Double(txtCosto.doubleValue),cmbCategoria.stringValue, Int(txtCantidad.integerValue)))
-        agregarID()
-        print("Actualizado")
-        self.view.window?.windowController?.close()
+        if validacionDeCampos(){
+            productosController.productos.append(Product(txtNombre.stringValue, txtDescripcion.stringValue, cmbUnidad.stringValue, Double(txtPrecio.doubleValue), Double(txtCosto.doubleValue),cmbCategoria.stringValue, Int(txtCantidad.integerValue)))
+            agregarID()
+            print("Actualizado")
+            self.view.window?.windowController?.close()
+        }else{
+            alertaCampos()
+        }
     }
     
     
@@ -48,11 +52,34 @@ class ProductosProfileVC: NSViewController {
     
     @IBAction func updateEvent(_ sender: NSButton) {
         //agregar validaciones
-        productosController.productos[posicion!] = Product(txtNombre.stringValue, txtDescripcion.stringValue, cmbUnidad.stringValue, Double(txtPrecio.doubleValue), Double(txtCosto.doubleValue), cmbCategoria.stringValue, Int(txtCantidad.integerValue))
-            
-            print("Actualizado")
-        self.view.window?.windowController?.close()
+        if validacionDeCampos(){
+            productosController.productos[posicion!] = Product(txtNombre.stringValue, txtDescripcion.stringValue, cmbUnidad.stringValue, Double(txtPrecio.doubleValue), Double(txtCosto.doubleValue), cmbCategoria.stringValue, Int(txtCantidad.integerValue))
+                agregarID()
+                print("Actualizado")
+            self.view.window?.windowController?.close()
+        }else{
+            alertaCampos()
         }
+        
+    }
+    
+    func validacionDeCampos() -> Bool{
+        var estado = false
+        if txtNombre.stringValue == "" || txtDescripcion.stringValue == "" || cmbUnidad.stringValue == "" || txtPrecio.stringValue == "" || txtCosto.stringValue == "" || cmbCategoria.stringValue == "" || txtCantidad.stringValue == ""{
+        }
+        else{
+            estado = true
+        }
+        return estado
+    }
+    
+    func alertaCampos() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "Verifica los campos, puede que tengas errores"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
+    }
         
     
     

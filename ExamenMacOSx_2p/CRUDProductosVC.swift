@@ -21,7 +21,7 @@ class CRUDProductosVC: NSViewController {
     }
     
     @IBOutlet weak var lblMensage: NSTextField!
-    @IBOutlet weak var btnCerrarSesion: NSButton!
+    @IBOutlet weak var btnCerrarSesion: NSButton!    
     @IBOutlet weak var txtID: NSTextField!
     @IBOutlet weak var btnAlta: NSButton!
     @IBOutlet weak var btnBaja: NSButton!
@@ -41,10 +41,16 @@ class CRUDProductosVC: NSViewController {
     }
     
     @IBAction func actualizarProducto(_ sender: Any) {
-        id = Int(txtID.intValue)
-        enviarAFlag = true
-        performSegue(withIdentifier: "actualizarProducto", sender: self)
-        dismiss(self)
+        if validacionID(){
+            id = Int(txtID.intValue)
+            enviarAFlag = true
+            performSegue(withIdentifier: "actualizarProducto", sender: self)
+            dismiss(self)
+        }else{
+            alertaValidacion()
+        }
+        
+        
     }
     
     @IBAction func modificar(_ sender: Any) {
@@ -56,15 +62,15 @@ class CRUDProductosVC: NSViewController {
     }
     
     @IBAction func eliminar(_ sender: Any) {
-        if(!productoController.productos.isEmpty){
+        if validacionID(){
             productoController.productos.remove(at: Int(txtID.intValue))
             alerta()
             txtID.stringValue = ""
             agregarID()
-            
         }else{
-            alertaNoEliminar()
+            alertaValidacion()
         }
+        
     }
     
     func agregarID(){
@@ -120,6 +126,28 @@ class CRUDProductosVC: NSViewController {
         }
          
          
+    }
+    
+    func validacionID() -> Bool {
+        var estado = false
+        if !productoController.productos.isEmpty{
+            for x in 0 ... productoController.productos.count-1{
+                if(txtID.integerValue==x){
+                    estado = true
+                }
+            }
+        }else{
+            estado = false
+        }
+        return estado
+    }
+    
+    func alertaValidacion() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "No existe el ID, verifica en la lista de productos los ID"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
     }
 
 }

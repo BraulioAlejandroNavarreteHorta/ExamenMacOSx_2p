@@ -48,10 +48,16 @@ class CRUDComprasVC: NSViewController {
     }
     
     @IBAction func actualizarCompra(_ sender: Any) {
-        id = Int(txtID.intValue)
-        enviarAFlag = true
-        performSegue(withIdentifier: "actualizarCompra", sender: self)
-        dismiss(self)
+        if validacionID(){
+            id = Int(txtID.intValue)
+            enviarAFlag = true
+            performSegue(withIdentifier: "actualizarCompra", sender: self)
+            dismiss(self)
+        }else{
+            alertaValidacion()
+        }
+        
+        
     }
     
     
@@ -63,17 +69,23 @@ class CRUDComprasVC: NSViewController {
     }
     
     @IBAction func eliminar(_ sender: Any) {
-        if(!compraController.compras.isEmpty){
-            restaCantidad = productosController.productos[compraController.compras[Int(txtID.intValue)].idProducto].cantidad - compraController.compras[Int(txtID.intValue)].cantidad
-            productosController.productos[compraController.compras[Int(txtID.intValue)].idProducto].cantidad = restaCantidad
-            compraController.compras.remove(at: Int(txtID.intValue))
-            alerta()
-            txtID.stringValue = ""
-            agregarID()
-            
+        if validacionID(){
+            if(!compraController.compras.isEmpty){
+                restaCantidad = productosController.productos[compraController.compras[Int(txtID.intValue)].idProducto].cantidad - compraController.compras[Int(txtID.intValue)].cantidad
+                productosController.productos[compraController.compras[Int(txtID.intValue)].idProducto].cantidad = restaCantidad
+                compraController.compras.remove(at: Int(txtID.intValue))
+                alerta()
+                txtID.stringValue = ""
+                agregarID()
+                
+            }else{
+                alertaNoEliminar()
+            }
         }else{
-            alertaNoEliminar()
+            alertaValidacion()
         }
+        
+        
     }
     
     
@@ -104,6 +116,7 @@ class CRUDComprasVC: NSViewController {
         }
         if(segue.identifier == "altaCompra"){
             let destinationVC = segue.destinationController as! ComprasProfileVC
+            enviarAFlag = false
             destinationVC.flag = enviarAFlag
             destinationVC.posicion = id
             destinationVC.usuarioRecibido = usuario
@@ -136,6 +149,28 @@ class CRUDComprasVC: NSViewController {
         }else{
             alertaNoEliminar()
         }
+    }
+    
+    func validacionID() -> Bool {
+        var estado = false
+        if !compraController.compras.isEmpty{
+            for x in 0 ... compraController.compras.count-1{
+                if(txtID.integerValue==x){
+                    estado = true
+                }
+            }
+        }else{
+            estado = false
+        }
+        return estado
+    }
+    
+    func alertaValidacion() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "No existe el ID, verifica en la lista de compras los ID"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
     }
     
     

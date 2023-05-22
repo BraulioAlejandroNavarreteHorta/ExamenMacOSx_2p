@@ -51,13 +51,14 @@ class RegistroUsuarioVC: NSViewController {
         registro()
         if segue.identifier == "irAMenu" {
             let destination = segue.destinationController as! MenuVC
+            destination.usuarioRecibido = txtUserName.stringValue
             destination.destinoMensage = mensaje
         }
     }
     
     @IBOutlet weak var txtUserName: NSTextField!
-    @IBOutlet weak var txtPassword: NSTextField!
-    @IBOutlet weak var txtConfirmarPassword: NSTextField!
+    @IBOutlet weak var txtPassword: NSSecureTextField!
+    @IBOutlet weak var txtConfirmarPassword: NSSecureTextField!
     @IBOutlet weak var lblConfirmarPassword: NSTextField!
     @IBOutlet weak var txtId: NSTextField!
     @IBOutlet weak var txtNombre: NSTextField!
@@ -65,7 +66,7 @@ class RegistroUsuarioVC: NSViewController {
     @IBOutlet weak var txtApellidoM: NSTextField!
     @IBOutlet weak var txtTelefono: NSTextField!
     @IBOutlet weak var txtEmail: NSTextField!
-    @IBOutlet weak var txtGenero: NSTextField!
+    @IBOutlet weak var txtGenero: NSComboBox!
     @IBOutlet weak var dateNacimiento: NSDatePicker!
     
     func calcularEdad(_ datePicker: NSDatePicker) -> Int {
@@ -79,29 +80,29 @@ class RegistroUsuarioVC: NSViewController {
     }
     
     @IBAction func checarContraseña(_ sender: NSButton) {
-        if txtUserName.stringValue == "" || txtPassword.stringValue == "" || txtConfirmarPassword.stringValue == "" || txtNombre.stringValue == "" || txtApellidoP.stringValue == "" || txtApellidoM.stringValue == "" || txtTelefono.stringValue == "" || txtEmail.stringValue == "" || txtGenero.stringValue == "" || txtTelefono.stringValue.count != 10{
-            txtUserName.placeholderString = "¡Falta llenar este campo!"
-            txtPassword.placeholderString = "¡Falta llenar este campo!"
-            txtConfirmarPassword.placeholderString = "¡Falta llenar este campo!"
-            txtNombre.placeholderString = "¡Falta llenar este campo!"
-            txtApellidoP.placeholderString = "¡Falta llenar este campo!"
-            txtApellidoM.placeholderString = "¡Falta llenar este campo!"
-            txtTelefono.stringValue = ""
-            txtTelefono.placeholderString = "Llena el campo o pon 10 digitos"
-            txtEmail.placeholderString = "¡Falta llenar este campo!"
-            txtGenero.placeholderString = "¡Falta llenar este campo!"
+        if txtUserName.stringValue == "" || txtPassword.stringValue == "" || txtConfirmarPassword.stringValue == "" || txtNombre.stringValue == "" || txtApellidoP.stringValue == "" || txtApellidoM.stringValue == "" || txtTelefono.stringValue == "" || txtEmail.stringValue == "" || txtGenero.stringValue == "" || txtNombre.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoP.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoM.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || !txtEmail.stringValue.contains("@") || txtPassword.stringValue.count < 8 || txtConfirmarPassword.stringValue.count < 8 || txtTelefono.stringValue.count != 10 || txtTelefono.stringValue.range(of: "[a-z]", options: .regularExpression) != nil{
+            alerta()
         }else{
             if txtPassword.stringValue == txtConfirmarPassword.stringValue {
-                performSegue(withIdentifier: "irALogin", sender: self)
+                performSegue(withIdentifier: "irAMenu", sender: self)
                 txtPassword.stringValue = ""
                 txtUserName.stringValue = ""
                 txtConfirmarPassword.stringValue = ""
                 self.view.window?.windowController?.close()
             }else{
                 lblConfirmarPassword.stringValue = "Contraseña incorrecta"
+                lblConfirmarPassword.textColor = NSColor(red: 255, green: 0, blue: 0, alpha: 255)
                 
             }
         }
+    }
+    
+    func alerta() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "Verifica los campos, puede que tengas errores"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
     }
     
 }

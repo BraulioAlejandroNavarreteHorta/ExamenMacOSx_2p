@@ -45,10 +45,20 @@ class LoginVC: NSViewController {
     
     @IBAction func actualizar(_ sender: Any) {
         //Oziel: Cambiar parametros para enviarlos
-        id = Int(txtID.intValue)
-        enviarAFlag = true
-        performSegue(withIdentifier: "actualizarUsuario", sender: self)
-        dismiss(self)
+        
+        if validacionID() {
+            if Int(txtID.intValue) == 0{
+                alertaNoEliminar()
+            }else{
+                id = Int(txtID.intValue)
+                enviarAFlag = true
+                performSegue(withIdentifier: "actualizarUsuario", sender: self)
+                dismiss(self)
+            }
+        }else{
+            alertaValidacion()
+        }
+        
     }
     
     
@@ -61,14 +71,21 @@ class LoginVC: NSViewController {
     }
     
     @IBAction func eliminar(_ sender: Any) {
-        if(Int(txtID.intValue) == 0){
-            alertaNoEliminar()
+        if validacionID(){
+            if(Int(txtID.intValue) == 0){
+                alertaNoEliminar()
+            }else{
+                loginController.users.remove(at: Int(txtID.intValue))
+                alerta()
+                txtID.stringValue = ""
+                agregarID()
+            }
         }else{
-            loginController.users.remove(at: Int(txtID.intValue))
-            alerta()
-            txtID.stringValue = ""
-            agregarID()
+            alertaValidacion()
         }
+        
+        
+        
     }
     
     func agregarID(){
@@ -87,7 +104,7 @@ class LoginVC: NSViewController {
     
     func alertaNoEliminar() -> Bool{
         let alert: NSAlert = NSAlert()
-        alert.messageText = "No se puede eliminar al Usuario 0"
+        alert.messageText = "No se puede eliminar ni modificar al Usuario 0"
         alert.alertStyle = .warning
         alert.addButton(withTitle: "Ok")
         return alert.runModal() == .alertFirstButtonReturn
@@ -125,6 +142,27 @@ class LoginVC: NSViewController {
          
     }
     
+    func validacionID() -> Bool {
+        var estado = false
+        if !loginController.users.isEmpty{
+            for x in 0 ... loginController.users.count-1{
+                if(txtID.integerValue==x){
+                    estado = true
+                }
+            }
+        }else{
+            estado = false
+        }
+        return estado
+    }
+    
+    func alertaValidacion() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "No existe el ID, verifica en la lista de usuarios los ID"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
+    }
     
     
 }

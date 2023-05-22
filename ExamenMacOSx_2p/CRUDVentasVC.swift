@@ -45,10 +45,16 @@ class CRUDVentasVC: NSViewController {
     
     
     @IBAction func actualizarCompra(_ sender: Any) {
-        id = Int(txtID.intValue)
-        enviarAFlag = true
-        performSegue(withIdentifier: "actualizarVenta", sender: self)
-        dismiss(self)
+        if validacionID(){
+            id = Int(txtID.intValue)
+            enviarAFlag = true
+            performSegue(withIdentifier: "actualizarVenta", sender: self)
+            dismiss(self)
+        }else{
+            alertaValidacion()
+        }
+        
+        
     }
 
     
@@ -61,17 +67,23 @@ class CRUDVentasVC: NSViewController {
     
     
      @IBAction func eliminar(_ sender: Any) {
-         if(!ventasController.ventas.isEmpty){
-             sumaCantidad = productosController.productos[ventasController.ventas[Int(txtID.intValue)].idProducto].cantidad + ventasController.ventas[Int(txtID.intValue)].cantidadVenta
-             productosController.productos[ventasController.ventas[Int(txtID.intValue)].idProducto].cantidad = sumaCantidad
-             ventasController.ventas.remove(at: Int(txtID.intValue))
-             alerta()
-             txtID.stringValue = ""
-             agregarID()
-             
+         if validacionID(){
+             if(!ventasController.ventas.isEmpty){
+                 sumaCantidad = productosController.productos[ventasController.ventas[Int(txtID.intValue)].idProducto].cantidad + ventasController.ventas[Int(txtID.intValue)].cantidadVenta
+                 productosController.productos[ventasController.ventas[Int(txtID.intValue)].idProducto].cantidad = sumaCantidad
+                 ventasController.ventas.remove(at: Int(txtID.intValue))
+                 alerta()
+                 txtID.stringValue = ""
+                 agregarID()
+                 
+             }else{
+                 alertaNoEliminar()
+             }
          }else{
-             alertaNoEliminar()
+             alertaValidacion()
          }
+         
+         
      }
      
     /*
@@ -123,7 +135,7 @@ class CRUDVentasVC: NSViewController {
     }
     func alerta() -> Bool {
         let alert: NSAlert = NSAlert()
-        alert.messageText = "Compra eliminada"
+        alert.messageText = "Venta eliminada"
         alert.alertStyle = .informational
         alert.addButton(withTitle: "Ok")
         return alert.runModal() == .alertFirstButtonReturn
@@ -136,5 +148,27 @@ class CRUDVentasVC: NSViewController {
         }else{
             alertaNoEliminar()
         }
+    }
+    
+    func validacionID() -> Bool {
+        var estado = false
+        if !ventasController.ventas.isEmpty{
+            for x in 0 ... ventasController.ventas.count-1{
+                if(txtID.integerValue==x){
+                    estado = true
+                }
+            }
+        }else{
+            estado = false
+        }
+        return estado
+    }
+    
+    func alertaValidacion() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "No existe el ID, verifica en la lista de ventas los ID"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
     }
 }

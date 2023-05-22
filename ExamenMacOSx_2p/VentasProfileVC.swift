@@ -86,44 +86,61 @@ class VentasProfileVC: NSViewController {
         return alta
     }
     @IBAction func alta(_ sender: Any) {
-        
-        if !productosController.productos.isEmpty{
-            
-            if restarExistencia() {
-                ventasController.ventas.append(Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(txtIDProducto.integerValue)].categoría,Int(lblCantidad.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue)))
-                agregarID()
-                print("se hizo la alta")
-                self.view.window?.windowController?.close()
+        if validarQueSeaCliente(){
+            if !productosController.productos.isEmpty{
+                
+                if restarExistencia() {
+                    ventasController.ventas.append(Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(txtIDProducto.integerValue)].categoría,Int(lblCantidad.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue)))
+                    agregarID()
+                    print("se hizo la alta")
+                    self.view.window?.windowController?.close()
+                }else{
+                    alertaInventarioInsuficiente()
+                }
             }else{
-                alertaInventarioInsuficiente()
+                noExisteElProducto()
             }
         }else{
-            noExisteElProducto()
+            alertaValidacion()
         }
+        
+        
     }
     
     @IBAction func Actualizar(_ sender: Any) {
-        
-        if !productosController.productos.isEmpty{
-            
-            if restarExistencia() {
-                ventasController.ventas[posicion!] = Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(txtIDProducto.integerValue)].categoría,Int(lblCantidad.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue))
-                print("actualizacion de compra")
-                self.view.window?.windowController?.close()
+        if validarQueSeaCliente(){
+            if !productosController.productos.isEmpty{
+                
+                if restarExistencia() {
+                    ventasController.ventas[posicion!] = Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(txtIDProducto.integerValue)].categoría,Int(lblCantidad.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue))
+                    agregarID()
+                    print("actualizacion de compra")
+                    self.view.window?.windowController?.close()
+                }else{
+                    alertaInventarioInsuficiente()
+                }
             }else{
-                alertaInventarioInsuficiente()
+                noExisteElProducto()
             }
         }else{
-            noExisteElProducto()
+            alertaValidacion()
         }
+        
+        
        
     }
     
     @IBAction func btnAplicarCambios(_ sender: Any) {
         //Informacion del producto
-        setProducto()
-        btnCrear.isEnabled = true
-        btnModificar.isEnabled = true
+        if validarQueSeaCliente(){
+            setProducto()
+            btnCrear.isEnabled = true
+            btnModificar.isEnabled = true
+        }else{
+            alertaValidacion()
+        }
+        
+        
     }
     
     
@@ -267,6 +284,28 @@ class VentasProfileVC: NSViewController {
         for x in 0...ventasController.ventas.count-1{
             ventasController.ventas[x].idVenta = x
         }
+    }
+    
+    func validarQueSeaCliente() -> Bool {
+        var estado = false
+        if !loginController.users.isEmpty{
+            for x in 0 ... loginController.users.count-1{
+                if(loginController.users[txtIDCliente.integerValue].role == 1){
+                    estado = true
+                }
+            }
+        }else{
+            estado = false
+        }
+        return estado
+    }
+    
+    func alertaValidacion() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "No existe un cliente con este ID, verifica en la lista de usuarios los ID de los clientes"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
     }
     
 }

@@ -84,7 +84,7 @@ class ViewController: NSViewController {
     }
     
     @IBOutlet weak var txtUser: NSTextField!
-    @IBOutlet weak var txtPassword: NSTextField!
+    @IBOutlet weak var txtPassword: NSSecureTextField!
     @IBOutlet weak var btnRegistrar: NSButton!
     @IBOutlet weak var btnIniciarSesion: NSButton!
     
