@@ -2206,7 +2206,7 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                                 <tableColumn width="116" minWidth="10" maxWidth="3.4028234663852886e+38" id="CMb-NL-WoG">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Costo Producto">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Categoria Producto">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableHeaderCell>
@@ -2230,7 +2230,7 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="DAp-o0-N8e" name="value" keyPath="objectValue.costoProducto" id="g36-eL-zPw"/>
+                                                                        <binding destination="DAp-o0-N8e" name="value" keyPath="objectValue.categoriaProducto" id="8uU-e8-AYR"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -2241,7 +2241,7 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                                 <tableColumn width="116" minWidth="10" maxWidth="3.4028234663852886e+38" id="L2j-MW-meB">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Categoria Producto">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Cantidad del Producto">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableHeaderCell>
@@ -2265,7 +2265,7 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="QKR-Nh-blF" name="value" keyPath="objectValue.categoriaProducto" id="Ka8-CL-dGE"/>
+                                                                        <binding destination="QKR-Nh-blF" name="value" keyPath="objectValue.cantidadPedidaProducto" id="SyW-na-uZx"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -2276,7 +2276,7 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                                 <tableColumn width="114" minWidth="10" maxWidth="3.4028234663852886e+38" id="MLh-bm-tLN">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Cantidad Producto">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Total de Pedido">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableHeaderCell>
@@ -2300,7 +2300,7 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="ZUf-9x-lpW" name="value" keyPath="objectValue.cantidadPedidaProducto" id="4qh-hq-JzY"/>
+                                                                        <binding destination="ZUf-9x-lpW" name="value" keyPath="objectValue.totalDePedido" id="ieg-bP-2Ui"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
