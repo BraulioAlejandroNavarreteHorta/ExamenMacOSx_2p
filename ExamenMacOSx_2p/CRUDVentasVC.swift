@@ -105,6 +105,7 @@ class CRUDVentasVC: NSViewController {
          */
         if(segue.identifier == "altaVenta"){
             let destinationVC = segue.destinationController as! VentasProfileVC
+            enviarAFlag = false
             destinationVC.flag = enviarAFlag
             destinationVC.posicion = id
             destinationVC.usuarioRecibido = usuario
