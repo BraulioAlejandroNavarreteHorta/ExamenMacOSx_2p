@@ -1500,6 +1500,15 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4O-ui-5Q5">
+                                <rect key="frame" x="18" y="545" width="100" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="ID del vendedor" id="6Bf-iJ-qpq">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-T7-c2e">
                                 <rect key="frame" x="18" y="588" width="98" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1557,15 +1566,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3J-wE-yKb">
-                                <rect key="frame" x="206" y="526" width="231" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Aplicar cambios" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aFd-g4-VbG">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <color key="bezelColor" name="AccentColor"/>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PeD-f6-qPp">
                                 <rect key="frame" x="20" y="681" width="51" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1641,7 +1641,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uKf-dH-6oc">
                                 <rect key="frame" x="22" y="193" width="71" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="-----------" id="3tY-cQ-mUX">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="-----------" id="3tY-cQ-mUX">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1650,7 +1650,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NHg-yy-PL8">
                                 <rect key="frame" x="127" y="193" width="71" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="-----------" id="NsG-7Q-ZzJ">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="-----------" id="NsG-7Q-ZzJ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1659,7 +1659,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8b-uE-ZDT">
                                 <rect key="frame" x="605" y="193" width="71" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="-----------" id="AYz-mh-vw4">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="-----------" id="AYz-mh-vw4">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1668,7 +1668,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-kX-zZa">
                                 <rect key="frame" x="605" y="127" width="71" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="-----------" id="gjk-aU-RvU">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="-----------" id="gjk-aU-RvU">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1677,7 +1677,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="heY-Ha-ZXb">
                                 <rect key="frame" x="605" y="103" width="71" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="-----------" id="2IU-7L-mVh">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="-----------" id="2IU-7L-mVh">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1686,7 +1686,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Db-BJ-onS">
                                 <rect key="frame" x="605" y="79" width="71" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="-----------" id="HW0-pl-8tK">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="-----------" id="HW0-pl-8tK">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1695,7 +1695,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6t-b7-T0n">
                                 <rect key="frame" x="227" y="193" width="101" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="----------------" id="SE7-wY-WcZ">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="----------------" id="SE7-wY-WcZ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1704,7 +1704,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVk-CR-85T">
                                 <rect key="frame" x="344" y="193" width="225" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="--------------------------------------" id="7lk-Hc-dT6">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="--------------------------------------" id="7lk-Hc-dT6">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1898,6 +1898,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="alta:" target="mI9-Qr-NSd" id="o2i-HV-2Jx"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nkb-v4-l9d">
                                 <rect key="frame" x="578" y="13" width="108" height="32"/>
@@ -1907,9 +1910,63 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="Actualizar:" target="mI9-Qr-NSd" id="w6g-VD-cmC"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9eq-ap-fag">
+                                <rect key="frame" x="149" y="542" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="r9g-DP-1gS">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="004-9E-sjo"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3J-wE-yKb">
+                                <rect key="frame" x="334" y="534" width="231" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Aplicar cambios" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aFd-g4-VbG">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="AccentColor"/>
+                                <connections>
+                                    <action selector="btnAplicarCambios:" target="mI9-Qr-NSd" id="5R5-8Q-sKx"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnCrear" destination="haJ-kw-Off" id="JEg-rd-FiQ"/>
+                        <outlet property="btnModificar" destination="Nkb-v4-l9d" id="FEj-H2-jaQ"/>
+                        <outlet property="lblApellidoMaternoCliente" destination="NgE-Z3-Nvr" id="ZOZ-XK-hvQ"/>
+                        <outlet property="lblApellidoMaternoVendedor" destination="E2L-f2-cDj" id="Vep-2Q-jw5"/>
+                        <outlet property="lblApellidoPaternoCliente" destination="UXt-6b-ucR" id="sj2-bc-pBT"/>
+                        <outlet property="lblApellidoPaternoVendedor" destination="lQz-xm-tZN" id="QDn-5h-Vls"/>
+                        <outlet property="lblCantidad" destination="uKf-dH-6oc" id="zZU-Vz-kKp"/>
+                        <outlet property="lblCorreoCliente" destination="Hz8-1I-hHc" id="3Qm-UM-KIA"/>
+                        <outlet property="lblCorreoVendedor" destination="Wg4-ZD-vfY" id="fPZ-lE-cRH"/>
+                        <outlet property="lblDescripcion" destination="rVk-CR-85T" id="3WZ-0E-maP"/>
+                        <outlet property="lblIDCliente" destination="dxH-s0-idZ" id="Gnt-GU-p6B"/>
+                        <outlet property="lblIVA" destination="heY-Ha-ZXb" id="RSl-MY-FOU"/>
+                        <outlet property="lblNombreCliente" destination="8yj-Me-Rec" id="gby-ZU-T2K"/>
+                        <outlet property="lblNombreVendedor" destination="nXw-dm-qoI" id="xah-rY-Kp0"/>
+                        <outlet property="lblPrecio" destination="g8b-uE-ZDT" id="igZ-yt-wig"/>
+                        <outlet property="lblProducto" destination="b6t-b7-T0n" id="Qtf-Mf-nhs"/>
+                        <outlet property="lblSubtotal" destination="d4f-kX-zZa" id="BFh-1A-51n"/>
+                        <outlet property="lblTelefonoCliente" destination="gPZ-sx-dqa" id="3yP-ld-Xns"/>
+                        <outlet property="lblTelefonoVendedor" destination="6iZ-eV-ywr" id="nrt-LI-foE"/>
+                        <outlet property="lblTotal" destination="7Db-BJ-onS" id="Hfu-Gz-r4c"/>
+                        <outlet property="lblUnidad" destination="NHg-yy-PL8" id="hHe-eF-CcC"/>
+                        <outlet property="lblUsuario" destination="PeD-f6-qPp" id="sf9-ci-f2i"/>
+                        <outlet property="txtCantidadVenta" destination="s4c-Zn-DP9" id="xxH-6I-czn"/>
+                        <outlet property="txtIDCliente" destination="lWP-dv-hFh" id="Bir-Ut-6oM"/>
+                        <outlet property="txtIDProducto" destination="LNX-og-W5C" id="84F-FR-j9g"/>
+                        <outlet property="txtIDVendedor" destination="9eq-ap-fag" id="fZh-si-bY3"/>
+                        <outlet property="txtIDVenta" destination="Zsn-1P-y7y" id="Uxd-QX-dew"/>
+                    </connections>
                 </viewController>
                 <customObject id="guh-OP-V4H" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2301,6 +2358,10 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="altaCompra:" target="z12-tj-HWC" id="1U6-ad-fqN"/>
+                                    <segue destination="mI9-Qr-NSd" kind="show" identifier="altaVenta" id="5SM-Ie-Pno"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjX-iX-kMv">
                                 <rect key="frame" x="207" y="159" width="60" height="32"/>
@@ -2309,6 +2370,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="funcBaja:" target="z12-tj-HWC" id="JSV-sn-2Nn"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVh-Az-VuO">
                                 <rect key="frame" x="191" y="117" width="91" height="32"/>
@@ -2317,6 +2381,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="modificar:" target="z12-tj-HWC" id="i7r-fO-SHD"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-ib-Zqq">
                                 <rect key="frame" x="193" y="79" width="88" height="32"/>
@@ -2325,6 +2392,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Consulta:" target="z12-tj-HWC" id="jl1-ME-DcR"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t6g-Dp-HMs">
                                 <rect key="frame" x="201" y="13" width="72" height="32"/>
@@ -2334,6 +2404,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="volver:" target="z12-tj-HWC" id="1W0-yo-cfV"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCj-1c-kLy">
                                 <rect key="frame" x="394" y="236" width="17" height="16"/>
@@ -2361,6 +2434,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="actualizarCompra:" target="z12-tj-HWC" id="A8R-WZ-QwU"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQE-Ke-XOF">
                                 <rect key="frame" x="361" y="126" width="82" height="32"/>
@@ -2370,6 +2446,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="eliminar:" target="z12-tj-HWC" id="XFg-vo-yWX"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvG-NW-xM1">
                                 <rect key="frame" x="24" y="245" width="414" height="41"/>
@@ -2382,6 +2461,18 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnAlta" destination="j4r-xY-C1l" id="v6u-CK-uMd"/>
+                        <outlet property="btnBaja" destination="gjX-iX-kMv" id="jOy-Ch-ZUi"/>
+                        <outlet property="btnConsulta" destination="8EG-ib-Zqq" id="DSJ-em-qRG"/>
+                        <outlet property="btnEliminar" destination="qQE-Ke-XOF" id="ai6-fh-xDO"/>
+                        <outlet property="btnModificar" destination="bVh-Az-VuO" id="93y-DI-4Dz"/>
+                        <outlet property="btnOK" destination="0DH-2w-Z3K" id="cHW-6o-NQQ"/>
+                        <outlet property="btnVolver" destination="t6g-Dp-HMs" id="YVp-mf-bfx"/>
+                        <outlet property="lblID" destination="bCj-1c-kLy" id="0kY-c3-bfB"/>
+                        <outlet property="txtID" destination="gmn-d1-uYd" id="agZ-sl-RYH"/>
+                        <segue destination="mI9-Qr-NSd" kind="show" identifier="actualizarVenta" id="Bbo-Iw-M4I"/>
+                    </connections>
                 </viewController>
                 <customObject id="6UZ-vD-msM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4226,7 +4317,7 @@
                 </viewController>
                 <customObject id="coy-im-QLh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="407" y="-1250"/>
+            <point key="canvasLocation" x="446" y="-1296"/>
         </scene>
         <!--Tabla Compra-->
         <scene sceneID="efz-v3-XgN">
@@ -4790,12 +4881,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dwl-Eq-MMu"/>
+        <segue reference="LWM-Hr-kTY"/>
         <segue reference="DF1-Q0-v9I"/>
         <segue reference="c9t-qj-ehu"/>
         <segue reference="bzv-3C-hfJ"/>
         <segue reference="Vop-Ri-nOJ"/>
         <segue reference="yHR-WD-ta3"/>
+        <segue reference="Bbo-Iw-M4I"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">

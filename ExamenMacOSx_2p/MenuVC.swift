@@ -75,6 +75,11 @@ class MenuVC: NSViewController {
             destination.usuarioRecibido = usuario
             destination.mensaje = destinoMensage
         }
+        if segue.identifier == "irAVentas"{
+            let destination = segue.destinationController as! CRUDVentasVC
+            destination.usuarioRecibido = usuario
+        }
+
     }
     
     @IBOutlet weak var lblMensaje: NSTextField!
