@@ -15,7 +15,6 @@ class ClientesProfileVC: NSViewController {
     var loginController = LoginController.compartir
     var ventasController = VentasController.compartir
     var PedidosController = pedidosController.compartir
-    //var idProducto:Int = 0
     
     var idCliente:Int = 0
     
@@ -55,10 +54,10 @@ class ClientesProfileVC: NSViewController {
         PedidosController.pedidos.removeAll()
         for x in 0...ventasController.ventas.count-1{
             if idCliente == 0{
-                PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadVenta))
+                PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadVenta, ventasController.ventas[x].total))
             }else{
                 if idCliente == ventasController.ventas[x].idCliente{
-                    PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadVenta))
+                    PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadVenta, ventasController.ventas[x].total))
                 }
             }
         }
