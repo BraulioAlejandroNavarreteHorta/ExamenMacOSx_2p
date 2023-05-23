@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZwD-No-WMT">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZwD-No-WMT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -2781,6 +2782,7 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <action selector="altaProducto:" target="XGu-IH-68D" id="igr-jC-8fn"/>
                                     <segue destination="1Xi-HY-oSt" kind="show" identifier="crearProducto" id="bzv-3C-hfJ"/>
@@ -2793,6 +2795,7 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <action selector="funcionEliminar:" target="XGu-IH-68D" id="gEB-E0-VAQ"/>
                                 </connections>
@@ -2804,6 +2807,7 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <color key="bezelColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <action selector="modificar:" target="XGu-IH-68D" id="sps-hi-0xe"/>
                                 </connections>
@@ -2815,6 +2819,7 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <action selector="mostrarTabla:" target="XGu-IH-68D" id="t5n-ds-07B"/>
                                 </connections>
@@ -2836,7 +2841,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="ID" id="2Lo-4h-z7S">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -2869,7 +2874,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="CRUD Productos" id="0zh-J1-Hsn">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -2880,9 +2885,14 @@
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="dfm-5H-2en"/>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="unemphasizedSelectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8js-OJ-RXm">
+                                <rect key="frame" x="-37" y="0.0" width="548" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondoBlanco" id="Slp-DG-WKM"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <connections>
@@ -3704,8 +3714,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="dyg-mZ-ldl">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706500987.03142405">
-                                        <!--2023-05-23 02:16:27 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="706568751.34485495">
+                                        <!--2023-05-23 21:05:51 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -4034,8 +4044,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="p3a-Ph-w7e">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706500987.04352403">
-                                        <!--2023-05-23 02:16:27 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="706568751.35636699">
+                                        <!--2023-05-23 21:05:51 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -5699,6 +5709,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="fondo" width="728" height="455"/>
+        <image name="fondoBlanco" width="1280" height="768"/>
         <image name="mundo" width="200" height="200"/>
     </resources>
 </document>
