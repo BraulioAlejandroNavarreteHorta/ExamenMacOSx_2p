@@ -1484,7 +1484,7 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98f-Lu-v49">
                                 <rect key="frame" x="0.0" y="484" width="368" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="qqU-30-7Us"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="mundo" id="qqU-30-7Us"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gA2-M5-xt1">
                                 <rect key="frame" x="365" y="481" width="368" height="229"/>
@@ -5015,11 +5015,11 @@
                                 <rect key="frame" x="20" y="20" width="897" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" id="BHQ-NI-W1R">
-                                    <rect key="frame" x="1" y="1" width="895" height="243"/>
+                                    <rect key="frame" x="1" y="1" width="895" height="258"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="RAa-7N-6r5" viewBased="YES" id="dQW-oU-qaF">
-                                            <rect key="frame" x="0.0" y="0.0" width="1500" height="215"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1500" height="230"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -5663,7 +5663,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Xoq-KS-UKX">
-                                    <rect key="frame" x="1" y="244" width="895" height="15"/>
+                                    <rect key="frame" x="1" y="243" width="895" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="4AC-Vt-EGi">
@@ -5699,5 +5699,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="fondo" width="728" height="455"/>
+        <image name="mundo" width="200" height="200"/>
     </resources>
 </document>
