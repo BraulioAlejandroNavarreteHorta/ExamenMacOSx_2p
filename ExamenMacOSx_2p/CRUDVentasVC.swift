@@ -86,12 +86,11 @@ class CRUDVentasVC: NSViewController {
          
      }
      
-    /*
     
+
     @IBAction func Consulta(_ sender: Any) {
-        performSegue(withIdentifier: "mostrar", sender: self)
+        performSegue(withIdentifier: "irATablaVenta", sender: self)
     }
-     */
     
     @IBAction func funcBaja(_ sender: Any) {
         txtID.isHidden = false
@@ -108,13 +107,11 @@ class CRUDVentasVC: NSViewController {
             destinationVC.posicion = id
             destinationVC.usuarioRecibido = usuario
         }
-        /*
-        if(segue.identifier == "mostrar"){
-            let destinationViewCont = segue.destinationController as! TablaCompra
-            destinationViewCont.compras = compraController.compras
-            destinationViewCont.prueba = "mensaje"
+        
+        if(segue.identifier == "irATablaVenta"){
+            let destinationViewCont = segue.destinationController as! TablaVentas
+            destinationViewCont.ventas = ventasController.ventas
         }
-         */
         if(segue.identifier == "altaVenta"){
             let destinationVC = segue.destinationController as! VentasProfileVC
             enviarAFlag = false

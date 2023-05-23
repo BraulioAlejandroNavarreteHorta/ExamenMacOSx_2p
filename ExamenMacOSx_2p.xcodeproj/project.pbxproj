@@ -33,6 +33,7 @@
 		D185EF832A19A8490025FB19 /* VentasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF822A19A8490025FB19 /* VentasController.swift */; };
 		D185EF852A1AA31A0025FB19 /* CRUDVentasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF842A1AA31A0025FB19 /* CRUDVentasVC.swift */; };
 		D185EF872A1AB2C00025FB19 /* VentasProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF862A1AB2C00025FB19 /* VentasProfileVC.swift */; };
+		D185EF892A1C45D40025FB19 /* TablaVentas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF882A1C45D40025FB19 /* TablaVentas.swift */; };
 		D1FA75D72A10777800055B72 /* RegistroUsuarioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75D62A10777800055B72 /* RegistroUsuarioVC.swift */; };
 		D1FA75D92A10779C00055B72 /* AdminProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75D82A10779C00055B72 /* AdminProfileVC.swift */; };
 		D1FA75DB2A1077D400055B72 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75DA2A1077D400055B72 /* LoginVC.swift */; };
@@ -70,6 +71,7 @@
 		D185EF822A19A8490025FB19 /* VentasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasController.swift; sourceTree = "<group>"; };
 		D185EF842A1AA31A0025FB19 /* CRUDVentasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDVentasVC.swift; sourceTree = "<group>"; };
 		D185EF862A1AB2C00025FB19 /* VentasProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasProfileVC.swift; sourceTree = "<group>"; };
+		D185EF882A1C45D40025FB19 /* TablaVentas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaVentas.swift; sourceTree = "<group>"; };
 		D1FA75D62A10777800055B72 /* RegistroUsuarioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroUsuarioVC.swift; sourceTree = "<group>"; };
 		D1FA75D82A10779C00055B72 /* AdminProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileVC.swift; sourceTree = "<group>"; };
 		D1FA75DA2A1077D400055B72 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				AA6790002A0D848B001D9BFF /* ViewController.swift */,
 				AA6790052A0D848C001D9BFF /* Assets.xcassets */,
 				AA6790072A0D848C001D9BFF /* Main.storyboard */,
+				D185EF882A1C45D40025FB19 /* TablaVentas.swift */,
 				5E7A11792A19DBAD000921F9 /* TablaPedidosVC.swift */,
 				5E7A11772A19DB95000921F9 /* ClientesProfileVC.swift */,
 				5E7A11732A19D40B000921F9 /* Pedidos.swift */,
@@ -223,6 +226,7 @@
 				D185EF872A1AB2C00025FB19 /* VentasProfileVC.swift in Sources */,
 				D1FA75DB2A1077D400055B72 /* LoginVC.swift in Sources */,
 				D1FA75D92A10779C00055B72 /* AdminProfileVC.swift in Sources */,
+				D185EF892A1C45D40025FB19 /* TablaVentas.swift in Sources */,
 				D131E6B72A14921D006D76DB /* ProductosProfileVC.swift in Sources */,
 				5E7A117A2A19DBAD000921F9 /* TablaPedidosVC.swift in Sources */,
 				D1FA75D72A10777800055B72 /* RegistroUsuarioVC.swift in Sources */,
