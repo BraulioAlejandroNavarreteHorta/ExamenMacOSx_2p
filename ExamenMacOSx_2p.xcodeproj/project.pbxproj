@@ -34,9 +34,6 @@
 		D185EF852A1AA31A0025FB19 /* CRUDVentasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF842A1AA31A0025FB19 /* CRUDVentasVC.swift */; };
 		D185EF872A1AB2C00025FB19 /* VentasProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF862A1AB2C00025FB19 /* VentasProfileVC.swift */; };
 		D185EF892A1C45D40025FB19 /* TablaVentas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185EF882A1C45D40025FB19 /* TablaVentas.swift */; };
-		D185EF8B2A1C5F5B0025FB19 /* mundo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D185EF8A2A1C5F5A0025FB19 /* mundo.gif */; };
-		D185EF8F2A1C6FA40025FB19 /* fondo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D185EF8E2A1C6FA40025FB19 /* fondo.jpg */; };
-		D185EF912A1C72E50025FB19 /* amarillo.png in Resources */ = {isa = PBXBuildFile; fileRef = D185EF902A1C72E50025FB19 /* amarillo.png */; };
 		D1FA75D72A10777800055B72 /* RegistroUsuarioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75D62A10777800055B72 /* RegistroUsuarioVC.swift */; };
 		D1FA75D92A10779C00055B72 /* AdminProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75D82A10779C00055B72 /* AdminProfileVC.swift */; };
 		D1FA75DB2A1077D400055B72 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FA75DA2A1077D400055B72 /* LoginVC.swift */; };
@@ -75,9 +72,6 @@
 		D185EF842A1AA31A0025FB19 /* CRUDVentasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDVentasVC.swift; sourceTree = "<group>"; };
 		D185EF862A1AB2C00025FB19 /* VentasProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasProfileVC.swift; sourceTree = "<group>"; };
 		D185EF882A1C45D40025FB19 /* TablaVentas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaVentas.swift; sourceTree = "<group>"; };
-		D185EF8A2A1C5F5A0025FB19 /* mundo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = mundo.gif; path = ../../mundo.gif; sourceTree = "<group>"; };
-		D185EF8E2A1C6FA40025FB19 /* fondo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fondo.jpg; path = ../../fondo.jpg; sourceTree = "<group>"; };
-		D185EF902A1C72E50025FB19 /* amarillo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amarillo.png; path = ../../amarillo.png; sourceTree = "<group>"; };
 		D1FA75D62A10777800055B72 /* RegistroUsuarioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroUsuarioVC.swift; sourceTree = "<group>"; };
 		D1FA75D82A10779C00055B72 /* AdminProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileVC.swift; sourceTree = "<group>"; };
 		D1FA75DA2A1077D400055B72 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -116,9 +110,6 @@
 		AA678FFD2A0D848B001D9BFF /* ExamenMacOSx_2p */ = {
 			isa = PBXGroup;
 			children = (
-				D185EF902A1C72E50025FB19 /* amarillo.png */,
-				D185EF8E2A1C6FA40025FB19 /* fondo.jpg */,
-				D185EF8A2A1C5F5A0025FB19 /* mundo.gif */,
 				AA678FFE2A0D848B001D9BFF /* AppDelegate.swift */,
 				AA6790002A0D848B001D9BFF /* ViewController.swift */,
 				AA6790052A0D848C001D9BFF /* Assets.xcassets */,
@@ -215,12 +206,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D185EF8B2A1C5F5B0025FB19 /* mundo.gif in Resources */,
 				AA676DAF2A16E69500709273 /* ComprasView.xib in Resources */,
-				D185EF912A1C72E50025FB19 /* amarillo.png in Resources */,
 				AA6790062A0D848C001D9BFF /* Assets.xcassets in Resources */,
 				AA6790092A0D848C001D9BFF /* Main.storyboard in Resources */,
-				D185EF8F2A1C6FA40025FB19 /* fondo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
