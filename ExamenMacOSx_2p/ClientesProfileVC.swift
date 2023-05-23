@@ -37,9 +37,12 @@ class ClientesProfileVC: NSViewController {
     }
     
     func agregarIDaPedidos(){
-        for x in 0...PedidosController.pedidos.count-1{
-            PedidosController.pedidos[x].id = x
+        if ventasController.ventas.isEmpty == false{
+            for x in 0...PedidosController.pedidos.count-1{
+                PedidosController.pedidos[x].id = x
+            }
         }
+        
     }
     
     func obtenerElIdClienteDelUsuarioRecibido(){
@@ -52,15 +55,27 @@ class ClientesProfileVC: NSViewController {
     
     func asignarVentasAlArregloPedidos(){
         PedidosController.pedidos.removeAll()
-        for x in 0...ventasController.ventas.count-1{
-            if idCliente == 0{
-                PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadVenta, ventasController.ventas[x].total))
-            }else{
-                if idCliente == ventasController.ventas[x].idCliente{
+        if ventasController.ventas.isEmpty == false{
+            for x in 0...ventasController.ventas.count-1{
+                if idCliente == 0{
                     PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadVenta, ventasController.ventas[x].total))
+                }else{
+                    if idCliente == ventasController.ventas[x].idCliente{
+                        PedidosController.addPedido(Pedidos(ventasController.ventas[x].idProducto, ventasController.ventas[x].nombreProducto, ventasController.ventas[x].descripcionProducto, ventasController.ventas[x].unidadProducto, ventasController.ventas[x].precioProducto, ventasController.ventas[x].total, ventasController.ventas[x].categoríaProducto, ventasController.ventas[x].cantidadVenta, ventasController.ventas[x].total))
+                    }
                 }
             }
+        }else{
+            alertaArregloVentasVacio()
         }
+    }
+    
+    func alertaArregloVentasVacio() -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = "No hay Ventas Hasta el Momento"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Ok")
+        return alert.runModal() == .alertFirstButtonReturn
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
