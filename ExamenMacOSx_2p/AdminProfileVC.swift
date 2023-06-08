@@ -95,7 +95,6 @@ class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
         
         if validacionDeCampos() {
             loginController.users.append(User(txtUsuer.stringValue, txtContraseña.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, Int(txtRol.intValue), calcularEdad(dateNacimiento),dateNacimiento.dateValue,color1,imagen1))
-            agregarID()
             print("Actualizado")
             self.view.window?.windowController?.close()
         }
@@ -109,12 +108,6 @@ class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
         
     }
     
-    func agregarID(){
-        for x in 0...loginController.users.count-1{
-            loginController.users[x].id = x
-        }
-    }
-    
     @IBAction func updateEvent(_ sender: NSButton) {
         
         imagen1 = cmbImg.stringValue
@@ -122,7 +115,6 @@ class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
         
         if validacionDeCampos() {
             loginController.users[posicion!] = User(txtUsuer.stringValue, txtContraseña.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, Int(txtRol.intValue),calcularEdad(dateNacimiento), dateNacimiento.dateValue,color1,imagen1)
-            agregarID()
             print("Actualizado")
             dismiss(self)
         } else {

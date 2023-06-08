@@ -39,8 +39,6 @@ class Tabla: NSViewController {
         
         
         for x in 0...loginController.users.count-1{
-            loginController.users[x].id = x
-            
             if usuarioRecibido==loginController.users[x].username{
                 
                 asignarColor(loginController.users[x].fondo)

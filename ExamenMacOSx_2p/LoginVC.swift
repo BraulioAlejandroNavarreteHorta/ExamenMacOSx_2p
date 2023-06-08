@@ -39,8 +39,6 @@ class LoginVC: NSViewController {
         
         
         for x in 0...loginController.users.count-1{
-            loginController.users[x].id = x
-            
             if usuarioRecibido==loginController.users[x].username{
                 img.image=NSImage(named: loginController.users[x].imagen)
                 asignarColor(loginController.users[x].fondo)
@@ -98,7 +96,11 @@ class LoginVC: NSViewController {
             if Int(txtID.intValue) == 0{
                 alertaNoEliminar()
             }else{
-                id = Int(txtID.intValue)
+                for user in loginController.users{
+                    if(Int(txtID.stringValue) == user.id){
+                        id = user.id
+                    }
+                }
                 enviarAFlag = true
                 performSegue(withIdentifier: "actualizarUsuario", sender: self)
                 dismiss(self)
@@ -123,23 +125,18 @@ class LoginVC: NSViewController {
             if(Int(txtID.intValue) == 0){
                 alertaNoEliminar()
             }else{
-                loginController.users.remove(at: Int(txtID.intValue))
+                for user in loginController.users{
+                    if(Int(txtID.stringValue) == user.id){
+                        loginController.users.remove(at: user.id)
+                    }
+                }
                 alerta()
                 txtID.stringValue = ""
-                agregarID()
             }
         }else{
             alertaValidacion()
         }
         
-        
-        
-    }
-    
-    func agregarID(){
-        for x in 0...loginController.users.count-1{
-            loginController.users[x].id = x
-        }
         
         
     }
@@ -195,8 +192,8 @@ class LoginVC: NSViewController {
     func validacionID() -> Bool {
         var estado = false
         if !loginController.users.isEmpty{
-            for x in 0 ... loginController.users.count-1{
-                if(txtID.integerValue==x){
+            for user in loginController.users{
+                if(Int(txtID.stringValue) == user.id){
                     estado = true
                 }
             }
