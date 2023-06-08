@@ -47,16 +47,8 @@ class RegistroUsuarioVC: NSViewController, NSComboBoxDelegate, NSComboBoxDataSou
         imagen1 = cmbImg.stringValue
         color1=cmbColor.stringValue
         loginController.addUser(User(txtUserName.stringValue, txtPassword.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, 0,calcularEdad(dateNacimiento),dateNacimiento.dateValue,color1,imagen1))
-        agregarID()
             login()
     }
-    
-    func agregarID(){
-        for x in 0...loginController.users.count-1{
-            loginController.users[x].id = x
-        }
-    }
-    
     
     func login() {
         let username = txtUserName.stringValue

@@ -24,12 +24,6 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
     }
     
-    func agregarID(){
-        for x in 0...loginController.users.count-1{
-            loginController.users[x].id = x
-        }
-    }
-    
     func login() {
         username = txtUser.stringValue
         password = txtPassword.stringValue
