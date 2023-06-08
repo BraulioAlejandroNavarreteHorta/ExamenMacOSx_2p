@@ -20,10 +20,49 @@ class VentasProfileVC: NSViewController {
     var subtotal:Double = 0
     var IVA:Double = 0
     var total:Double = 0
+    var color1:NSColor?
+    
+    func asignarColor(_ color:String){
+        switch color {
+        case "verde":
+            color1 = NSColor.green
+        case "rojo":
+            color1 = NSColor.red
+        case "azul":
+            color1 = NSColor.blue
+        case "amarillo":
+            color1 = NSColor.yellow
+        case "naranja":
+            color1 = NSColor.orange
+        case "ninguno":
+            color1 = NSColor.white
+        default:
+            break
+        }
+    }
+    
+    
+    func setValue(){
+        
+        
+        for x in 0...loginController.users.count-1{
+            loginController.users[x].id = x
+            
+            if usuarioRecibido==loginController.users[x].username{
+                img.image=NSImage(named: loginController.users[x].imagen)
+                asignarColor(loginController.users[x].fondo)
+                view.wantsLayer = true
+                view.layer?.backgroundColor=color1?.cgColor
+            }
+        }
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         usuario = usuarioRecibido!
+        setValue()
         btnCrear.isEnabled = false
         btnModificar.isEnabled = false
         lblUsuario.stringValue = usuario
@@ -183,6 +222,9 @@ class VentasProfileVC: NSViewController {
     //Botones
     @IBOutlet weak var btnCrear: NSButton!
     @IBOutlet weak var btnModificar: NSButton!
+    
+    @IBOutlet weak var img: NSImageCell!
+    
     
     func setProducto(){
         

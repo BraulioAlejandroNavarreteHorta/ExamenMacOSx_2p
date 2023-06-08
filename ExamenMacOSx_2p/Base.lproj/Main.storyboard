@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZwD-No-WMT">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZwD-No-WMT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1114,7 +1114,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="nlR-wC-0K7">
-                                    <rect key="frame" x="1" y="244" width="1387" height="15"/>
+                                    <rect key="frame" x="1" y="243" width="1387" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="w2I-1K-yPo">
@@ -1449,7 +1449,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="GgI-zQ-WzV">
-                                    <rect key="frame" x="1" y="260" width="1232" height="15"/>
+                                    <rect key="frame" x="1" y="259" width="1232" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="fG4-Tn-96G">
@@ -1482,45 +1482,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="714" height="710"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98f-Lu-v49">
-                                <rect key="frame" x="0.0" y="484" width="368" height="229"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RnY-JL-zB9">
+                                <rect key="frame" x="0.0" y="0.0" width="714" height="710"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="fondo" id="qqU-30-7Us"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gA2-M5-xt1">
-                                <rect key="frame" x="365" y="481" width="368" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="HXY-sL-ycy"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="894-Kr-thS">
-                                <rect key="frame" x="334" y="224" width="428" height="266"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="4QP-b9-gAj"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lt4-2e-my5">
-                                <rect key="frame" x="0.0" y="261" width="368" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="ZYM-nv-0JY"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uT7-2j-gbF">
-                                <rect key="frame" x="0.0" y="35" width="368" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="j7o-Fa-vzM"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iX3-lV-aYs">
-                                <rect key="frame" x="334" y="35" width="368" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="0nh-qg-VvM"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kiA-BQ-zEW">
-                                <rect key="frame" x="341" y="0.0" width="403" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="SdU-he-K5G"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X4T-hU-xph">
-                                <rect key="frame" x="0.0" y="-4" width="368" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="bpa-6a-Awf"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="xBL-bw-I8C"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjC-ao-asl">
                                 <rect key="frame" x="18" y="635" width="90" height="15"/>
@@ -1981,6 +1946,7 @@
                     <connections>
                         <outlet property="btnCrear" destination="haJ-kw-Off" id="JEg-rd-FiQ"/>
                         <outlet property="btnModificar" destination="Nkb-v4-l9d" id="FEj-H2-jaQ"/>
+                        <outlet property="img" destination="xBL-bw-I8C" id="FSM-iB-qIa"/>
                         <outlet property="lblApellidoMaternoCliente" destination="NgE-Z3-Nvr" id="ZOZ-XK-hvQ"/>
                         <outlet property="lblApellidoMaternoVendedor" destination="E2L-f2-cDj" id="Vep-2Q-jw5"/>
                         <outlet property="lblApellidoPaternoCliente" destination="UXt-6b-ucR" id="sj2-bc-pBT"/>
@@ -2358,7 +2324,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="WYk-Tm-WUG">
-                                    <rect key="frame" x="1" y="244" width="1190" height="15"/>
+                                    <rect key="frame" x="1" y="243" width="1190" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="uIp-pb-xI1">
@@ -2391,31 +2357,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="351" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HEm-H6-Ye1">
-                                <rect key="frame" x="0.0" y="145" width="243" height="155"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="LOt-zv-yDB"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Q3-s5-2JM">
-                                <rect key="frame" x="241" y="86" width="340" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="Gsq-mI-HKr"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1O-uv-QLp">
-                                <rect key="frame" x="241" y="-23" width="285" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="Otf-bm-RPj"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O4n-R7-8QQ">
-                                <rect key="frame" x="0.0" y="-2" width="243" height="155"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="YqF-y8-Yvg"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93N-5Z-Bkr">
-                                <rect key="frame" x="-130" y="-34" width="457" height="369"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AculComplemento" id="5z1-0e-YpK"/>
-                            </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4r-xY-C1l">
                                 <rect key="frame" x="73" y="200" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2530,6 +2471,11 @@
                                     <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93N-5Z-Bkr">
+                                <rect key="frame" x="-65" y="-9" width="457" height="369"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="5z1-0e-YpK"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <connections>
@@ -2540,6 +2486,7 @@
                         <outlet property="btnModificar" destination="bVh-Az-VuO" id="93y-DI-4Dz"/>
                         <outlet property="btnOK" destination="0DH-2w-Z3K" id="cHW-6o-NQQ"/>
                         <outlet property="btnVolver" destination="t6g-Dp-HMs" id="YVp-mf-bfx"/>
+                        <outlet property="img" destination="5z1-0e-YpK" id="bSN-67-xys"/>
                         <outlet property="lblID" destination="bCj-1c-kLy" id="0kY-c3-bfB"/>
                         <outlet property="txtID" destination="aAr-h8-yHw" id="cOW-i7-y25"/>
                         <segue destination="mI9-Qr-NSd" kind="show" identifier="actualizarVenta" id="Bbo-Iw-M4I"/>
@@ -2557,25 +2504,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="221" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZI-SD-Ci3">
-                                <rect key="frame" x="0.0" y="124" width="283" height="176"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBe-FT-Lxo">
+                                <rect key="frame" x="281" y="-50" width="283" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="3sF-Jf-Rfm"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BcM-H0-v2g">
-                                <rect key="frame" x="0.0" y="-50" width="283" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="k61-kI-XyU"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfm-Wn-me3">
-                                <rect key="frame" x="281" y="124" width="283" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="rH1-C6-6bk"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="VHg-PL-o7A"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D1K-ew-ocg">
-                                <rect key="frame" x="-13" y="-33" width="263" height="253"/>
+                                <rect key="frame" x="-13" y="0.0" width="263" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="complemento" id="qIj-OH-4tM"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="qIj-OH-4tM"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-Aj-A7Q">
                                 <rect key="frame" x="18" y="198" width="185" height="82"/>
@@ -2610,16 +2547,12 @@
                                     <action selector="salirDeLaPagina:" target="xqo-Ao-JIz" id="8c0-kk-7cB"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBe-FT-Lxo">
-                                <rect key="frame" x="281" y="-50" width="283" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="VHg-PL-o7A"/>
-                            </imageView>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="btnConsultarPedidos" destination="gB1-Ku-GPs" id="1S0-2p-gNG"/>
                         <outlet property="btnSalir" destination="BQi-42-2hU" id="Zxq-kX-RdC"/>
+                        <outlet property="img" destination="qIj-OH-4tM" id="ZEP-hR-6Ii"/>
                         <outlet property="lblMensajeBienvenida" destination="GIf-Aj-A7Q" id="uw0-nm-IY2"/>
                         <segue destination="xQN-B8-6yC" kind="show" identifier="irATablaPedidos" id="5F1-dp-xVo"/>
                     </connections>
@@ -2636,25 +2569,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="229" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LCv-UJ-Ctl">
-                                <rect key="frame" x="0.0" y="108" width="308" height="192"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L52-bC-aJM">
+                                <rect key="frame" x="306" y="108" width="308" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="rUM-T0-eXk"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GC2-Wj-SqK">
-                                <rect key="frame" x="0.0" y="-81" width="308" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="naq-pG-Ffz"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hK-53-edS">
-                                <rect key="frame" x="306" y="-53" width="308" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="TNR-59-TDj"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="hwu-QQ-vBD"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nS9-Ov-Yc6">
-                                <rect key="frame" x="-80" y="-53" width="388" height="243"/>
+                                <rect key="frame" x="-85" y="0.0" width="388" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="complemento" id="eQy-82-vbR"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="eQy-82-vbR"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwh-8v-Ih9">
                                 <rect key="frame" x="11" y="248" width="209" height="45"/>
@@ -2725,11 +2648,6 @@
                                     <action selector="cerrarSesion:" target="85l-bU-Zvm" id="I9i-Uh-1oa"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L52-bC-aJM">
-                                <rect key="frame" x="306" y="108" width="308" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="hwu-QQ-vBD"/>
-                            </imageView>
                         </subviews>
                     </view>
                     <connections>
@@ -2738,6 +2656,7 @@
                         <outlet property="btnCompras" destination="Kh1-q3-rXf" id="UYq-Az-MZL"/>
                         <outlet property="btnUsuarios" destination="AMf-Kt-dha" id="rEn-kA-tJX"/>
                         <outlet property="btnVentas" destination="4vJ-Sd-6Yw" id="xUj-Cb-L02"/>
+                        <outlet property="img" destination="eQy-82-vbR" id="G54-zK-qFH"/>
                         <outlet property="lblMensaje" destination="hwh-8v-Ih9" id="tcS-fd-SQ0"/>
                     </connections>
                 </viewController>
@@ -2753,10 +2672,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="259" height="135"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-rt-Vb5">
-                                <rect key="frame" x="-102" y="0.0" width="462" height="177"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJB-c1-c9c">
+                                <rect key="frame" x="-65" y="-78" width="371" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="bFW-dj-nc5"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Vxh-Qa-jog"/>
                             </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-k5-Moo">
                                 <rect key="frame" x="72" y="80" width="97" height="32"/>
@@ -2782,13 +2701,11 @@
                                     <segue destination="Hva-vE-CiJ" kind="show" identifier="compras" id="Hrb-dT-MG8"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJB-c1-c9c">
-                                <rect key="frame" x="-50" y="-157" width="371" height="292"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="complemento" id="Vxh-Qa-jog"/>
-                            </imageView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="img" destination="Vxh-Qa-jog" id="y1U-7P-ALB"/>
+                    </connections>
                 </viewController>
                 <customObject id="DDH-E7-3jx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2802,11 +2719,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="363" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8js-OJ-RXm">
-                                <rect key="frame" x="-37" y="0.0" width="548" height="307"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="Slp-DG-WKM"/>
-                            </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYh-ec-Mle">
                                 <rect key="frame" x="64" y="214" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2921,9 +2833,9 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a32-uv-JxG">
-                                <rect key="frame" x="-87" y="-50" width="374" height="429"/>
+                                <rect key="frame" x="-44" y="0.0" width="450" height="429"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AculComplemento" id="ydM-NA-TVE"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="ydM-NA-TVE"/>
                             </imageView>
                         </subviews>
                     </view>
@@ -2935,6 +2847,7 @@
                         <outlet property="btnEliminar" destination="SII-SQ-3Ny" id="XdC-Bn-mKO"/>
                         <outlet property="btnModificar" destination="Ntu-eM-aLL" id="BDU-RX-lI6"/>
                         <outlet property="btnOK" destination="EOc-45-pSf" id="Reb-pW-Omi"/>
+                        <outlet property="img" destination="ydM-NA-TVE" id="nWf-cn-Z92"/>
                         <outlet property="lblID" destination="Lm2-vz-Phr" id="d53-XC-FW0"/>
                         <outlet property="lblMensage" destination="5sn-cp-l1N" id="LOl-1J-aHb"/>
                         <outlet property="txtID" destination="i5V-ET-pn3" id="BN7-mh-yMO"/>
@@ -2954,15 +2867,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="646"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZF5-Wf-bbu">
-                                <rect key="frame" x="-74" y="-13" width="629" height="350"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPa-zB-WxS">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="493"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="Zfi-OM-8Qk"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uy5-Hb-7hm">
-                                <rect key="frame" x="-74" y="329" width="629" height="317"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="h77-Rd-89d"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="O3a-86-RdT"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87J-7u-2jp">
                                 <rect key="frame" x="171" y="623" width="104" height="15"/>
@@ -3163,6 +3071,7 @@
                         <outlet property="btnModificar" destination="Ilo-YF-ZFb" id="Y8P-Mv-xeQ"/>
                         <outlet property="cmbCategoria" destination="iXF-gZ-1He" id="vgb-FW-brR"/>
                         <outlet property="cmbUnidad" destination="Jyk-hl-JVw" id="bO1-mU-tAD"/>
+                        <outlet property="img" destination="O3a-86-RdT" id="WAD-c1-bye"/>
                         <outlet property="txtCantidad" destination="Vqx-aN-mM1" id="FxG-lT-Jei"/>
                         <outlet property="txtCosto" destination="w50-Q4-e2E" id="ImH-Hp-wlE"/>
                         <outlet property="txtDescripcion" destination="7ns-ok-sbz" id="mB3-Su-aY7"/>
@@ -3295,7 +3204,7 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qq3-Gx-4BE">
                                 <rect key="frame" x="-101" y="-37" width="389" height="379"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AculComplemento" id="bnA-2D-J71"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bnA-2D-J71"/>
                             </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zq-OT-Ydq">
                                 <rect key="frame" x="60" y="207" width="58" height="32"/>
@@ -3420,6 +3329,7 @@
                         <outlet property="btnEliminar" destination="DwO-oE-fHo" id="ptN-et-DxP"/>
                         <outlet property="btnModificar" destination="jW3-sq-ZAc" id="hJj-Vm-5Ei"/>
                         <outlet property="btnOK" destination="B9x-pe-pPr" id="ao3-vu-nSt"/>
+                        <outlet property="img" destination="bnA-2D-J71" id="zaf-8u-BeF"/>
                         <outlet property="lblID" destination="fyw-Wt-Go5" id="RMt-gP-9ts"/>
                         <outlet property="lblMensage" destination="7p2-Vn-VP8" id="S1N-10-uML"/>
                         <outlet property="txtID" destination="htr-gM-4wR" id="Zkd-y9-I39"/>
@@ -3439,35 +3349,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="377" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94i-ZO-sAC">
-                                <rect key="frame" x="0.0" y="100" width="322" height="200"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KhI-u7-7rT">
+                                <rect key="frame" x="-63" y="-3" width="489" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="qHD-3k-W6C"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Fr-eX-kTF">
-                                <rect key="frame" x="315" y="100" width="322" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="Fl5-Fa-eNG"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVx-Q4-e1T">
-                                <rect key="frame" x="315" y="-10" width="322" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="8VF-gH-sCf"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tl2-rr-WR3">
-                                <rect key="frame" x="0.0" y="0.0" width="322" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="MJi-Rz-I9j"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mp4-md-ji5">
-                                <rect key="frame" x="335" y="0.0" width="322" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="vi2-fQ-3t8"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53K-ql-Hmq">
-                                <rect key="frame" x="335" y="100" width="322" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="Dg4-xy-8f0"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="hIe-Vl-3JQ"/>
                             </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lsr-7m-rqw">
                                 <rect key="frame" x="87" y="214" width="60" height="32"/>
@@ -3582,11 +3467,6 @@
                                     <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KhI-u7-7rT">
-                                <rect key="frame" x="-136" y="-40" width="489" height="385"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AculComplemento" id="hIe-Vl-3JQ"/>
-                            </imageView>
                         </subviews>
                     </view>
                     <connections>
@@ -3597,6 +3477,7 @@
                         <outlet property="btnModificar" destination="oX5-2e-kQW" id="3mV-u1-vdc"/>
                         <outlet property="btnOK" destination="t6z-3G-gBI" id="xxq-zV-JiS"/>
                         <outlet property="btnVolver" destination="xq7-7w-eJZ" id="Ob3-gR-e0x"/>
+                        <outlet property="img" destination="hIe-Vl-3JQ" id="86o-uf-WOL"/>
                         <outlet property="lblID" destination="AqV-Wa-m0Y" id="OyK-9y-eZQ"/>
                         <outlet property="txtID" destination="jA8-0z-cbq" id="VGn-TY-cam"/>
                         <segue destination="1d2-VS-RRD" kind="show" identifier="actualizarCompra" id="LWM-Hr-kTY"/>
@@ -3770,8 +3651,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="dyg-mZ-ldl">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706572634.89124501">
-                                        <!--2023-05-23 22:10:34 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="707872729.60687995">
+                                        <!--2023-06-07 23:18:49 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -3862,9 +3743,57 @@
                                     </objectValues>
                                 </comboBoxCell>
                             </comboBox>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkm-jv-MXl">
+                                <rect key="frame" x="358" y="247" width="99" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="J3a-9G-8wO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Item 1</string>
+                                        <string>Item 2</string>
+                                        <string>Item 3</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                            </comboBox>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojr-Hb-ZRa">
+                                <rect key="frame" x="356" y="185" width="99" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="v0h-Ew-Pbg">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Item 1</string>
+                                        <string>Item 2</string>
+                                        <string>Item 3</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                            </comboBox>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tfN-BJ-Elp">
+                                <rect key="frame" x="286" y="251" width="41" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Color:" id="mIm-QT-JhQ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acS-h4-GLJ">
+                                <rect key="frame" x="282" y="189" width="53" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Imagen:" id="yFl-Js-Y03">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="cmbColor" destination="bkm-jv-MXl" id="0W8-AB-vEL"/>
+                        <outlet property="cmbImg" destination="ojr-Hb-ZRa" id="HzJ-En-Rqf"/>
                         <outlet property="dateNacimiento" destination="xE0-Yj-0d6" id="ZFs-l3-es6"/>
                         <outlet property="lblConfirmarPassword" destination="9ja-Ff-bRc" id="HUl-Fm-MvK"/>
                         <outlet property="lblMensaje" destination="3Jq-xK-Mbx" id="Lco-E6-LWO"/>
@@ -4105,8 +4034,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="p3a-Ph-w7e">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="706572634.90320897">
-                                        <!--2023-05-23 22:10:34 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="707872729.620314">
+                                        <!--2023-06-07 23:18:49 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -4163,11 +4092,59 @@
                                     </allowedInputSourceLocales>
                                 </secureTextFieldCell>
                             </secureTextField>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJY-Za-rfI">
+                                <rect key="frame" x="334" y="312" width="99" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="2a3-C9-SUn">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Item 1</string>
+                                        <string>Item 2</string>
+                                        <string>Item 3</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                            </comboBox>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uE0-3c-8Xu">
+                                <rect key="frame" x="332" y="250" width="99" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="Z1h-FG-xD2">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Item 1</string>
+                                        <string>Item 2</string>
+                                        <string>Item 3</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                            </comboBox>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4oE-bX-nVi">
+                                <rect key="frame" x="262" y="316" width="41" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Color:" id="BWM-xo-FTi">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vra-xQ-Nv7">
+                                <rect key="frame" x="258" y="254" width="53" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Imagen:" id="9oh-ls-uPv">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="btnCreate" destination="MVA-HI-5Sd" id="bCT-C4-6ra"/>
                         <outlet property="btnUpdate" destination="wWv-F5-SZA" id="gdQ-uz-mvg"/>
+                        <outlet property="cmbColor" destination="qJY-Za-rfI" id="rpM-yj-NCk"/>
+                        <outlet property="cmbImg" destination="uE0-3c-8Xu" id="HEj-3y-KHU"/>
                         <outlet property="dateNacimiento" destination="GKl-JG-2gI" id="3hF-g3-ymg"/>
                         <outlet property="txtApellidoM" destination="Vvc-5y-aGy" id="6Ll-ZL-WHO"/>
                         <outlet property="txtApellidoP" destination="jBj-u8-2pS" id="ytw-LZ-7uR"/>
@@ -4194,30 +4171,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="794" height="542"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wdt-PK-PIa">
-                                <rect key="frame" x="0.0" y="197" width="552" height="345"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JUk-fY-VM4">
+                                <rect key="frame" x="0.0" y="0.0" width="794" height="542"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="mDJ-xM-cas"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHa-vZ-YFC">
-                                <rect key="frame" x="10" y="187" width="552" height="345"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="FAA-7P-obW"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tw2-10-gkf">
-                                <rect key="frame" x="242" y="-5" width="552" height="345"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="gpP-pn-BKp"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPt-kt-hjd">
-                                <rect key="frame" x="242" y="197" width="552" height="345"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="Few-01-8LT"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FA1-fT-Mwb">
-                                <rect key="frame" x="0.0" y="-58" width="552" height="345"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="jnq-9E-BOk"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="MEX-W8-pgI"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ouS-c3-mYk">
                                 <rect key="frame" x="363" y="519" width="69" height="15"/>
@@ -4605,6 +4562,7 @@
                         <outlet property="btnCrear" destination="x3N-DH-nnt" id="BOj-Sv-au1"/>
                         <outlet property="btnModificar" destination="6Ze-3P-okG" id="Bfn-t0-R9e"/>
                         <outlet property="btnSubmit" destination="dRj-M1-fe8" id="rMZ-dD-vBC"/>
+                        <outlet property="img" destination="MEX-W8-pgI" id="vT3-Yp-K4g"/>
                         <outlet property="lblApellidoMaternoComprador" destination="r14-gS-nqv" id="zs0-P6-d2R"/>
                         <outlet property="lblApellidoPaternoComprador" destination="KEw-MB-rF3" id="mnN-M2-OSm"/>
                         <outlet property="lblCategoria" destination="g5C-02-8vh" id="Zw5-7n-mwO"/>
@@ -5081,11 +5039,11 @@
                                 <rect key="frame" x="20" y="20" width="897" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" id="BHQ-NI-W1R">
-                                    <rect key="frame" x="1" y="1" width="895" height="243"/>
+                                    <rect key="frame" x="1" y="1" width="895" height="258"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="RAa-7N-6r5" viewBased="YES" id="dQW-oU-qaF">
-                                            <rect key="frame" x="0.0" y="0.0" width="1500" height="215"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1500" height="230"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -5729,7 +5687,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Xoq-KS-UKX">
-                                    <rect key="frame" x="1" y="244" width="895" height="15"/>
+                                    <rect key="frame" x="1" y="243" width="895" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="4AC-Vt-EGi">
@@ -5757,16 +5715,14 @@
     <inferredMetricsTieBreakers>
         <segue reference="LWM-Hr-kTY"/>
         <segue reference="DF1-Q0-v9I"/>
-        <segue reference="oNh-9f-g2e"/>
+        <segue reference="c9t-qj-ehu"/>
         <segue reference="rf7-c9-A79"/>
         <segue reference="L3e-Cz-ACk"/>
-        <segue reference="KFQ-xw-FYt"/>
+        <segue reference="yHR-WD-ta3"/>
         <segue reference="5SM-Ie-Pno"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="17004" width="512" height="512"/>
-        <image name="AculComplemento" width="658" height="790"/>
-        <image name="complemento" width="751" height="767"/>
         <image name="fondo" width="728" height="455"/>
     </resources>
 </document>

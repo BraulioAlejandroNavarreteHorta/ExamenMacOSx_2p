@@ -14,10 +14,51 @@ class CRUDVentasVC: NSViewController {
     var enviarAFlag: Bool = false
     var ventasController = VentasController.compartir
     var productosController = ProductosController.compartir
+    var loginController = LoginController.compartir
     var sumaCantidad: Int = 0
+    var color1:NSColor?
+    
+    
+    func asignarColor(_ color:String){
+        switch color {
+        case "verde":
+            color1 = NSColor.green
+        case "rojo":
+            color1 = NSColor.red
+        case "azul":
+            color1 = NSColor.blue
+        case "amarillo":
+            color1 = NSColor.yellow
+        case "naranja":
+            color1 = NSColor.orange
+        case "ninguno":
+            color1 = NSColor.white
+        default:
+            break
+        }
+    }
+    
+    
+    func setValue(){
+        
+        
+        for x in 0...loginController.users.count-1{
+            loginController.users[x].id = x
+            
+            if usuarioRecibido==loginController.users[x].username{
+                img.image=NSImage(named: loginController.users[x].imagen)
+                asignarColor(loginController.users[x].fondo)
+                view.wantsLayer = true
+                view.layer?.backgroundColor=color1?.cgColor
+            }
+        }
+        
+        
+    }
     //var restaCantidad: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        setValue()
         usuario = usuarioRecibido!
         lblID.isHidden=true
         txtID.isHidden=true
@@ -34,6 +75,8 @@ class CRUDVentasVC: NSViewController {
     @IBOutlet weak var lblID: NSTextField!
     @IBOutlet weak var btnOK: NSButton!
     @IBOutlet weak var btnEliminar: NSButton!
+    
+    @IBOutlet weak var img: NSImageCell!
     
     @IBAction func volver(_ sender: Any) {
         self.view.window?.windowController?.close()

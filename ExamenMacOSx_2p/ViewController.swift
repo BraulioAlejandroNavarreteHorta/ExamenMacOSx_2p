@@ -18,7 +18,7 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginController.addUser(User("admin", "admin123", "Admin", "Super", "MOM", "your@mom.cum", "4771234567", "admin", 4,0,Date.now))
+        loginController.addUser(User("admin", "admin123", "Admin", "Super", "MOM", "your@mom.cum", "4771234567", "admin", 4,0,Date.now,"ninguno","ninguno"))
         
 
         // Do any additional setup after loading the view.

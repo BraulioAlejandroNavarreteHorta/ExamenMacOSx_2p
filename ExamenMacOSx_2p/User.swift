@@ -20,9 +20,11 @@ class User: NSObject{
     @objc dynamic var role:Int
     @objc dynamic var edad:Int
     @objc dynamic var fechaNacimiento:Date
+    @objc dynamic var fondo:String
+    @objc dynamic var imagen:String
     
     
-    init(_ username: String,_ password: String,_ nombre: String,_ apellidoP: String,_ apellidoM: String,_ email: String,_ telefono: String,_ genero: String,_ role: Int,_ edad: Int,_ fechaNacimiento: Date) {
+    init(_ username: String,_ password: String,_ nombre: String,_ apellidoP: String,_ apellidoM: String,_ email: String,_ telefono: String,_ genero: String,_ role: Int,_ edad: Int,_ fechaNacimiento: Date, _ fondo: String,_ imagen: String) {
         self.username = username
         self.password = password
         self.id = 0
@@ -35,5 +37,7 @@ class User: NSObject{
         self.role = role
         self.edad = edad
         self.fechaNacimiento = fechaNacimiento
+        self.imagen=imagen
+        self.fondo=fondo
     }
 }

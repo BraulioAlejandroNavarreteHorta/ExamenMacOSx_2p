@@ -7,19 +7,46 @@
 
 import Cocoa
 
-class RegistroUsuarioVC: NSViewController {
+class RegistroUsuarioVC: NSViewController, NSComboBoxDelegate, NSComboBoxDataSource {
     var mensaje : String = ""
     var loginController = LoginController.compartir
     var rol:String?
+    
+    var color1=""
+    var imagen1=""
+    
+    
+    let colores=["rojo","azul","verde","amarillo","naranja","ninguno"]
+    
+    let imagen=["redAzul","olaAzul","marcoRosa","arcoNaranja","arcoAzul","ninguno"]
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         txtId.isEnabled = false
         txtId.stringValue = String(loginController.users.count)
+        
+        cmbImg.delegate = self
+        cmbColor.delegate = self
+        cmbImg.dataSource=self
+        cmbColor.dataSource=self
+        
+        
+        for color in colores {
+            cmbColor.addItem(withObjectValue: color)
+        }
+        
+        for img in imagen {
+            cmbImg.addItem(withObjectValue: img)
+        }
     }
     
     func registro (){
-        loginController.addUser(User(txtUserName.stringValue, txtPassword.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, 0,calcularEdad(dateNacimiento),dateNacimiento.dateValue))
+        imagen1 = cmbImg.stringValue
+        color1=cmbColor.stringValue
+        loginController.addUser(User(txtUserName.stringValue, txtPassword.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, 0,calcularEdad(dateNacimiento),dateNacimiento.dateValue,color1,imagen1))
         agregarID()
             login()
     }
@@ -68,6 +95,9 @@ class RegistroUsuarioVC: NSViewController {
     @IBOutlet weak var txtEmail: NSTextField!
     @IBOutlet weak var txtGenero: NSComboBox!
     @IBOutlet weak var dateNacimiento: NSDatePicker!
+    @IBOutlet weak var cmbColor: NSComboBox!
+    @IBOutlet weak var cmbImg: NSComboBox!
+    
     
     func calcularEdad(_ datePicker: NSDatePicker) -> Int {
         let birthDate = datePicker.dateValue

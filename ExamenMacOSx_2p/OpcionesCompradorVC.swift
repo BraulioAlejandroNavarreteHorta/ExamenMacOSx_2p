@@ -10,9 +10,49 @@ import Cocoa
 class OpcionesCompradorVC: NSViewController {
     var usuarioRecibido:String?
     var usuario: String = ""
+    var color1:NSColor?
+    var loginController = LoginController.compartir
+    
+    func asignarColor(_ color:String){
+        switch color {
+        case "verde":
+            color1 = NSColor.green
+        case "rojo":
+            color1 = NSColor.red
+        case "azul":
+            color1 = NSColor.blue
+        case "amarillo":
+            color1 = NSColor.yellow
+        case "naranja":
+            color1 = NSColor.orange
+        case "ninguno":
+            color1 = NSColor.white
+        default:
+            break
+        }
+    }
+    
+    
+    func setValue(){
+        
+        
+        for x in 0...loginController.users.count-1{
+            loginController.users[x].id = x
+            
+            if usuarioRecibido==loginController.users[x].username{
+                img.image=NSImage(named: loginController.users[x].imagen)
+                asignarColor(loginController.users[x].fondo)
+                view.wantsLayer = true
+                view.layer?.backgroundColor=color1?.cgColor
+            }
+        }
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         usuario = usuarioRecibido!
+        setValue()
         // Do view setup here.
     }
     
@@ -23,5 +63,7 @@ class OpcionesCompradorVC: NSViewController {
             destination.usuarioRecibido = usuario
         }
     }
+    
+    @IBOutlet weak var img: NSImageCell!
     
 }

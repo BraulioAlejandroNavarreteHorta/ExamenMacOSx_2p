@@ -7,10 +7,19 @@
 
 import Cocoa
 
-class AdminProfileVC: NSViewController {
+class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate {
     var flag: Bool = false
     var posicion: Int?
     var loginController = LoginController.compartir
+    
+    
+    var color1=""
+    var imagen1=""
+    
+    
+    let colores=["rojo","azul","verde","amarillo","naranja","ninguno"]
+    
+    let imagen=["redAzul","olaAzul","marcoRosa","arcoNaranja","arcoAzul","ninguno"]
     
     @IBOutlet weak var txtId: NSTextField!
     @IBOutlet weak var txtNombre: NSTextField!
@@ -23,6 +32,8 @@ class AdminProfileVC: NSViewController {
     @IBOutlet weak var txtContraseña: NSSecureTextField!
     @IBOutlet weak var txtRol: NSComboBox!
     @IBOutlet weak var dateNacimiento: NSDatePicker!
+    @IBOutlet weak var cmbColor: NSComboBox!
+    @IBOutlet weak var cmbImg: NSComboBox!
     
     
     @IBOutlet weak var btnCreate: NSButton!
@@ -60,11 +71,30 @@ class AdminProfileVC: NSViewController {
             
             dateNacimiento.dateValue = loginController.users[posicion!].fechaNacimiento
         }
+        
+        cmbImg.delegate = self
+        cmbColor.delegate = self
+        cmbImg.dataSource=self
+        cmbColor.dataSource=self
+        
+        
+        for color in colores {
+            cmbColor.addItem(withObjectValue: color)
+        }
+        
+        for img in imagen {
+            cmbImg.addItem(withObjectValue: img)
+        }
+        
+        
     }
     @IBAction func addEvent(_ sender: NSButton) {
         
+        imagen1 = cmbImg.stringValue
+        color1=cmbColor.stringValue
+        
         if validacionDeCampos() {
-            loginController.users.append(User(txtUsuer.stringValue, txtContraseña.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, Int(txtRol.intValue), calcularEdad(dateNacimiento),dateNacimiento.dateValue))
+            loginController.users.append(User(txtUsuer.stringValue, txtContraseña.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, Int(txtRol.intValue), calcularEdad(dateNacimiento),dateNacimiento.dateValue,color1,imagen1))
             agregarID()
             print("Actualizado")
             self.view.window?.windowController?.close()
@@ -74,6 +104,9 @@ class AdminProfileVC: NSViewController {
         }
         
         print(dateNacimiento.dateValue)
+        
+        
+        
     }
     
     func agregarID(){
@@ -83,14 +116,21 @@ class AdminProfileVC: NSViewController {
     }
     
     @IBAction func updateEvent(_ sender: NSButton) {
+        
+        imagen1 = cmbImg.stringValue
+        color1=cmbColor.stringValue
+        
         if validacionDeCampos() {
-            loginController.users[posicion!] = User(txtUsuer.stringValue, txtContraseña.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, Int(txtRol.intValue),calcularEdad(dateNacimiento), dateNacimiento.dateValue)
+            loginController.users[posicion!] = User(txtUsuer.stringValue, txtContraseña.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, Int(txtRol.intValue),calcularEdad(dateNacimiento), dateNacimiento.dateValue,color1,imagen1)
             agregarID()
             print("Actualizado")
             dismiss(self)
         } else {
             alerta()
         }
+        
+        
+        
         
     }
     

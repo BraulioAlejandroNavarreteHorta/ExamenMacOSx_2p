@@ -16,10 +16,49 @@ class ComprasProfileVC: NSViewController {
     var loginController = LoginController.compartir
     var productosController = ProductosController.compartir
     var sumaCantidades:Int = 0
+    var color1:NSColor?
+    
+    func asignarColor(_ color:String){
+        switch color {
+        case "verde":
+            color1 = NSColor.green
+        case "rojo":
+            color1 = NSColor.red
+        case "azul":
+            color1 = NSColor.blue
+        case "amarillo":
+            color1 = NSColor.yellow
+        case "naranja":
+            color1 = NSColor.orange
+        case "ninguno":
+            color1 = NSColor.white
+        default:
+            break
+        }
+    }
+    
+    
+    func setValue(){
+        
+        
+        for x in 0...loginController.users.count-1{
+            loginController.users[x].id = x
+            
+            if usuarioRecibido==loginController.users[x].username{
+                img.image=NSImage(named: loginController.users[x].imagen)
+                asignarColor(loginController.users[x].fondo)
+                view.wantsLayer = true
+                view.layer?.backgroundColor=color1?.cgColor
+            }
+        }
+        
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setValue()
         usuario = usuarioRecibido!
         lblUsuario.stringValue = usuario
         txtIDCompra.isEnabled = false
@@ -174,6 +213,8 @@ class ComprasProfileVC: NSViewController {
     @IBOutlet weak var btnSubmit: NSButton!
     @IBOutlet weak var btnCrear: NSButton!
     @IBOutlet weak var btnModificar: NSButton!
+    
+    @IBOutlet weak var img: NSImageCell!
     
     
     func validacionID() -> Bool {

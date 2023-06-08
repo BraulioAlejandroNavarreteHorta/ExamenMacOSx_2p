@@ -10,9 +10,51 @@ import Cocoa
 class TablaCompra: NSViewController {
     @objc dynamic var compras:[Compra] = []
     var prueba:String?
+    var loginController = LoginController.compartir
+    var usuarioRecibido:String?
+    var color1:NSColor?
+    
+    func asignarColor(_ color:String){
+        switch color {
+        case "verde":
+            color1 = NSColor.green
+        case "rojo":
+            color1 = NSColor.red
+        case "azul":
+            color1 = NSColor.blue
+        case "amarillo":
+            color1 = NSColor.yellow
+        case "naranja":
+            color1 = NSColor.orange
+        case "ninguno":
+            color1 = NSColor.white
+        default:
+            break
+        }
+    }
+    
+    
+    func setValue(){
+        
+        
+        for x in 0...loginController.users.count-1{
+            loginController.users[x].id = x
+            
+            if usuarioRecibido==loginController.users[x].username{
+                
+                asignarColor(loginController.users[x].fondo)
+                view.wantsLayer = true
+                view.layer?.backgroundColor=color1?.cgColor
+            }
+        }
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        setValue()
     }
     
 }
