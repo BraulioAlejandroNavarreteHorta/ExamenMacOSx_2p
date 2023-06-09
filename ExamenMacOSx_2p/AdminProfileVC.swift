@@ -118,7 +118,19 @@ class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
         color1=cmbColor.stringValue
         
         if validacionDeCampos() {
-            loginController.users[posicion!] = User(txtUsuer.stringValue, txtContraseña.stringValue, txtNombre.stringValue, txtApellidoP.stringValue, txtApellidoM.stringValue, txtEmail.stringValue, txtTelefono.stringValue, txtGenero.stringValue, Int(txtRol.intValue),calcularEdad(dateNacimiento), dateNacimiento.dateValue,color1,imagen1)
+            loginController.users[posicion!].id = Int(txtId.intValue)
+            loginController.users[posicion!].nombre = txtNombre.stringValue
+            loginController.users[posicion!].apellidoP = txtApellidoP.stringValue
+            loginController.users[posicion!].apellidoM = txtApellidoM.stringValue
+            loginController.users[posicion!].username = txtUsuer.stringValue
+            loginController.users[posicion!].telefono = txtTelefono.stringValue
+            loginController.users[posicion!].email = txtEmail.stringValue
+            loginController.users[posicion!].genero = txtGenero.stringValue
+            loginController.users[posicion!].fondo = cmbColor.stringValue
+            loginController.users[posicion!].imagen = cmbImg.stringValue
+            loginController.users[posicion!].password = txtContraseña.stringValue
+            loginController.users[posicion!].role = txtRol.integerValue
+            loginController.users[posicion!].fechaNacimiento = dateNacimiento.dateValue
             print("Actualizado")
             dismiss(self)
         } else {
