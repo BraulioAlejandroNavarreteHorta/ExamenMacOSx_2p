@@ -11,6 +11,7 @@ class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
     var flag: Bool = false
     var posicion: Int?
     var loginController = LoginController.compartir
+    var contadorID = User.contador
     
     
     var color1=""
@@ -42,7 +43,7 @@ class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         txtId.isEnabled = false
-        txtId.stringValue = String(loginController.users.count)
+        txtId.stringValue = String(contadorID)
         btnUpdate.isHidden = !flag
         btnCreate.isHidden = flag
         
@@ -64,6 +65,9 @@ class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
             
             txtGenero.stringValue  = loginController.users[posicion!].genero
             
+            cmbColor.stringValue = loginController.users[posicion!].fondo
+            
+            cmbImg.stringValue = loginController.users[posicion!].imagen
             
             txtContraseña.stringValue  = loginController.users[posicion!].password
             

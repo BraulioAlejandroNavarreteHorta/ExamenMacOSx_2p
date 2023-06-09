@@ -11,6 +11,7 @@ class RegistroUsuarioVC: NSViewController, NSComboBoxDelegate, NSComboBoxDataSou
     var mensaje : String = ""
     var loginController = LoginController.compartir
     var rol:String?
+    var contadorID = User.contador
     
     var color1=""
     var imagen1=""
@@ -26,7 +27,7 @@ class RegistroUsuarioVC: NSViewController, NSComboBoxDelegate, NSComboBoxDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         txtId.isEnabled = false
-        txtId.stringValue = String(loginController.users.count)
+        txtId.stringValue = String(contadorID)
         
         cmbImg.delegate = self
         cmbColor.delegate = self

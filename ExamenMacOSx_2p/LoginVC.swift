@@ -96,9 +96,9 @@ class LoginVC: NSViewController {
             if Int(txtID.intValue) == 0{
                 alertaNoEliminar()
             }else{
-                for user in loginController.users{
-                    if(Int(txtID.stringValue) == user.id){
-                        id = user.id
+                for x in 0...loginController.users.count-1{
+                    if(Int(txtID.stringValue) == loginController.users[x].id){
+                        id = x
                     }
                 }
                 enviarAFlag = true
