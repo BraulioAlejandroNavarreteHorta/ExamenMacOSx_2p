@@ -37,8 +37,6 @@ class OpcionesCompradorVC: NSViewController {
         
         
         for x in 0...loginController.users.count-1{
-            loginController.users[x].id = x
-            
             if usuarioRecibido==loginController.users[x].username{
                 img.image=NSImage(named: loginController.users[x].imagen)
                 asignarColor(loginController.users[x].fondo)
