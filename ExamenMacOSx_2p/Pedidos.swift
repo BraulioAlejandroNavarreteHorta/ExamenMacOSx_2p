@@ -18,9 +18,11 @@ class Pedidos: NSObject{
     @objc dynamic var categoriaProducto:String //
     @objc dynamic var cantidadPedidaProducto:Int
     @objc dynamic var totalDePedido:Double
+    static var contador = 0
     
     init(_ idProducto: Int,_ nombreProducto: String,_ descripcionProducto: String,_ unidadProducto: String,_ precioProducto: Double,_ costoProducto: Double,_ categoríaProducto: String,_ cantidadPedidaProducto: Int, _ totalDePedido: Double) {
-        self.id = 0
+        self.id = Pedidos.contador
+        Pedidos.contador += 1
         self.idProducto = idProducto
         self.nombreProducto = nombreProducto
         self.descripcionProducto = descripcionProducto

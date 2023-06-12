@@ -65,21 +65,11 @@ class ClientesProfileVC: NSViewController {
     
     @IBAction func viajarATablaProductos(_ sender: Any) {
         asignarVentasAlArregloPedidos()
-        agregarIDaPedidos()
         performSegue(withIdentifier: "irATablaPedidos", sender: self)
     }
     
     @IBAction func salirDeLaPagina(_ sender: Any) {
         self.view.window?.windowController?.close()
-    }
-    
-    func agregarIDaPedidos(){
-        if ventasController.ventas.isEmpty == false{
-            for x in 0...PedidosController.pedidos.count-1{
-                PedidosController.pedidos[x].id = x
-            }
-        }
-        
     }
     
     func obtenerElIdClienteDelUsuarioRecibido(){
