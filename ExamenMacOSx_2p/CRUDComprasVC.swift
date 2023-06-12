@@ -89,7 +89,11 @@ class CRUDComprasVC: NSViewController {
     
     @IBAction func actualizarCompra(_ sender: Any) {
         if validacionID(){
-            id = Int(txtID.intValue)
+            for x in 0...compraController.compras.count-1{
+                if(txtID.integerValue == compraController.compras[x].id){
+                    id = x
+                }
+            }
             enviarAFlag = true
             performSegue(withIdentifier: "actualizarCompra", sender: self)
             dismiss(self)
@@ -113,10 +117,14 @@ class CRUDComprasVC: NSViewController {
             if(!compraController.compras.isEmpty){
                 restaCantidad = productosController.productos[compraController.compras[Int(txtID.intValue)].idProducto].cantidad - compraController.compras[Int(txtID.intValue)].cantidad
                 productosController.productos[compraController.compras[Int(txtID.intValue)].idProducto].cantidad = restaCantidad
-                compraController.compras.remove(at: Int(txtID.intValue))
+                for x in 0...compraController.compras.count-1{
+                    if(txtID.integerValue == compraController.compras[x].id){
+                        compraController.compras.remove(at: x)
+                        break
+                    }
+                }
                 alerta()
                 txtID.stringValue = ""
-                agregarID()
                 
             }else{
                 alertaNoEliminar()
@@ -181,21 +189,12 @@ class CRUDComprasVC: NSViewController {
         alert.addButton(withTitle: "Ok")
         return alert.runModal() == .alertFirstButtonReturn
     }
-    func agregarID(){
-        if(!compraController.compras.isEmpty){
-            for x in 0...compraController.compras.count-1{
-                compraController.compras[x].id = x
-            }
-        }else{
-            alertaNoEliminar()
-        }
-    }
     
     func validacionID() -> Bool {
         var estado = false
         if !compraController.compras.isEmpty{
-            for x in 0 ... compraController.compras.count-1{
-                if(txtID.integerValue==x){
+            for compra in compraController.compras{
+                if(txtID.integerValue == compra.id){
                     estado = true
                 }
             }

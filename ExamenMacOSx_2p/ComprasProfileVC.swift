@@ -17,6 +17,7 @@ class ComprasProfileVC: NSViewController {
     var productosController = ProductosController.compartir
     var sumaCantidades:Int = 0
     var color1:NSColor?
+    var contadorID = Compra.contador
     
     func asignarColor(_ color:String){
         switch color {
@@ -61,7 +62,7 @@ class ComprasProfileVC: NSViewController {
         lblUsuario.stringValue = usuario
         txtIDCompra.isEnabled = false
         txtIdComprador.isEnabled = false
-        txtIDCompra.stringValue = String(comprasController.compras.count)
+        txtIDCompra.stringValue = String(contadorID)
         btnModificar.isHidden = !flag
         btnCrear.isHidden = flag
         txtIdComprador.integerValue = identificarIdComprador(lblUsuario)
@@ -95,7 +96,6 @@ class ComprasProfileVC: NSViewController {
     @IBAction func alta(_ sender: Any) {
         if validacionID(){
             comprasController.compras.append(Compra(Int(txtIdProducto.integerValue),Int(txtCantidadCompra.integerValue),txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue))
-            agregarID()
             print("se hizo la alta")
             self.view.window?.windowController?.close()
         }else{
@@ -124,8 +124,25 @@ class ComprasProfileVC: NSViewController {
     @IBAction func Actualizar(_ sender: Any) {
         //sale paro en debug checar mañana
         if validacionID(){
-            comprasController.compras[posicion!] = Compra(Int(txtIdProducto.integerValue),Int(txtCantidadCompra.integerValue),txtIdComprador.integerValue,lblNombreProducto.stringValue,lblDescripcionProducto.stringValue,lblUnidadProducto.stringValue,Double(lblPrecioProducto.doubleValue),Double(lblCostoProducto.doubleValue),lblCategoria.stringValue,lblExitenciaProducto.integerValue,lblNombreComprador.stringValue,lblApellidoPaternoComprador.stringValue,lblApellidoMaternoComprador.stringValue,lblCorreo.stringValue,lblTelefono.stringValue)
-            agregarID()
+            comprasController.compras[posicion!].username = lblNombreComprador.stringValue
+            comprasController.compras[posicion!].apellidoP = lblApellidoPaternoComprador.stringValue
+            comprasController.compras[posicion!].apellidoM = lblApellidoMaternoComprador.stringValue
+            comprasController.compras[posicion!].email = lblCorreo.stringValue
+            comprasController.compras[posicion!].telefono = lblTelefono.stringValue
+            //informacion del producto
+            comprasController.compras[posicion!].idProducto = lblIDproducto.integerValue
+            comprasController.compras[posicion!].nombre = lblNombreProducto.stringValue
+            comprasController.compras[posicion!].descripcion = lblDescripcionProducto.stringValue
+            comprasController.compras[posicion!].unidad = lblUnidadProducto.stringValue
+            comprasController.compras[posicion!].precio = lblPrecioProducto.doubleValue
+            comprasController.compras[posicion!].costo = lblCostoProducto.doubleValue
+            comprasController.compras[posicion!].categoría = lblCategoria.stringValue
+            comprasController.compras[posicion!].cantidadProducto = lblExitenciaProducto.integerValue
+            //formulario
+            comprasController.compras[posicion!].id = txtIDCompra.integerValue
+            comprasController.compras[posicion!].idProducto = txtIdProducto.integerValue
+            comprasController.compras[posicion!].cantidad = txtCantidadCompra.integerValue
+            comprasController.compras[posicion!].idComprador = txtIdComprador.integerValue
             print("actualizacion de compra")
             self.view.window?.windowController?.close()
         }else{
@@ -137,7 +154,7 @@ class ComprasProfileVC: NSViewController {
 
     func setProducto(){
         for x in 0 ... productosController.productos.count-1{
-            if(txtIdProducto.integerValue==x){
+            if(txtIdProducto.integerValue==productosController.productos[x].id){
                 lblIDproducto.stringValue = " \(productosController.productos[x].id)"
                 lblNombreProducto.stringValue = productosController.productos[x].nombre
                 lblDescripcionProducto.stringValue = productosController.productos[x].descripcion
@@ -156,20 +173,13 @@ class ComprasProfileVC: NSViewController {
     func setInfoComprador(){
         for x in 0 ...
         loginController.users.count-1{
-            if(txtIdComprador.integerValue==x){
+            if(txtIdComprador.integerValue==loginController.users[x].id){
                 lblNombreComprador.stringValue = loginController.users[x].nombre
                 lblApellidoPaternoComprador.stringValue = loginController.users[x].apellidoP
                 lblApellidoMaternoComprador.stringValue = loginController.users[x].apellidoM
                 lblCorreo.stringValue = loginController.users[x].email
                 lblTelefono.stringValue = "\(loginController.users[x].telefono)"
             }
-        }
-    }
-   
-    
-    func agregarID(){
-        for x in 0...comprasController.compras.count-1{
-            comprasController.compras[x].id = x
         }
     }
     
@@ -219,7 +229,7 @@ class ComprasProfileVC: NSViewController {
         var estado = false
         if !productosController.productos.isEmpty{
             for x in 0 ... productosController.productos.count-1{
-                if(txtIdProducto.integerValue==x){
+                if(txtIdProducto.integerValue==productosController.productos[x].id){
                     estado = true
                 }
             }
