@@ -60,6 +60,11 @@ class OpcionesCompradorVC: NSViewController {
             let destination = segue.destinationController as! CRUDComprasVC
             destination.usuarioRecibido = usuario
         }
+        
+        if segue.identifier == "productos" {
+            let destination = segue.destinationController as! CRUDProductosVC
+            destination.usuarioRecibido = usuario
+        }
     }
     
     @IBOutlet weak var img: NSImageCell!

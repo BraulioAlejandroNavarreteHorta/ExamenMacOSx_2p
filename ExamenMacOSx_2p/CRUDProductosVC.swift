@@ -86,7 +86,11 @@ class CRUDProductosVC: NSViewController {
     
     @IBAction func actualizarProducto(_ sender: Any) {
         if validacionID(){
-            id = Int(txtID.intValue)
+            for x in 0...productoController.productos.count-1{
+                if(txtID.integerValue == productoController.productos[x].id){
+                    id = x
+                }
+            }
             enviarAFlag = true
             performSegue(withIdentifier: "actualizarProducto", sender: self)
             dismiss(self)
@@ -107,24 +111,18 @@ class CRUDProductosVC: NSViewController {
     
     @IBAction func eliminar(_ sender: Any) {
         if validacionID(){
-            productoController.productos.remove(at: Int(txtID.intValue))
+            for x in 0...productoController.productos.count-1{
+                if(txtID.integerValue == productoController.productos[x].id){
+                    productoController.productos.remove(at: x)
+                    break
+                }
+            }
             alerta()
             txtID.stringValue = ""
-            agregarID()
         }else{
             alertaValidacion()
         }
         
-    }
-    
-    func agregarID(){
-        if(!productoController.productos.isEmpty){
-            for x in 0...productoController.productos.count-1{
-                productoController.productos[x].id = x
-            }
-        }else{
-            alertaNoEliminar()
-        }
     }
     
     func alerta() -> Bool {
@@ -160,6 +158,7 @@ class CRUDProductosVC: NSViewController {
             let destinationVC = segue.destinationController as! ProductosProfileVC
             destinationVC.flag = enviarAFlag
             destinationVC.posicion = id
+            destinationVC.usuarioRecibido2 = usuarioRecibido
         }
         
         
@@ -175,8 +174,8 @@ class CRUDProductosVC: NSViewController {
     func validacionID() -> Bool {
         var estado = false
         if !productoController.productos.isEmpty{
-            for x in 0 ... productoController.productos.count-1{
-                if(txtID.integerValue==x){
+            for producto in productoController.productos{
+                if(txtID.integerValue == producto.id){
                     estado = true
                 }
             }

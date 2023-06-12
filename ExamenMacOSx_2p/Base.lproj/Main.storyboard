@@ -2686,7 +2686,7 @@
                                 </buttonCell>
                                 <color key="bezelColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
-                                    <segue destination="XGu-IH-68D" kind="show" id="Vop-Ri-nOJ"/>
+                                    <segue destination="XGu-IH-68D" kind="show" identifier="productos" id="Vop-Ri-nOJ"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3EU-rl-rCt">
@@ -2719,6 +2719,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="363" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a32-uv-JxG">
+                                <rect key="frame" x="-44" y="0.0" width="450" height="429"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="ydM-NA-TVE"/>
+                            </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYh-ec-Mle">
                                 <rect key="frame" x="64" y="214" width="60" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2832,11 +2837,6 @@
                                     <color key="backgroundColor" name="unemphasizedSelectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a32-uv-JxG">
-                                <rect key="frame" x="-44" y="0.0" width="450" height="429"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="ydM-NA-TVE"/>
-                            </imageView>
                         </subviews>
                     </view>
                     <connections>
@@ -5695,11 +5695,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="LWM-Hr-kTY"/>
         <segue reference="DF1-Q0-v9I"/>
-        <segue reference="c9t-qj-ehu"/>
+        <segue reference="oNh-9f-g2e"/>
         <segue reference="rf7-c9-A79"/>
-        <segue reference="L3e-Cz-ACk"/>
+        <segue reference="Vop-Ri-nOJ"/>
         <segue reference="KFQ-xw-FYt"/>
-        <segue reference="5SM-Ie-Pno"/>
+        <segue reference="Bbo-Iw-M4I"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="17004" width="512" height="512"/>

@@ -17,9 +17,11 @@ class Product: NSObject{
     @objc dynamic var costo:Double //
     @objc dynamic var categoría:String //
     @objc dynamic var cantidad:Int //
+    static var contador = 0
     
     init(_ nombre: String,_ descripcion: String,_ unidad: String,_ precio: Double,_ costo: Double,_ categoría: String,_ cantidad: Int) {
-        self.id = 0
+        self.id = Product.contador
+        Product.contador += 1
         self.nombre = nombre
         self.descripcion = descripcion
         self.unidad = unidad

@@ -12,8 +12,9 @@ class ProductosProfileVC: NSViewController {
     var posicion: Int?
     var productosController = ProductosController.compartir
     var loginController = LoginController.compartir
-    var usuarioRecibido:String?
+    var usuarioRecibido2:String?
     var color1:NSColor?
+    var contadorID = Product.contador
     
     func asignarColor(_ color:String){
         switch color {
@@ -39,7 +40,7 @@ class ProductosProfileVC: NSViewController {
         
         
         for x in 0...loginController.users.count-1{
-            if usuarioRecibido==loginController.users[x].username{
+            if usuarioRecibido2==loginController.users[x].username{
                 img.image=NSImage(named: loginController.users[x].imagen)
                 asignarColor(loginController.users[x].fondo)
                 view.wantsLayer = true
@@ -53,7 +54,7 @@ class ProductosProfileVC: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         txtID.isEnabled = false
-        txtID.stringValue = String(productosController.productos.count)
+        txtID.stringValue = String(contadorID)
         btnModificar.isHidden = !flag
         btnCrear.isHidden = flag
         setValue()
@@ -74,7 +75,6 @@ class ProductosProfileVC: NSViewController {
         //agregar validaciones
         if validacionDeCampos(){
             productosController.productos.append(Product(txtNombre.stringValue, txtDescripcion.stringValue, cmbUnidad.stringValue, Double(txtPrecio.doubleValue), Double(txtCosto.doubleValue),cmbCategoria.stringValue, Int(txtCantidad.integerValue)))
-            agregarID()
             print("Actualizado")
             self.view.window?.windowController?.close()
         }else{
@@ -82,18 +82,17 @@ class ProductosProfileVC: NSViewController {
         }
     }
     
-    
-    func agregarID(){
-        for x in 0...productosController.productos.count-1{
-            productosController.productos[x].id = x
-        }
-    }
-    
     @IBAction func updateEvent(_ sender: NSButton) {
         //agregar validaciones
         if validacionDeCampos(){
-            productosController.productos[posicion!] = Product(txtNombre.stringValue, txtDescripcion.stringValue, cmbUnidad.stringValue, Double(txtPrecio.doubleValue), Double(txtCosto.doubleValue), cmbCategoria.stringValue, Int(txtCantidad.integerValue))
-                agregarID()
+            productosController.productos[posicion!].id = txtID.integerValue
+            productosController.productos[posicion!].nombre = txtNombre.stringValue
+            productosController.productos[posicion!].descripcion = txtDescripcion.stringValue
+            productosController.productos[posicion!].unidad = cmbUnidad.stringValue
+            productosController.productos[posicion!].precio = txtPrecio.doubleValue
+            productosController.productos[posicion!].costo = txtCosto.doubleValue
+            productosController.productos[posicion!].categoría = cmbCategoria.stringValue
+            productosController.productos[posicion!].cantidad = txtCantidad.integerValue
                 print("Actualizado")
             self.view.window?.windowController?.close()
         }else{
