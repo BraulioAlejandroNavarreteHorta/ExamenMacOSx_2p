@@ -87,7 +87,11 @@ class CRUDVentasVC: NSViewController {
     
     @IBAction func actualizarCompra(_ sender: Any) {
         if validacionID(){
-            id = Int(txtID.intValue)
+            for x in 0...ventasController.ventas.count-1{
+                if(Int(txtID.stringValue) == ventasController.ventas[x].idVenta){
+                    id = x
+                }
+            }
             enviarAFlag = true
             performSegue(withIdentifier: "actualizarVenta", sender: self)
             dismiss(self)
@@ -112,10 +116,14 @@ class CRUDVentasVC: NSViewController {
              if(!ventasController.ventas.isEmpty){
                  sumaCantidad = productosController.productos[ventasController.ventas[Int(txtID.intValue)].idProducto].cantidad + ventasController.ventas[Int(txtID.intValue)].cantidadVenta
                  productosController.productos[ventasController.ventas[Int(txtID.intValue)].idProducto].cantidad = sumaCantidad
-                 ventasController.ventas.remove(at: Int(txtID.intValue))
+                 for x in 0...ventasController.ventas.count-1{
+                     if(Int(txtID.stringValue) == ventasController.ventas[x].idVenta){
+                         ventasController.ventas.remove(at: x)
+                         break
+                     }
+                 }
                  alerta()
                  txtID.stringValue = ""
-                 agregarID()
                  
              }else{
                  alertaNoEliminar()
@@ -178,21 +186,12 @@ class CRUDVentasVC: NSViewController {
         alert.addButton(withTitle: "Ok")
         return alert.runModal() == .alertFirstButtonReturn
     }
-    func agregarID(){
-        if(!ventasController.ventas.isEmpty){
-            for x in 0...ventasController.ventas.count-1{
-                ventasController.ventas[x].idVenta = x
-            }
-        }else{
-            alertaNoEliminar()
-        }
-    }
     
     func validacionID() -> Bool {
         var estado = false
         if !ventasController.ventas.isEmpty{
-            for x in 0 ... ventasController.ventas.count-1{
-                if(txtID.integerValue==x){
+            for venta in ventasController.ventas{
+                if(txtID.integerValue == venta.idVenta){
                     estado = true
                 }
             }

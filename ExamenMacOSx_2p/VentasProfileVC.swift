@@ -21,6 +21,7 @@ class VentasProfileVC: NSViewController {
     var IVA:Double = 0
     var total:Double = 0
     var color1:NSColor?
+    var contadorID = Venta.contador
     
     func asignarColor(_ color:String){
         switch color {
@@ -66,7 +67,7 @@ class VentasProfileVC: NSViewController {
         lblUsuario.stringValue = usuario
         txtIDVenta.isEnabled = false
         txtIDVendedor.isEnabled = false
-        txtIDVenta.stringValue = String(ventasController.ventas.count)
+        txtIDVenta.stringValue = String(contadorID)
         btnModificar.isHidden = !flag
         btnCrear.isHidden = flag
         txtIDVendedor.integerValue = identificarIdVendedor(lblUsuario)
@@ -128,7 +129,6 @@ class VentasProfileVC: NSViewController {
                 
                 if restarExistencia() {
                     ventasController.ventas.append(Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(txtIDProducto.integerValue)].categoría,Int(lblCantidad.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue)))
-                    agregarID()
                     print("se hizo la alta")
                     self.view.window?.windowController?.close()
                 }else{
@@ -149,8 +149,32 @@ class VentasProfileVC: NSViewController {
             if !productosController.productos.isEmpty{
                 
                 if restarExistencia() {
-                    ventasController.ventas[posicion!] = Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(txtIDProducto.integerValue)].categoría,Int(lblCantidad.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue))
-                    agregarID()
+                    ventasController.ventas[posicion!].nombreVendedor = lblNombreVendedor.stringValue
+                    ventasController.ventas[posicion!].apellidoPVendedor = lblApellidoPaternoVendedor.stringValue
+                    ventasController.ventas[posicion!].apellidoMVendedor = lblApellidoMaternoVendedor.stringValue
+                    ventasController.ventas[posicion!].emailVendedor = lblCorreoVendedor.stringValue
+                    ventasController.ventas[posicion!].telefonoVendedor = lblTelefonoVendedor.stringValue
+                    
+                    ventasController.ventas[posicion!].idCliente = lblIDCliente.integerValue
+                    ventasController.ventas[posicion!].nombreCliente = lblNombreCliente.stringValue
+                    ventasController.ventas[posicion!].apellidoPCliente = lblApellidoPaternoCliente.stringValue
+                    ventasController.ventas[posicion!].apellidoMCliente = lblApellidoMaternoCliente.stringValue
+                    ventasController.ventas[posicion!].correoCliente = lblCorreoCliente.stringValue
+                    ventasController.ventas[posicion!].telefonoCliente = lblTelefonoCliente.stringValue
+                    
+                    ventasController.ventas[posicion!].cantidadVenta = lblCantidad.integerValue
+                    ventasController.ventas[posicion!].unidadProducto = lblUnidad.stringValue
+                    ventasController.ventas[posicion!].nombreProducto = lblProducto.stringValue
+                    ventasController.ventas[posicion!].descripcionProducto = lblDescripcion.stringValue
+                    ventasController.ventas[posicion!].precioProducto = lblPrecio.doubleValue
+                    ventasController.ventas[posicion!].subtotal = lblSubtotal.doubleValue
+                    ventasController.ventas[posicion!].IVA = lblIVA.doubleValue
+                    ventasController.ventas[posicion!].total = lblTotal.doubleValue
+                    
+                    ventasController.ventas[posicion!].idVenta = txtIDVenta.integerValue
+                    ventasController.ventas[posicion!].idProducto = txtIDProducto.integerValue
+                    ventasController.ventas[posicion!].idCliente = txtIDCliente.integerValue
+                    ventasController.ventas[posicion!].cantidadVenta = txtCantidadVenta.integerValue
                     print("actualizacion de compra")
                     self.view.window?.windowController?.close()
                 }else{
@@ -228,7 +252,7 @@ class VentasProfileVC: NSViewController {
         
         if !productosController.productos.isEmpty {
             for x in 0 ... productosController.productos.count-1{
-                if(txtIDProducto.integerValue==x){
+                if(txtIDProducto.integerValue==productosController.productos[x].id){
                     
                     if txtCantidadVenta.integerValue <= productosController.productos[x].cantidad {
                         lblCantidad.stringValue = txtCantidadVenta.stringValue
@@ -262,7 +286,7 @@ class VentasProfileVC: NSViewController {
     func setInfoVendedor(){
         for x in 0 ...
         loginController.users.count-1{
-            if(txtIDVendedor.integerValue==x){
+            if(txtIDVendedor.integerValue == loginController.users[x].id){
                 lblNombreVendedor.stringValue = loginController.users[x].nombre
                 lblApellidoPaternoVendedor.stringValue = loginController.users[x].apellidoP
                 lblApellidoMaternoVendedor.stringValue = loginController.users[x].apellidoM
@@ -299,7 +323,7 @@ class VentasProfileVC: NSViewController {
     func setInfoCliente(){
         for x in 0 ...
         loginController.users.count-1{
-            if(txtIDCliente.integerValue==x){
+            if(txtIDCliente.integerValue == loginController.users[x].id){
                 lblIDCliente.integerValue = loginController.users[x].id
                 lblNombreCliente.stringValue = loginController.users[x].nombre
                 lblApellidoPaternoCliente.stringValue = loginController.users[x].apellidoP
@@ -320,17 +344,18 @@ class VentasProfileVC: NSViewController {
         return idVendedor
     }
     
-    func agregarID(){
-        for x in 0...ventasController.ventas.count-1{
-            ventasController.ventas[x].idVenta = x
-        }
-    }
-    
     func validarQueSeaCliente() -> Bool {
         var estado = false
         if !loginController.users.isEmpty{
-            for x in 0 ... loginController.users.count-1{
-                if(loginController.users[txtIDCliente.integerValue].role == 1){
+            var idCliente = 0
+            for x in 0...loginController.users.count-1{
+                if(txtIDCliente.integerValue == loginController.users[x].id){
+                    idCliente = x
+                }
+            }
+            
+            for _ in 0 ... loginController.users.count-1{
+                if(loginController.users[idCliente].role == 1){
                     estado = true
                 }
             }

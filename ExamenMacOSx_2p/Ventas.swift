@@ -35,9 +35,11 @@ class Venta: NSObject{
     @objc dynamic var subtotal:Double
     @objc dynamic var IVA:Double
     @objc dynamic var total:Double
+    static var contador:Int = 0
     
     init(_ idProducto: Int,_ nombreProducto: String,_ descripcionProducto: String,_ unidadProducto: String,_ precioProducto: Double,_ categoríaProducto: String,_ cantidadVenta: Int,_ nombreVendedor: String,_ apellidoPVendedor: String,_ apellidoMVendedor: String,_ emailVendedor: String,_ telefonoVendedor: String,_ idCliente: Int,_ nombreCliente: String,_ apellidoPCliente: String,_ apellidoMCliente: String,_ correoCliente: String,_ telefonoCliente: String,_ subtotal: Double,_ IVA: Double,_ total: Double) {
-        self.idVenta = 0
+        self.idVenta = Venta.contador
+        Venta.contador += 1
         self.idProducto = idProducto
         self.nombreProducto = nombreProducto
         self.descripcionProducto = descripcionProducto
