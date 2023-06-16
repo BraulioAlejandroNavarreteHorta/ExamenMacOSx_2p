@@ -111,11 +111,16 @@ class VentasProfileVC: NSViewController {
         
         var alta = false
         for x in 0 ... productosController.productos.count-1{
-            if txtCantidadVenta.integerValue <= productosController.productos[x].cantidad{
+            if txtIDProducto.integerValue == productosController.productos[x].id{
                 restaExistencia=productosController.productos[x].cantidad - txtCantidadVenta.integerValue
                 productosController.productos[x].cantidad = restaExistencia
+                
+                
+                
+                
             alertaInventario()
                 alta = true
+                break
             }
             else{
                 alta = false
