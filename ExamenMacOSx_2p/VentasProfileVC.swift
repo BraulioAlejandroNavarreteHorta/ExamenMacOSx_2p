@@ -256,33 +256,41 @@ class VentasProfileVC: NSViewController {
     func setProducto(){
         
         if !productosController.productos.isEmpty {
-            for x in 0 ... productosController.productos.count-1{
-                if(txtIDProducto.integerValue==productosController.productos[x].id){
-                    
-                    if txtCantidadVenta.integerValue <= productosController.productos[x].cantidad {
-                        lblCantidad.stringValue = txtCantidadVenta.stringValue
-                        lblUnidad.stringValue = " \(productosController.productos[x].unidad)"
-                        lblProducto.stringValue = productosController.productos[x].nombre
-                        lblDescripcion.stringValue = productosController.productos[x].descripcion
-                        lblPrecio.stringValue = "\(productosController.productos[x].precio)"
-                        subtotal = lblCantidad.doubleValue * lblPrecio.doubleValue
-                        IVA = subtotal * 0.16
-                        total = subtotal + IVA
-                        lblSubtotal.stringValue = String(subtotal)
-                        lblIVA.stringValue = String(IVA)
-                        lblTotal.stringValue = String(total)
-                        alertaInventario()
-                        setInfoCliente()
-                        setInfoVendedor()
-                    }
-                    else{
-                        alertaInventarioInsuficiente()
-                    }
-                }else{
-                    noExisteElProducto()
+            var productoEncontrado = false
+            var indiceProductoEncontrado = 0
+
+            for x in 0 ... productosController.productos.count-1 {
+                if txtIDProducto.integerValue == productosController.productos[x].id {
+                    productoEncontrado = true
+                    indiceProductoEncontrado = x
+                    break
                 }
-                
             }
+
+            if productoEncontrado {
+                if txtCantidadVenta.integerValue <= productosController.productos[indiceProductoEncontrado].cantidad {
+                    lblCantidad.stringValue = txtCantidadVenta.stringValue
+                    lblUnidad.stringValue = " \(productosController.productos[indiceProductoEncontrado].unidad)"
+                    lblProducto.stringValue = productosController.productos[indiceProductoEncontrado].nombre
+                    lblDescripcion.stringValue = productosController.productos[indiceProductoEncontrado].descripcion
+                    lblPrecio.stringValue = "\(productosController.productos[indiceProductoEncontrado].precio)"
+                    subtotal = lblCantidad.doubleValue * lblPrecio.doubleValue
+                    IVA = subtotal * 0.16
+                    total = subtotal + IVA
+                    lblSubtotal.stringValue = String(subtotal)
+                    lblIVA.stringValue = String(IVA)
+                    lblTotal.stringValue = String(total)
+                    alertaInventario()
+                    setInfoCliente()
+                    setInfoVendedor()
+                } else {
+                    alertaInventarioInsuficiente()
+                }
+            } else {
+                noExisteElProducto()
+            }
+
+        
         }else{
             noExisteElProducto()
         }
@@ -297,6 +305,7 @@ class VentasProfileVC: NSViewController {
                 lblApellidoMaternoVendedor.stringValue = loginController.users[x].apellidoM
                 lblCorreoVendedor.stringValue = loginController.users[x].email
                 lblTelefonoVendedor.stringValue = "\(loginController.users[x].telefono)"
+                break
             }
         }
     }
@@ -335,6 +344,7 @@ class VentasProfileVC: NSViewController {
                 lblApellidoMaternoCliente.stringValue = loginController.users[x].apellidoM
                 lblCorreoCliente.stringValue = loginController.users[x].email
                 lblTelefonoCliente.stringValue = "\(loginController.users[x].telefono)"
+                break
             }
         }
     }
@@ -344,6 +354,7 @@ class VentasProfileVC: NSViewController {
         for x in 0...loginController.users.count-1{
             if usuario.stringValue == loginController.users[x].username {
                 idVendedor = x
+                break
             }
         }
         return idVendedor
@@ -356,12 +367,14 @@ class VentasProfileVC: NSViewController {
             for x in 0...loginController.users.count-1{
                 if(txtIDCliente.integerValue == loginController.users[x].id){
                     idCliente = x
+                    break
                 }
             }
             
             for _ in 0 ... loginController.users.count-1{
                 if(loginController.users[idCliente].role == 1){
                     estado = true
+                    break
                 }
             }
         }else{
