@@ -31,10 +31,13 @@ class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
     @IBOutlet weak var txtEmail: NSTextField!
     @IBOutlet weak var txtGenero: NSComboBox!    
     @IBOutlet weak var txtContraseña: NSSecureTextField!
+    @IBOutlet weak var txtConfirmarPassword: NSSecureTextField!
     @IBOutlet weak var txtRol: NSComboBox!
     @IBOutlet weak var dateNacimiento: NSDatePicker!
     @IBOutlet weak var cmbColor: NSComboBox!
     @IBOutlet weak var cmbImg: NSComboBox!
+    
+    @IBOutlet weak var lblConfirmarContraseña: NSTextField!
     
     
     @IBOutlet weak var btnCreate: NSButton!
@@ -154,10 +157,16 @@ class AdminProfileVC: NSViewController, NSComboBoxDataSource, NSComboBoxDelegate
     
     func validacionDeCampos() -> Bool{
         var estado = false
-        if txtUsuer.stringValue == "" || txtContraseña.stringValue == "" || txtNombre.stringValue == "" || txtApellidoP.stringValue == "" || txtApellidoM.stringValue == "" || txtTelefono.stringValue == "" || txtEmail.stringValue == "" || txtGenero.stringValue == "" || txtRol.stringValue == "" || txtNombre.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoP.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoM.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || !txtEmail.stringValue.contains("@") || txtContraseña.stringValue.count < 8 || txtTelefono.stringValue.count != 10 || txtTelefono.stringValue.range(of: "[a-z]", options: .regularExpression) != nil{
+        if txtUsuer.stringValue == "" || txtContraseña.stringValue == "" || txtNombre.stringValue == "" || txtApellidoP.stringValue == "" || txtApellidoM.stringValue == "" || txtTelefono.stringValue == "" || txtEmail.stringValue == "" || txtGenero.stringValue == "" || txtRol.stringValue == "" || cmbColor.stringValue == "" || cmbImg.stringValue == "" || txtNombre.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoP.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoM.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || !txtEmail.stringValue.contains("@") || txtContraseña.stringValue.count < 8 || txtTelefono.stringValue.count != 10 || txtTelefono.stringValue.range(of: "[a-z]", options: .regularExpression) != nil{
         }
         else{
-            estado = true
+            if txtContraseña.stringValue == txtConfirmarPassword.stringValue {
+                estado = true
+            }else{
+                lblConfirmarContraseña.stringValue = "Contraseña incorrecta"
+                lblConfirmarContraseña.textColor = NSColor.red
+            }
+            
         }
         return estado
     }

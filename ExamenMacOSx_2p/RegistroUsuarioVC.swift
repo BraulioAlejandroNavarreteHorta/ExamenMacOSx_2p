@@ -103,7 +103,7 @@ class RegistroUsuarioVC: NSViewController, NSComboBoxDelegate, NSComboBoxDataSou
     }
     
     @IBAction func checarContraseña(_ sender: NSButton) {
-        if txtUserName.stringValue == "" || txtPassword.stringValue == "" || txtConfirmarPassword.stringValue == "" || txtNombre.stringValue == "" || txtApellidoP.stringValue == "" || txtApellidoM.stringValue == "" || txtTelefono.stringValue == "" || txtEmail.stringValue == "" || txtGenero.stringValue == "" || txtNombre.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoP.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoM.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || !txtEmail.stringValue.contains("@") || txtPassword.stringValue.count < 8 || txtConfirmarPassword.stringValue.count < 8 || txtTelefono.stringValue.count != 10 || txtTelefono.stringValue.range(of: "[a-z]", options: .regularExpression) != nil{
+        if txtUserName.stringValue == "" || txtPassword.stringValue == "" || txtConfirmarPassword.stringValue == "" || txtNombre.stringValue == "" || txtApellidoP.stringValue == "" || txtApellidoM.stringValue == "" || txtTelefono.stringValue == "" || txtEmail.stringValue == "" || txtGenero.stringValue == "" || cmbColor.stringValue == "" || cmbImg.stringValue == "" || txtNombre.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoP.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || txtApellidoM.stringValue.range(of: "[0-9]", options: .regularExpression) != nil || !txtEmail.stringValue.contains("@") || txtPassword.stringValue.count < 8 || txtConfirmarPassword.stringValue.count < 8 || txtTelefono.stringValue.count != 10 || txtTelefono.stringValue.range(of: "[a-z]", options: .regularExpression) != nil{
             alerta()
         }else{
             if txtPassword.stringValue == txtConfirmarPassword.stringValue {
@@ -114,7 +114,7 @@ class RegistroUsuarioVC: NSViewController, NSComboBoxDelegate, NSComboBoxDataSou
                 self.view.window?.windowController?.close()
             }else{
                 lblConfirmarPassword.stringValue = "Contraseña incorrecta"
-                lblConfirmarPassword.textColor = NSColor(red: 255, green: 0, blue: 0, alpha: 255)
+                lblConfirmarPassword.textColor = NSColor.red
                 
             }
         }
