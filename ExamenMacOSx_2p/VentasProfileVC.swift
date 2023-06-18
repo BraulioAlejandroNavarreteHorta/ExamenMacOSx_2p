@@ -132,8 +132,8 @@ class VentasProfileVC: NSViewController {
         if validarQueSeaCliente(){
             if !productosController.productos.isEmpty{
                 
-                if restarExistencia() {
-                    ventasController.ventas.append(Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(txtIDProducto.integerValue)].categoría,Int(lblCantidad.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue)))
+                if restarExistencia() || restaExistencia <= 0 {
+                    ventasController.ventas.append(Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(txtIDProducto.integerValue)].categoría,Int(txtCantidadVenta.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue)))
                     print("se hizo la alta")
                     self.view.window?.windowController?.close()
                 }else{
@@ -167,7 +167,7 @@ class VentasProfileVC: NSViewController {
                     ventasController.ventas[posicion!].correoCliente = lblCorreoCliente.stringValue
                     ventasController.ventas[posicion!].telefonoCliente = lblTelefonoCliente.stringValue
                     
-                    ventasController.ventas[posicion!].cantidadVenta = lblCantidad.integerValue
+                    ventasController.ventas[posicion!].cantidadVenta = txtCantidadVenta.integerValue
                     ventasController.ventas[posicion!].unidadProducto = lblUnidad.stringValue
                     ventasController.ventas[posicion!].nombreProducto = lblProducto.stringValue
                     ventasController.ventas[posicion!].descripcionProducto = lblDescripcion.stringValue
@@ -200,8 +200,8 @@ class VentasProfileVC: NSViewController {
         //Informacion del producto
         if validarQueSeaCliente(){
             setProducto()
-            btnCrear.isEnabled = true
-            btnModificar.isEnabled = true
+            //btnCrear.isEnabled = true
+            //btnModificar.isEnabled = true
         }else{
             alertaValidacion()
         }
@@ -256,6 +256,8 @@ class VentasProfileVC: NSViewController {
     func setProducto(){
         
         if !productosController.productos.isEmpty {
+            
+                
             var productoEncontrado = false
             var indiceProductoEncontrado = 0
 
@@ -269,29 +271,38 @@ class VentasProfileVC: NSViewController {
 
             if productoEncontrado {
                 if txtCantidadVenta.integerValue <= productosController.productos[indiceProductoEncontrado].cantidad {
-                    lblCantidad.stringValue = txtCantidadVenta.stringValue
+                    var cantidadVenta = txtCantidadVenta.stringValue
+                    lblCantidad.stringValue = cantidadVenta
                     lblUnidad.stringValue = " \(productosController.productos[indiceProductoEncontrado].unidad)"
                     lblProducto.stringValue = productosController.productos[indiceProductoEncontrado].nombre
                     lblDescripcion.stringValue = productosController.productos[indiceProductoEncontrado].descripcion
                     lblPrecio.stringValue = "\(productosController.productos[indiceProductoEncontrado].precio)"
-                    subtotal = lblCantidad.doubleValue * lblPrecio.doubleValue
+                    subtotal = txtCantidadVenta.doubleValue * lblPrecio.doubleValue
                     IVA = subtotal * 0.16
                     total = subtotal + IVA
                     lblSubtotal.stringValue = String(subtotal)
                     lblIVA.stringValue = String(IVA)
                     lblTotal.stringValue = String(total)
+                    btnCrear.isEnabled = true
+                    btnModificar.isEnabled = true
                     alertaInventario()
                     setInfoCliente()
                     setInfoVendedor()
                 } else {
+                    btnCrear.isEnabled = false
+                    btnModificar.isEnabled = false
                     alertaInventarioInsuficiente()
                 }
             } else {
+                btnCrear.isEnabled = false
+                btnModificar.isEnabled = false
                 noExisteElProducto()
             }
 
         
         }else{
+            btnCrear.isEnabled = false
+            btnModificar.isEnabled = false
             noExisteElProducto()
         }
     }
