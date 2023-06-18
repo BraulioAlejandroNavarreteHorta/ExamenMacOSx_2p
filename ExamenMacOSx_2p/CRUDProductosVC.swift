@@ -13,6 +13,7 @@ class CRUDProductosVC: NSViewController {
     var enviarAFlag: Bool = false
     var productoController = ProductosController.compartir
     var usuarioRecibido:String?
+    var usuario: String = ""
     var color1:NSColor?
     var loginController = LoginController.compartir
     
@@ -57,6 +58,7 @@ class CRUDProductosVC: NSViewController {
         txtID.isHidden = true
         btnOK.isHidden = true
         btnEliminar.isHidden = true
+        usuario = usuarioRecibido!
         setValue()
     }
     
@@ -81,6 +83,7 @@ class CRUDProductosVC: NSViewController {
     }
     
     @IBAction func altaProducto(_ sender: Any) {
+        performSegue(withIdentifier: "crearProducto", sender: self)
         self.view.window?.windowController?.close()
     }
     
@@ -158,7 +161,14 @@ class CRUDProductosVC: NSViewController {
             let destinationVC = segue.destinationController as! ProductosProfileVC
             destinationVC.flag = enviarAFlag
             destinationVC.posicion = id
-            destinationVC.usuarioRecibido2 = usuarioRecibido
+            destinationVC.usuarioRecibido2 = usuario
+        }
+        
+        if(segue.identifier == "crearProducto"){
+            let destinationVC = segue.destinationController as! ProductosProfileVC
+            destinationVC.flag = enviarAFlag
+            destinationVC.posicion = id
+            destinationVC.usuarioRecibido2 = usuario
         }
         
         

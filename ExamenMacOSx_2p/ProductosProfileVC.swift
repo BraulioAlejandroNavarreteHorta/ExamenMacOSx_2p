@@ -10,6 +10,7 @@ import Cocoa
 class ProductosProfileVC: NSViewController {
     var flag: Bool = false
     var posicion: Int?
+    var usuario: String = ""
     var productosController = ProductosController.compartir
     var loginController = LoginController.compartir
     var usuarioRecibido2:String?
@@ -57,7 +58,9 @@ class ProductosProfileVC: NSViewController {
         txtID.stringValue = String(contadorID)
         btnModificar.isHidden = !flag
         btnCrear.isHidden = flag
+        usuario = usuarioRecibido2!
         setValue()
+        
         
         if flag {
             txtID.integerValue = productosController.productos[posicion!].id
