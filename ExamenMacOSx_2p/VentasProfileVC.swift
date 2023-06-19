@@ -129,11 +129,21 @@ class VentasProfileVC: NSViewController {
         return alta
     }
     @IBAction func alta(_ sender: Any) {
+        var productoEncontrado = false
+        var indiceProductoEncontrado = 0
+
+        for x in 0 ... productosController.productos.count-1 {
+            if txtIDProducto.integerValue == productosController.productos[x].id {
+                productoEncontrado = true
+                indiceProductoEncontrado = x
+                break
+            }
+        }
         if validarQueSeaCliente(){
             if !productosController.productos.isEmpty{
                 
                 if restarExistencia() || restaExistencia <= 0 {
-                    ventasController.ventas.append(Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(txtIDProducto.integerValue)].categoría,Int(txtCantidadVenta.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue)))
+                    ventasController.ventas.append(Venta(Int(txtIDProducto.integerValue),lblProducto.stringValue,lblDescripcion.stringValue,lblUnidad.stringValue,Double(lblPrecio.doubleValue),productosController.productos[Int(indiceProductoEncontrado)].categoría,Int(txtCantidadVenta.integerValue),lblNombreVendedor.stringValue,lblApellidoPaternoVendedor.stringValue,lblApellidoMaternoVendedor.stringValue,lblCorreoVendedor.stringValue,lblTelefonoVendedor.stringValue,Int(lblIDCliente.integerValue),lblNombreCliente.stringValue,lblApellidoPaternoCliente.stringValue,lblApellidoMaternoCliente.stringValue,lblCorreoCliente.stringValue,lblTelefonoCliente.stringValue,Double(lblSubtotal.doubleValue),Double(lblIVA.doubleValue),Double(lblTotal.doubleValue)))
                     print("se hizo la alta")
                     self.view.window?.windowController?.close()
                 }else{
@@ -331,17 +341,39 @@ class VentasProfileVC: NSViewController {
     
     func alertaInventarioInsuficiente() -> Bool {
         let alert: NSAlert = NSAlert()
-        alert.messageText = "La existencia de este producto es \(productosController.productos[txtIDProducto.integerValue].cantidad), avisa al comprador que pida más para completar la venta u ofrecele al cliente la existencia"
-        alert.alertStyle = .informational
-        alert.addButton(withTitle: "Ok")
+        var productoEncontrado = false
+        var indiceProductoEncontrado = 0
+        
+        for x in 0 ... productosController.productos.count-1 {
+            if txtIDProducto.integerValue == productosController.productos[x].id {
+                productoEncontrado = true
+                indiceProductoEncontrado = x
+                alert.messageText = "La existencia de este producto es \(productosController.productos[indiceProductoEncontrado].cantidad), avisa al comprador que pida más para completar la venta u ofrecele al cliente la existencia"
+                alert.alertStyle = .informational
+                alert.addButton(withTitle: "Ok")
+                break
+            }
+        }
+        
         return alert.runModal() == .alertFirstButtonReturn
     }
     
     func alertaInventario() -> Bool {
         let alert: NSAlert = NSAlert()
-        alert.messageText = "Queda \(productosController.productos[txtIDProducto.integerValue].cantidad) de \(lblProducto.stringValue)"
-        alert.alertStyle = .informational
-        alert.addButton(withTitle: "Ok")
+        var productoEncontrado = false
+        var indiceProductoEncontrado = 0
+        
+        for x in 0 ... productosController.productos.count-1 {
+            if txtIDProducto.integerValue == productosController.productos[x].id {
+                productoEncontrado = true
+                indiceProductoEncontrado = x
+                alert.messageText = "Queda \(productosController.productos[indiceProductoEncontrado].cantidad) de \(lblProducto.stringValue)"
+                alert.alertStyle = .informational
+                alert.addButton(withTitle: "Ok")
+                
+                break
+            }
+        }
         return alert.runModal() == .alertFirstButtonReturn
     }
     
