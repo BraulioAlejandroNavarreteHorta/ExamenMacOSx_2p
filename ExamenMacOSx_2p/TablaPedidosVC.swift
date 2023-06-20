@@ -11,6 +11,7 @@ class TablaPedidosVC: NSViewController {
     
     @objc dynamic var pedidos:[Pedidos] = []
     
+    @IBOutlet weak var img: NSImageView!
     
     var loginController = LoginController.compartir
     var usuarioRecibido:String?
@@ -41,6 +42,7 @@ class TablaPedidosVC: NSViewController {
         
         for x in 0...loginController.users.count-1{
             if usuarioRecibido==loginController.users[x].username{
+                img.image=NSImage(named: loginController.users[x].imagen)
                 asignarColor(loginController.users[x].fondo)
                 view.wantsLayer = true
                 view.layer?.backgroundColor=color1?.cgColor

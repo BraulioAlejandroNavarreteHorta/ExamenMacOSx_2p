@@ -704,11 +704,16 @@
             <objects>
                 <viewController id="BT7-5o-WHp" customClass="Tabla" customModule="ExamenMacOSx_2p" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="iKb-ol-jcJ">
-                        <rect key="frame" x="0.0" y="0.0" width="1389" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1429" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vf5-a1-3Uv">
+                                <rect key="frame" x="0.0" y="0.0" width="1429" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="amG-KY-LHr"/>
+                            </imageView>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yU2-2E-FHk">
-                                <rect key="frame" x="0.0" y="20" width="1389" height="260"/>
+                                <rect key="frame" x="20" y="20" width="1389" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" drawsBackground="NO" id="HUQ-Dr-Wds">
                                     <rect key="frame" x="1" y="1" width="1387" height="258"/>
@@ -1129,6 +1134,9 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="img" destination="Vf5-a1-3Uv" id="b80-vX-Vyw"/>
+                    </connections>
                 </viewController>
                 <customObject id="UFZ-FY-8wR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController id="BVO-Ur-tfu">
@@ -1138,18 +1146,23 @@
                 </arrayController>
                 <userDefaultsController representsSharedInstance="YES" id="JyV-af-Hti"/>
             </objects>
-            <point key="canvasLocation" x="2163" y="250"/>
+            <point key="canvasLocation" x="2167.5" y="250"/>
         </scene>
         <!--Tablap-->
         <scene sceneID="8ZU-dZ-D8G">
             <objects>
                 <viewController id="2ry-VN-ZC2" customClass="Tablap" customModule="ExamenMacOSx_2p" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="nGk-pY-Bp2">
-                        <rect key="frame" x="0.0" y="0.0" width="1234" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1274" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="of1-4K-YPk">
+                                <rect key="frame" x="0.0" y="0.0" width="1274" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="PWR-a4-T5T"/>
+                            </imageView>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7W-0v-WLm">
-                                <rect key="frame" x="0.0" y="13" width="1234" height="276"/>
+                                <rect key="frame" x="20" y="12" width="1234" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" id="tX6-vn-Rst">
                                     <rect key="frame" x="1" y="1" width="1232" height="274"/>
@@ -1465,6 +1478,9 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="img" destination="of1-4K-YPk" id="c4R-ij-hrh"/>
+                    </connections>
                 </viewController>
                 <customObject id="lvd-Hb-cgw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController id="bre-ta-sf8">
@@ -1474,7 +1490,7 @@
                 </arrayController>
                 <userDefaultsController id="7jo-yB-gGz"/>
             </objects>
-            <point key="canvasLocation" x="187" y="-1775"/>
+            <point key="canvasLocation" x="207" y="-1775"/>
         </scene>
         <!--Ventas ProfileVC-->
         <scene sceneID="q3x-zq-pnk">
@@ -1985,9 +2001,14 @@
             <objects>
                 <viewController id="xQN-B8-6yC" customClass="TablaPedidosVC" customModule="ExamenMacOSx_2p" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="9Xt-A7-N18">
-                        <rect key="frame" x="0.0" y="0.0" width="1332" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1232" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBk-G0-1Jg">
+                                <rect key="frame" x="0.0" y="0.0" width="1232" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="g4s-5M-1DS"/>
+                            </imageView>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEm-pV-oVx">
                                 <rect key="frame" x="20" y="20" width="1192" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2341,6 +2362,9 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="img" destination="tBk-G0-1Jg" id="utI-ZJ-Ddw"/>
+                    </connections>
                 </viewController>
                 <customObject id="agF-w9-KF1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController id="7tc-Z1-o09">
@@ -2350,7 +2374,7 @@
                 </arrayController>
                 <userDefaultsController id="P88-rO-c4u"/>
             </objects>
-            <point key="canvasLocation" x="-1567" y="-262"/>
+            <point key="canvasLocation" x="-1617" y="-262"/>
         </scene>
         <!--VentasVC-->
         <scene sceneID="EKk-vp-HHc">
@@ -3654,8 +3678,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="dyg-mZ-ldl">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="708935633.68325603">
-                                        <!--2023-06-20 06:33:53 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="708977112.35041702">
+                                        <!--2023-06-20 18:05:12 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -4048,8 +4072,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="p3a-Ph-w7e">
                                     <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="708935633.73417795">
-                                        <!--2023-06-20 06:33:53 +0000-->
+                                    <date key="date" timeIntervalSinceReferenceDate="708977112.40686905">
+                                        <!--2023-06-20 18:05:12 +0000-->
                                     </date>
                                     <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -4598,11 +4622,16 @@
             <objects>
                 <viewController id="ftQ-bi-e26" customClass="TablaCompra" customModule="ExamenMacOSx_2p" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="XOa-AR-R5c">
-                        <rect key="frame" x="0.0" y="0.0" width="1571" height="334"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1611" height="334"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-rg-o2h">
+                                <rect key="frame" x="0.0" y="0.0" width="1611" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="UIC-GD-K2v"/>
+                            </imageView>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-ed-Bw9">
-                                <rect key="frame" x="0.0" y="20" width="1571" height="301"/>
+                                <rect key="frame" x="20" y="16" width="1571" height="301"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" drawsBackground="NO" id="xi2-yn-9jF">
                                     <rect key="frame" x="1" y="1" width="1569" height="299"/>
@@ -5024,6 +5053,9 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="img" destination="OHF-rg-o2h" id="VNi-6y-vcK"/>
+                    </connections>
                 </viewController>
                 <customObject id="FvV-Jq-i4S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController id="o76-b2-7yp">
@@ -5032,7 +5064,7 @@
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="1651.5" y="-1045"/>
+            <point key="canvasLocation" x="1671.5" y="-1045"/>
         </scene>
         <!--Tabla Ventas-->
         <scene sceneID="DZD-8l-usy">
@@ -5042,6 +5074,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="937" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qh3-Lg-phI">
+                                <rect key="frame" x="0.0" y="0.0" width="937" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="UzP-il-ydb"/>
+                            </imageView>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWf-uP-vu2">
                                 <rect key="frame" x="20" y="20" width="897" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -5709,6 +5746,9 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="img" destination="qh3-Lg-phI" id="iRB-KG-TBQ"/>
+                    </connections>
                 </viewController>
                 <customObject id="gxF-nd-rX9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController id="IXv-qc-fE2">

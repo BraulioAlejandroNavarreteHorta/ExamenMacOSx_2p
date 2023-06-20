@@ -41,6 +41,7 @@ class Tablap: NSViewController {
         
         for x in 0...loginController.users.count-1{
             if usuarioRecibido==loginController.users[x].username{
+                img.image=NSImage(named: loginController.users[x].imagen)
                 asignarColor(loginController.users[x].fondo)
                 view.wantsLayer = true
                 view.layer?.backgroundColor=color1?.cgColor
@@ -50,6 +51,7 @@ class Tablap: NSViewController {
         
     }
     
+    @IBOutlet weak var img: NSImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
