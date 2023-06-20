@@ -116,6 +116,11 @@ class MenuVC: NSViewController {
             let destination = segue.destinationController as! CRUDVentasVC
             destination.usuarioRecibido = usuario
         }
+        
+        if segue.identifier == "irAUsuarios"{
+            let destination = segue.destinationController as! LoginVC
+            destination.usuarioRecibido = self.usuario
+        }
 
     }
     

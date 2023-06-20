@@ -176,6 +176,7 @@ class CRUDProductosVC: NSViewController {
             let destinationViewCont = segue.destinationController as! Tablap
             destinationViewCont.products = productoController.productos
             destinationViewCont.prueba = "mensaje"
+            destinationViewCont.usuarioRecibido = self.usuarioRecibido
         }
          
          

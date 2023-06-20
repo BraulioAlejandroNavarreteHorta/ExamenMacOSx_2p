@@ -52,7 +52,7 @@ class Tabla: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       setValue()
+        setValue()
     }
     
 }

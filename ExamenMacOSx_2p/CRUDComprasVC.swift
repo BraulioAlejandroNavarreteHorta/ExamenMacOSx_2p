@@ -161,6 +161,7 @@ class CRUDComprasVC: NSViewController {
             let destinationViewCont = segue.destinationController as! TablaCompra
             destinationViewCont.compras = compraController.compras
             destinationViewCont.prueba = "mensaje"
+            destinationViewCont.usuarioRecibido = self.usuarioRecibido
         }
         if(segue.identifier == "altaCompra"){
             let destinationVC = segue.destinationController as! ComprasProfileVC

@@ -186,6 +186,7 @@ class LoginVC: NSViewController {
             let destinationViewCont = segue.destinationController as! Tabla
             destinationViewCont.users = loginController.users
             destinationViewCont.prueba = "mensaje"
+            destinationViewCont.usuarioRecibido = self.usuarioRecibido
         }
          
     }

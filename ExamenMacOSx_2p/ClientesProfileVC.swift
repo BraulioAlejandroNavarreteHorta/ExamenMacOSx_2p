@@ -109,6 +109,7 @@ class ClientesProfileVC: NSViewController {
         if segue.identifier == "irATablaPedidos"{
             let destination = segue.destinationController as! TablaPedidosVC
             destination.pedidos = PedidosController.pedidos
+            destination.usuarioRecibido = self.usuarioRecibido
         }
     }
     

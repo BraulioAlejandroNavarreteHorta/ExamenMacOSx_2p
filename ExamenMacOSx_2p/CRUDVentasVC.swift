@@ -160,6 +160,7 @@ class CRUDVentasVC: NSViewController {
         if(segue.identifier == "irATablaVenta"){
             let destinationViewCont = segue.destinationController as! TablaVentas
             destinationViewCont.ventas = ventasController.ventas
+            destinationViewCont.usuarioRecibido = self.usuarioRecibido
         }
         if(segue.identifier == "altaVenta"){
             let destinationVC = segue.destinationController as! VentasProfileVC
